@@ -21,3 +21,4 @@ input/
 
 # Outros
 .env 
+dist/

@@ -1,7 +1,14 @@
-# Dockerfile para processar CSV com Node.js
-FROM node:20-alpine
+# Dockerfile for processing CSV with Node.js and TypeScript
+FROM node:20-alpine AS build
 WORKDIR /app
 COPY package*.json ./
-RUN npm install --production
+RUN npm install
 COPY . .
-CMD ["node", "index.js"] 
+RUN npx tsc
+
+FROM node:20-alpine
+WORKDIR /app
+COPY --from=build /app/package*.json ./
+RUN npm install --production
+COPY --from=build /app/dist ./dist
+CMD ["node", "dist/index.js"] 
