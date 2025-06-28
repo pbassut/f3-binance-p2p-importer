@@ -16,7 +16,7 @@ function transformRow(row) {
   let type = row["Order Type"];
   let description = "";
   const coin = row["Asset Type"] || "";
-  const seller = row["Description"] || "";
+  const seller = row["Couterparty"] || "";
   if (type === "Buy") {
     description = `Compra de ${coin} de ${seller}`;
   } else if (type === "Sell") {
