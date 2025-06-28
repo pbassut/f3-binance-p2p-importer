@@ -1,0 +1,8 @@
+version: "3.8"
+services:
+  app:
+    build: .
+    image: f-iii-binance-p2p-importer
+    volumes:
+      - ./input:/app/input
+      - ./output:/app/output
