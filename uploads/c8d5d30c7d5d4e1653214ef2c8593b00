@@ -1,0 +1,5 @@
+﻿Order Number,Order Type,Asset Type,Fiat Type,Total Price,Price,Quantity,Exchange rate,Maker Fee,Taker Fee,Couterparty,Status,Created Time
+22738681649623920640,Sell,USDT,BRL,6778.84,5.763,1176.27,0.00,"",0.05,Smartpag,Completed,2025-03-27 21:03:53
+22738959681472921600,Sell,USDT,BRL,704.44,5.759,122.32,,"",0.05,IaCrypto_24x7,Completed,2025-03-28 15:28:41
+22739014073198538752,Sell,USDT,BRL,1383.41,5.77,239.76,,"",0.05,yucraaltoque,Completed,2025-03-28 19:04:49
+22739015061977964544,Sell,USDT,BRL,21784.43,5.769,3776.12,,"",0.05,ZAKTO_CAPITAL,Completed,2025-03-28 19:08:45

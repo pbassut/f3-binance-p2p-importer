@@ -6,10 +6,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Output
-output/
-input/
-
 # Sistema
 .DS_Store
 
@@ -22,3 +18,8 @@ input/
 # Outros
 .env 
 dist/
+
+input/*
+!input/.gitkeep
+output/*
+!output/.gitkeep

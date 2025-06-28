@@ -3,6 +3,8 @@ import fs from "fs";
 import path from "path";
 import Papa from "papaparse";
 import { processCsvFile } from "./process";
+import { createInstance } from "i18next";
+import ptBrTranslation from "./locales/pt-BR/translation.json";
 
 const INPUT_DIR = "input";
 const OUTPUT_DIR = "output";
@@ -18,6 +20,7 @@ beforeAll(() => {
 afterAll(() => {
   if (fs.existsSync(TEST_INPUT)) fs.unlinkSync(TEST_INPUT);
   if (fs.existsSync(TEST_OUTPUT)) fs.unlinkSync(TEST_OUTPUT);
+  // No cleanup needed for i18n instance
 });
 
 describe("CSV Conversion", () => {
@@ -70,5 +73,58 @@ describe("CSV Conversion", () => {
       // Pode ser string vazia ou conter dados
       expect(typeof row["Notes"]).toBe("string");
     }
+  });
+});
+
+describe("pt-BR translations", () => {
+  let i18n: ReturnType<typeof createInstance>;
+  beforeAll(async () => {
+    i18n = createInstance();
+    await i18n.init({
+      lng: "pt-BR",
+      fallbackLng: "pt-BR",
+      resources: {
+        "pt-BR": { translation: ptBrTranslation },
+      },
+    });
+  });
+
+  it("should translate Buy", () => {
+    expect(
+      i18n.t("Buy {{asset}} from {{counterparty}}", {
+        asset: "USDT",
+        counterparty: "AnonE",
+      })
+    ).toBe("Compra de USDT de AnonE");
+  });
+
+  it("should translate Sell", () => {
+    expect(
+      i18n.t("Sell {{asset}} to {{counterparty}}", {
+        asset: "USDT",
+        counterparty: "AnonA",
+      })
+    ).toBe("Venda de USDT para AnonA");
+  });
+
+  it("should translate Tax", () => {
+    expect(
+      i18n.t("Tax of {{asset}} from {{counterparty}}", {
+        asset: "USDT",
+        counterparty: "AnonA",
+      })
+    ).toBe("Taxa de USDT de AnonA");
+  });
+
+  it("should translate generic key:value", () => {
+    expect(
+      i18n.t("{{key}}: {{value}}", { key: "Fiat Type", value: "BRL" })
+    ).toBe("Fiat Type: BRL");
+  });
+
+  it("should have pt-BR translation resource loaded", () => {
+    expect(ptBrTranslation["Buy {{asset}} from {{counterparty}}"]).toBe(
+      "Compra de {{asset}} de {{counterparty}}"
+    );
   });
 });

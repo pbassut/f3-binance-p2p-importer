@@ -1,0 +1,15 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Fish Shell Environment Rule
+
+This project is developed using the fish shell, not bash. Any instructions or scripts for setting up environment variables, nvm, or similar tools must use fish-compatible syntax. For example, to load nvm in fish, use:
+
+```
+set -x NVM_DIR $HOME/.nvm
+source $NVM_DIR/nvm.sh
+```
+
+Avoid bash-specific commands in documentation or automation.

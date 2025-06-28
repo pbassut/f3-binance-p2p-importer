@@ -1,0 +1,58 @@
+{
+    "version": 3,
+    "source": "ff3-importer-1.6.3",
+    "created_at": "2025-06-28T17:39:06-03:00",
+    "date": "Y-m-d H:i:s",
+    "default_account": 1,
+    "delimiter": "comma",
+    "headers": true,
+    "rules": true,
+    "skip_form": false,
+    "add_import_tag": true,
+    "roles": [
+        "external-id",
+        "internal_reference",
+        "description",
+        "date_transaction",
+        "note",
+        "amount"
+    ],
+    "do_mapping": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+    ],
+    "mapping": {
+        "1": {
+            "Sell": 1
+        }
+    },
+    "duplicate_detection_method": "classic",
+    "ignore_duplicate_lines": true,
+    "unique_column_index": 0,
+    "unique_column_type": "internal_reference",
+    "flow": "file",
+    "content_type": "csv",
+    "custom_tag": "Binance P2P",
+    "identifier": "0",
+    "connection": "0",
+    "ignore_spectre_categories": false,
+    "grouped_transaction_handling": "",
+    "use_entire_opposing_address": false,
+    "map_all_data": false,
+    "accounts": [],
+    "date_range": "",
+    "date_range_number": 30,
+    "date_range_unit": "d",
+    "date_not_before": "",
+    "date_not_after": "",
+    "nordigen_country": "",
+    "nordigen_bank": "",
+    "nordigen_requisitions": [],
+    "nordigen_max_days": "90",
+    "conversion": false,
+    "ignore_duplicate_transactions": true
+}

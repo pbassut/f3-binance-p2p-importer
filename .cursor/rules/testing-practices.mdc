@@ -1,0 +1,14 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Testing Practices Rule
+
+Every time code is changed in this project, you must:
+
+1. Add or adjust test cases in the relevant test files to cover the new or modified code.
+2. Run the test suite (using the configured test runner, e.g., Vitest) after making changes.
+3. If any tests fail, continue modifying the code and/or the tests until all tests pass.
+
+This ensures that the codebase remains reliable and that all changes are properly tested.

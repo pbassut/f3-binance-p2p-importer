@@ -1,0 +1,8 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Firefly III Data Import Documentation Rule
+
+Whenever you are working with, integrating, or troubleshooting the Firefly III API, always consult the official API documentation at @https://docs.firefly-iii.org/how-to/data-importer/advanced/post/. This ensures you use the correct endpoints, parameters, and authentication methods.

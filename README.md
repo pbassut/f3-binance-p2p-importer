@@ -11,6 +11,12 @@ This project monitors a folder and automatically converts any CSV file exported 
 - **Docker compatible:** easily run the converter in any environment.
 - **Automated tests:** quality ensured with Vitest tests.
 
+## 🌐 Translation Support
+
+- The project supports multiple languages using [i18next](https://www.i18next.com/).
+- The default language is **English** (can be changed with the `LANG` environment variable, e.g., `LANG=pt-BR`).
+- To add or modify translations, edit the files in the `locales/` directory (to be created).
+
 ## 📦 How to use locally
 
 1. Install dependencies:
@@ -70,6 +76,16 @@ Order Number,Description,Created Time,Notes
 ## 🤝 Contributing
 
 Pull requests are welcome! Feel free to open issues or suggest improvements.
+
+## Quick Test: Process a CSV File
+
+To quickly test the output of the CSV processing logic, run:
+
+```sh
+npx ts-node -e "const { processCsvFile } = require('./src/process'); processCsvFile('example.csv', 'example.out.csv', () => { console.log(require('fs').readFileSync('example.out.csv', 'utf8')); });" > example.out.csv
+```
+
+This will process `example.csv` and write the output to `example.out.csv`.
 
 ---
 

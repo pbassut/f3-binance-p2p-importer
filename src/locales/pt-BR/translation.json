@@ -1,0 +1,9 @@
+{
+	"Buy {{asset}} from {{counterparty}}": "Compra de {{asset}} de {{counterparty}}",
+	"Sell {{asset}} to {{counterparty}}": "Venda de {{asset}} para {{counterparty}}",
+	"{{orderType}} {{asset}} with {{counterparty}}": "{{orderType}} {{asset}} com {{counterparty}}",
+	"Tax of {{asset}} from {{counterparty}}": "Taxa de {{asset}} de {{counterparty}}",
+	"Tax of {{asset}} to {{counterparty}}": "Taxa de {{asset}} para {{counterparty}}",
+	"Tax of {{asset}} with {{counterparty}}": "Taxa de {{asset}} com {{counterparty}}",
+	"{{key}}: {{value}}": "{{key}}: {{value}}"
+}

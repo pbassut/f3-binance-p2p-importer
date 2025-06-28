@@ -1,0 +1,8 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# README Update Rule
+
+Whenever you introduce a new configurable option (such as an environment variable, CLI flag, or config file setting) or change the behavior of an existing one, you must update the [README.md](mdc:README.md) to document the new or changed option. This ensures users are always aware of all configuration options and their effects.
