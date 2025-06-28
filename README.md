@@ -1,57 +1,57 @@
 # F-III Binance P2P Importer 🚀
 
-> **Conversor universal de CSV P2P da Binance para Firefly-III**
+> **Universal CSV Converter for Binance P2P to Firefly-III**
 
-Este projeto monitora uma pasta e converte automaticamente qualquer arquivo CSV de transações em um formato mais aceito pelo [Firefly-III](https://www.firefly-iii.org/), facilitando a importação de dados financeiros de diferentes fontes para o seu gerenciador financeiro favorito.
+This project monitors a folder and automatically converts any CSV file exported from the Binance P2P area into a format accepted by [Firefly-III](https://www.firefly-iii.org/), making it easy to import financial data from different sources into your favorite finance manager.
 
-## ✨ Funcionalidades
+## ✨ Features
 
-- **Monitoramento automático:** basta jogar um CSV na pasta `input/` e ele será convertido para a pasta `output/`.
-- **Conversão flexível:** transforma os campos do CSV de entrada para um formato padrão, incluindo Order Number, Description (com lógica de compra/venda), Created Time e Notes.
-- **Compatível com Docker:** rode o conversor facilmente em qualquer ambiente.
-- **Testes automatizados:** qualidade garantida com testes usando Vitest.
+- **Automatic monitoring:** just drop a CSV exported from Binance P2P into the `input/` folder and it will be converted to the `output/` folder.
+- **Flexible conversion:** transforms the input CSV fields into a standard format, including Order Number, Description (with buy/sell logic), Created Time, and Notes.
+- **Docker compatible:** easily run the converter in any environment.
+- **Automated tests:** quality ensured with Vitest tests.
 
-## 📦 Como usar localmente
+## 📦 How to use locally
 
-1. Instale as dependências:
+1. Install dependencies:
    ```bash
    npm install
    ```
-2. Coloque seu arquivo CSV de entrada na pasta `input/` (exemplo: `input/seuarquivo.csv`).
-3. Execute o conversor:
+2. Export the CSV from the Binance P2P area and place it in the `input/` folder (e.g., `input/yourfile.csv`).
+3. Run the converter:
    ```bash
-   node index.js
+   npx ts-node index.ts
    ```
-4. O arquivo convertido aparecerá na pasta `output/` com o mesmo nome.
+4. The converted file will appear in the `output/` folder with the same name.
 
-## 🐳 Como rodar via Docker
+## 🐳 How to run with Docker
 
-1. Construa a imagem:
+1. Build the image:
    ```bash
-   docker build -t f3-binance-p2p-importer .
+   docker build -t f-iii-binance-p2p-importer .
    ```
-2. Execute o container, montando o diretório atual:
+2. Run the container, mounting the current directory:
    ```bash
-   docker run --rm -v $(pwd):/app f3-binance-p2p-importer
+   docker run --rm -v $(pwd):/app f-iii-binance-p2p-importer
    ```
 
-## 🔬 Testes
+## 🔬 Tests
 
-Execute os testes automatizados com:
+Run the automated tests with:
 
 ```bash
 npm test
 ```
 
-## 🔄 Personalização
+## 🔄 Customization
 
-- Edite a função `transformRow` em `process.js` para adaptar a lógica de transformação para o seu banco ou corretora.
-- O campo **Description** é montado automaticamente com base no tipo de operação e contrapartida.
-- O campo **Notes** agrega todos os outros campos não utilizados, facilitando a auditoria.
+- Edit the `transformRow` function in `process.ts` to adapt the transformation logic for your bank or exchange.
+- The **Description** field is automatically built based on the operation type and counterparty.
+- The **Notes** field aggregates all other unused fields, making auditing easier.
 
-## 💡 Exemplo de uso
+## 💡 Example
 
-Coloque um arquivo como este em `input/`:
+Place a file exported from Binance P2P in `input/`:
 
 ```csv
 Order Number,Order Type,Asset Type,Fiat Type,Total Price,Price,Quantity,Exchange rate,Maker Fee,Taker Fee,Couterparty,Status,Created Time
@@ -59,7 +59,7 @@ Order Number,Order Type,Asset Type,Fiat Type,Total Price,Price,Quantity,Exchange
 10000000000000000005,Buy,USDT,BRL,500.00,5.74,87.12,0.00,,0.05,AnonE,Completed,2025-03-29 10:00:00
 ```
 
-E receba em `output/` um arquivo pronto para importar no Firefly-III:
+And receive in `output/` a file ready to import into Firefly-III:
 
 ```csv
 Order Number,Description,Created Time,Notes
@@ -67,10 +67,10 @@ Order Number,Description,Created Time,Notes
 10000000000000000005,"Compra de USDT de AnonE",2025-03-29 10:00:00,"Fiat Type: BRL | Total Price: 500.00 | Price: 5.74 | Quantity: 87.12 | Exchange rate: 0.00 | Taker Fee: 0.05 | Status: Completed"
 ```
 
-## 🤝 Contribuição
+## 🤝 Contributing
 
-Pull requests são bem-vindos! Sinta-se à vontade para abrir issues ou sugerir melhorias.
+Pull requests are welcome! Feel free to open issues or suggest improvements.
 
 ---
 
-Feito com ❤️ para facilitar sua vida financeira!
+Made with ❤️ to make your financial life easier!

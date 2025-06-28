@@ -20,7 +20,7 @@ afterAll(() => {
   if (fs.existsSync(TEST_OUTPUT)) fs.unlinkSync(TEST_OUTPUT);
 });
 
-describe("Conversão de CSV", () => {
+describe("CSV Conversion", () => {
   let rows: Record<string, string>[] = [];
 
   beforeAll(async () => {
@@ -44,7 +44,7 @@ describe("Conversão de CSV", () => {
     });
   });
 
-  it("deve conter Order Number, Created Time e Notes definidos", () => {
+  it("should have Order Number, Created Time, and Notes defined", () => {
     for (const row of rows) {
       expect(row["Order Number"]).toBeTruthy();
       expect(row["Created Time"]).toBeTruthy();
@@ -52,25 +52,19 @@ describe("Conversão de CSV", () => {
     }
   });
 
-  it("deve montar Description corretamente para SELL", () => {
-    for (const row of rows.filter((r) =>
-      r["Description"].startsWith("Venda")
-    )) {
-      expect(/^Venda de USDT para Anon[A-D]$/.test(row["Description"])).toBe(
-        true
-      );
+  it("should build Description correctly for SELL", () => {
+    for (const row of rows.filter((r) => r["Description"].startsWith("Sell"))) {
+      expect(/^Sell USDT to Anon[A-D]$/.test(row["Description"])).toBe(true);
     }
   });
 
-  it("deve montar Description corretamente para BUY", () => {
-    for (const row of rows.filter((r) =>
-      r["Description"].startsWith("Compra")
-    )) {
-      expect(/^Compra de USDT de AnonE$/.test(row["Description"])).toBe(true);
+  it("should build Description correctly for BUY", () => {
+    for (const row of rows.filter((r) => r["Description"].startsWith("Buy"))) {
+      expect(/^Buy USDT from AnonE$/.test(row["Description"])).toBe(true);
     }
   });
 
-  it("Notes deve conter informações extras ou ser string vazia", () => {
+  it("Notes should contain extra info or be an empty string", () => {
     for (const row of rows) {
       expect(row["Notes"]).not.toBeUndefined();
       // Pode ser string vazia ou conter dados

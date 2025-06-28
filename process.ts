@@ -24,16 +24,16 @@ function normalizeRowKeys(row: InputRow): InputRow {
 function transformRow(row: InputRow): OutputRow {
   row = normalizeRowKeys(row);
   const orderNumber = row["Order Number"];
-  let type = row["Order Type"];
+  const orderType = row["Order Type"];
   let description = "";
-  const coin = row["Asset Type"] || "";
+  const asset = row["Asset Type"] || "";
   const counterparty = row["Couterparty"] || "";
-  if (type === "Buy") {
-    description = `Compra de ${coin} de ${counterparty}`;
-  } else if (type === "Sell") {
-    description = `Venda de ${coin} para ${counterparty}`;
+  if (orderType === "Buy") {
+    description = `Buy ${asset} from ${counterparty}`;
+  } else if (orderType === "Sell") {
+    description = `Sell ${asset} to ${counterparty}`;
   } else {
-    description = `${type} de ${coin} de/para ${counterparty}`;
+    description = `${orderType} ${asset} with ${counterparty}`;
   }
   const createdTime = row["Created Time"];
   const usedFields = [
@@ -67,8 +67,10 @@ export function processCsvFile(
   cb?: () => void
 ) {
   const csvData = fs.readFileSync(inputPath, "utf8");
-  const parsed =
-    Papa.parse < InputRow > (csvData, { header: true, skipEmptyLines: true });
+  const parsed = Papa.parse<InputRow>(csvData, {
+    header: true,
+    skipEmptyLines: true,
+  });
   const rows = parsed.data.map(transformRow);
   const csvOut = Papa.unparse(rows, { header: true });
   fs.writeFileSync(outputPath, csvOut);
