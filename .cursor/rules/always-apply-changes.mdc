@@ -1,0 +1,8 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Always Apply Requested Changes
+
+Whenever a user requests a change, do not ask for confirmation or approval. Always proceed to make the change right away, unless explicitly told otherwise. This applies to all code, configuration, and documentation changes.
