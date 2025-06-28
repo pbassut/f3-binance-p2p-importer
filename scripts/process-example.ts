@@ -9,5 +9,4 @@ const outputFile = output || "example.out.csv";
 
 processCsvFile(inputFile, outputFile, () => {
   console.log(fs.readFileSync(outputFile, "utf8"));
-  fs.unlinkSync(outputFile);
 });

@@ -15,13 +15,7 @@ app.use(express.static(path.join(__dirname, "../frontend/dist")));
 // API endpoint for file upload and forwarding to Firefly-III Data Importer
 app.post("/api/upload", upload.single("file"), async (req, res) => {
   const { token, fireflyUrl, secret } = req.body;
-  // Detect browser language from Accept-Language header
-  const acceptLang = req.headers["accept-language"];
-  let lang = "pt-BR";
-  if (typeof acceptLang === "string" && acceptLang.length > 0) {
-    lang = acceptLang.split(",")[0].split("-")[0];
-  }
-  setI18nLanguage(lang);
+  setI18nLanguage("pt-BR");
   if (!req.file) {
     return res
       .status(400)

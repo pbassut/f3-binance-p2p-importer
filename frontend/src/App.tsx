@@ -65,10 +65,7 @@ const App: React.FC = () => {
           Accept: "application/json",
         },
       });
-      setSuccess(
-        "File uploaded and import requested successfully! " +
-          (res.data?.firefly || "")
-      );
+      setSuccess("File uploaded and import requested successfully!");
       setResponseJson(res.data);
     } catch (err: any) {
       setError(
@@ -147,30 +144,30 @@ const App: React.FC = () => {
               {success}
             </Alert>
           )}
-          {responseJson && (
-            <>
-              {typeof responseJson.firefly === "string" &&
-                responseJson.firefly.includes("\n") && (
-                  <Accordion sx={{ mt: 2 }}>
-                    <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                      <Typography variant="subtitle2">Output logs</Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <pre style={{ margin: 0, fontSize: 12 }}>
-                        {responseJson.firefly
-                          .split("\n")
-                          .map((line: string, idx: number) => (
-                            <div key={idx}>{line}</div>
-                          ))}
-                      </pre>
-                    </AccordionDetails>
-                  </Accordion>
-                )}
-            </>
-          )}
           {error && <Alert severity="error">{error}</Alert>}
         </Box>
       </Paper>
+      {responseJson && (
+        <>
+          {typeof responseJson.firefly === "string" &&
+            responseJson.firefly.includes("\n") && (
+              <Accordion sx={{ mt: 2 }}>
+                <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                  <Typography variant="subtitle2">Output logs</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <pre style={{ margin: 0, fontSize: 12 }}>
+                    {responseJson.firefly
+                      .split("\n")
+                      .map((line: string, idx: number) => (
+                        <div key={idx}>{line}</div>
+                      ))}
+                  </pre>
+                </AccordionDetails>
+              </Accordion>
+            )}
+        </>
+      )}
     </Box>
   );
 };

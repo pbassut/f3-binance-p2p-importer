@@ -98,16 +98,13 @@ function transformRow(row: InputRow): OutputRow {
     .filter(([_, v]) => v && v.trim() !== "")
     .map(([k, v]) => i18next.t("{{key}}: {{value}}", { key: k, value: v }))
     .join(" | ");
-  let amount = row["Total Price"];
-  if (orderType === "Buy" && amount && !amount.startsWith("-")) {
-    amount = `-${amount}`;
-  }
+
   return {
     "Order Number": orderNumber,
     Description: description,
     "Created Time": createdTime,
     Notes: notes,
-    Amount: amount,
+    Amount: row["Total Price"],
     Income: income,
     Expense: expense,
   };
