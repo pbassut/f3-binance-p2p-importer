@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "vitest run"
   },
   "keywords": [],
   "author": "",
@@ -13,5 +13,8 @@
     "csv-parse": "^5.6.0",
     "csv-stringify": "^6.5.2",
     "papaparse": "^5.5.3"
+  },
+  "devDependencies": {
+    "vitest": "^3.2.4"
   }
 }
