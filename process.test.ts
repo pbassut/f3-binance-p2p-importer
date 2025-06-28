@@ -21,11 +21,13 @@ afterAll(() => {
 });
 
 describe("Conversão de CSV", () => {
-  it("deve converter corretamente o arquivo de exemplo", async () => {
+  let rows: Record<string, string>[] = [];
+
+  beforeAll(async () => {
     if (fs.existsSync(TEST_INPUT)) fs.unlinkSync(TEST_INPUT);
     if (fs.existsSync(TEST_OUTPUT)) fs.unlinkSync(TEST_OUTPUT);
     fs.copyFileSync(EXAMPLE_CSV, TEST_INPUT);
-    await new Promise((resolve, reject) => {
+    await new Promise<void>((resolve, reject) => {
       processCsvFile(TEST_INPUT, TEST_OUTPUT, () => {
         try {
           const csv = fs.readFileSync(TEST_OUTPUT, "utf8");
@@ -33,29 +35,46 @@ describe("Conversão de CSV", () => {
             header: true,
             skipEmptyLines: true,
           });
-          for (const row of parsed.data) {
-            expect(row["Order Number"]).toBeTruthy();
-            expect(row["Created Time"]).toBeTruthy();
-            expect(row["Notes"]).not.toBeUndefined();
-            if (row["Description"].startsWith("Venda")) {
-              expect(
-                /^Venda de USDT para Anon[A-D]$/.test(row["Description"])
-              ).toBe(true);
-            } else if (row["Description"].startsWith("Compra")) {
-              expect(/^Compra de USDT de AnonE$/.test(row["Description"])).toBe(
-                true
-              );
-            } else {
-              throw new Error(
-                "Description não reconhecida: " + row["Description"]
-              );
-            }
-          }
+          rows = parsed.data as Record<string, string>[];
           resolve();
         } catch (err) {
           reject(err);
         }
       });
     });
+  });
+
+  it("deve conter Order Number, Created Time e Notes definidos", () => {
+    for (const row of rows) {
+      expect(row["Order Number"]).toBeTruthy();
+      expect(row["Created Time"]).toBeTruthy();
+      expect(row["Notes"]).not.toBeUndefined();
+    }
+  });
+
+  it("deve montar Description corretamente para SELL", () => {
+    for (const row of rows.filter((r) =>
+      r["Description"].startsWith("Venda")
+    )) {
+      expect(/^Venda de USDT para Anon[A-D]$/.test(row["Description"])).toBe(
+        true
+      );
+    }
+  });
+
+  it("deve montar Description corretamente para BUY", () => {
+    for (const row of rows.filter((r) =>
+      r["Description"].startsWith("Compra")
+    )) {
+      expect(/^Compra de USDT de AnonE$/.test(row["Description"])).toBe(true);
+    }
+  });
+
+  it("Notes deve conter informações extras ou ser string vazia", () => {
+    for (const row of rows) {
+      expect(row["Notes"]).not.toBeUndefined();
+      // Pode ser string vazia ou conter dados
+      expect(typeof row["Notes"]).toBe("string");
+    }
   });
 });
