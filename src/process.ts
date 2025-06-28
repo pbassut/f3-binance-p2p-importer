@@ -31,11 +31,12 @@ export interface InputRow {
 
 export type OutputRow = {
   "Order Number": string;
-  "Order Type": string;
   Description: string;
   "Created Time": string;
   Notes: string;
   Amount?: string;
+  Income: boolean;
+  Expense: boolean;
 };
 
 function normalizeRowKeys(row: InputRow): InputRow {
@@ -54,16 +55,22 @@ function transformRow(row: InputRow): OutputRow {
   let description = "";
   const asset = row["Asset Type"] || "";
   const counterparty = row["Couterparty"] || "";
+  let income = false;
+  let expense = false;
   if (orderType === "Buy") {
     description = i18next.t("Buy {{asset}} from {{counterparty}}", {
       asset,
       counterparty,
     });
+    income = false;
+    expense = true;
   } else if (orderType === "Sell") {
     description = i18next.t("Sell {{asset}} to {{counterparty}}", {
       asset,
       counterparty,
     });
+    income = true;
+    expense = false;
   } else {
     description = i18next.t("{{orderType}} {{asset}} with {{counterparty}}", {
       orderType,
@@ -91,13 +98,18 @@ function transformRow(row: InputRow): OutputRow {
     .filter(([_, v]) => v && v.trim() !== "")
     .map(([k, v]) => i18next.t("{{key}}: {{value}}", { key: k, value: v }))
     .join(" | ");
+  let amount = row["Total Price"];
+  if (orderType === "Buy" && amount && !amount.startsWith("-")) {
+    amount = `-${amount}`;
+  }
   return {
     "Order Number": orderNumber,
-    "Order Type": orderType,
     Description: description,
     "Created Time": createdTime,
     Notes: notes,
-    Amount: row["Total Price"],
+    Amount: amount,
+    Income: income,
+    Expense: expense,
   };
 }
 
@@ -109,6 +121,9 @@ function createFeeRow(row: InputRow): OutputRow | null {
     const asset = row["Asset Type"] || "";
     const counterparty = row["Couterparty"] || "";
     let description = "";
+    // For fee rows, always: Income = false, Expense = true
+    const income = false;
+    const expense = true;
     if (orderType === "Buy") {
       description = i18next.t("Tax of {{asset}} from {{counterparty}}", {
         asset,
@@ -141,13 +156,16 @@ function createFeeRow(row: InputRow): OutputRow | null {
       .filter(([_, v]) => v && v.trim() !== "")
       .map(([k, v]) => i18next.t("{{key}}: {{value}}", { key: k, value: v }))
       .join(" | ");
+    // Amount is always negative for fee rows
+    let amount = takerFee.startsWith("-") ? takerFee : `-${takerFee}`;
     return {
       "Order Number": row["Order Number"],
-      "Order Type": orderType,
       Description: description,
       "Created Time": row["Created Time"],
       Notes: notes,
-      Amount: takerFee,
+      Amount: amount,
+      Income: income,
+      Expense: expense,
     };
   }
   return null;
@@ -174,11 +192,12 @@ export function processCsvFile(
   }
   const outputHeader = [
     "Order Number",
-    "Order Type",
     "Description",
     "Created Time",
     "Notes",
     "Amount",
+    "Income",
+    "Expense",
   ];
   const csvOut = Papa.unparse(rows, {
     header: true,

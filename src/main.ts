@@ -17,7 +17,7 @@ app.post("/api/upload", upload.single("file"), async (req, res) => {
   const { token, fireflyUrl, secret } = req.body;
   // Detect browser language from Accept-Language header
   const acceptLang = req.headers["accept-language"];
-  let lang = "en";
+  let lang = "pt-BR";
   if (typeof acceptLang === "string" && acceptLang.length > 0) {
     lang = acceptLang.split(",")[0].split("-")[0];
   }
