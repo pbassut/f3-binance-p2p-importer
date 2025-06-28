@@ -1,6 +1,6 @@
-# f3-binance-p2p-importer 🚀
+# F-III Binance P2P Importer 🚀
 
-> **Conversor universal de CSV para Firefly-III**
+> **Conversor universal de CSV P2P da Binance para Firefly-III**
 
 Este projeto monitora uma pasta e converte automaticamente qualquer arquivo CSV de transações em um formato mais aceito pelo [Firefly-III](https://www.firefly-iii.org/), facilitando a importação de dados financeiros de diferentes fontes para o seu gerenciador financeiro favorito.
 
