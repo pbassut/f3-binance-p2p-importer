@@ -4,13 +4,27 @@ import path from "path";
 import fs from "fs";
 import axios from "axios";
 import FormData from "form-data";
-import { processCsvFile, setI18nLanguage } from "./process";
+import { processCsvFile, setI18nLanguage, ProcessorType } from "./process";
 
 const app = express();
 const upload = multer({ dest: path.join(__dirname, "../uploads") });
 
 // Serve static files from the React app build
 app.use(express.static(path.join(__dirname, "../frontend/dist")));
+
+function detectProcessorType(filePath: string): ProcessorType {
+  const firstLine = fs.readFileSync(filePath, "utf8").split(/\r?\n/)[0];
+  if (firstLine.includes("Order Number") && firstLine.includes("Order Type")) {
+    return "binance";
+  }
+  if (
+    firstLine.toLowerCase().includes("data;") ||
+    firstLine.toLowerCase().includes("lançamentos")
+  ) {
+    return "itau";
+  }
+  return "binance"; // fallback
+}
 
 // API endpoint for file upload and forwarding to Firefly-III Data Importer
 app.post("/api/upload", upload.single("file"), async (req, res) => {
@@ -29,10 +43,11 @@ app.post("/api/upload", upload.single("file"), async (req, res) => {
   }
   const inputPath = req.file.path;
   const outputPath = inputPath + ".out.csv";
+  const processorType = detectProcessorType(inputPath);
   try {
     // Process the uploaded file to the correct format
     await new Promise<void>((resolve, reject) => {
-      processCsvFile(inputPath, outputPath, resolve);
+      processCsvFile(inputPath, outputPath, resolve, processorType);
     });
 
     // Path to the config file
@@ -62,7 +77,7 @@ app.post("/api/upload", upload.single("file"), async (req, res) => {
     });
     fs.unlink(inputPath, () => {});
     fs.unlink(outputPath, () => {});
-    res.json({ success: true, firefly: fireflyRes.data });
+    res.json({ success: true, firefly: fireflyRes.data, processorType });
   } catch (err) {
     fs.unlink(inputPath, () => {});
     fs.unlink(outputPath, () => {});
