@@ -2,7 +2,7 @@ import { describe, it, expect, beforeAll, afterAll } from "vitest";
 import fs from "fs";
 import path from "path";
 import Papa from "papaparse";
-import { processCsvFile } from "./process";
+import { processCsvFile, ProcessorType } from "./process";
 import { createInstance } from "i18next";
 import ptBrTranslation from "./locales/pt-BR/translation.json";
 
@@ -12,6 +12,11 @@ const EXAMPLE_CSV = "example.csv";
 const TEST_INPUT = path.join(INPUT_DIR, "test.csv");
 const TEST_OUTPUT = path.join(OUTPUT_DIR, "test.csv");
 
+const OUT_CSV = path.join(__dirname, "../example.out.csv");
+
+const ITAU_SAMPLE = path.join(__dirname, "../itau-sample.csv");
+const ITAU_OUT = path.join(__dirname, "../itau-sample.out.csv");
+
 beforeAll(() => {
   if (!fs.existsSync(INPUT_DIR)) fs.mkdirSync(INPUT_DIR);
   if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR);
@@ -20,6 +25,9 @@ beforeAll(() => {
 afterAll(() => {
   if (fs.existsSync(TEST_INPUT)) fs.unlinkSync(TEST_INPUT);
   if (fs.existsSync(TEST_OUTPUT)) fs.unlinkSync(TEST_OUTPUT);
+  if (fs.existsSync(OUT_CSV)) fs.unlinkSync(OUT_CSV);
+  if (fs.existsSync(ITAU_SAMPLE)) fs.unlinkSync(ITAU_SAMPLE);
+  if (fs.existsSync(ITAU_OUT)) fs.unlinkSync(ITAU_OUT);
   // No cleanup needed for i18n instance
 });
 
@@ -126,5 +134,41 @@ describe("pt-BR translations", () => {
     expect(ptBrTranslation["Buy {{asset}} from {{counterparty}}"]).toBe(
       "Compra de {{asset}} de {{counterparty}}"
     );
+  });
+});
+
+describe("processCsvFile processor selection", () => {
+  it("should process with binance processor by default", () => {
+    processCsvFile(EXAMPLE_CSV, OUT_CSV, undefined, "binance");
+    const output = fs.readFileSync(OUT_CSV, "utf8");
+    expect(output).toContain("Order Number");
+    expect(output).toContain("Income");
+    expect(output).toContain("Expense");
+    // Clean up
+    fs.unlinkSync(OUT_CSV);
+  });
+
+  it("should process Itau CSV and extract only real transactions", () => {
+    processCsvFile(ITAU_SAMPLE, ITAU_OUT, undefined, "itau");
+    const output = fs.readFileSync(ITAU_OUT, "utf8");
+    // Should have only 3 real transactions
+    expect(output).toContain("Date,Description,Value");
+    expect(output).toContain("2025-04-01,UTILITY PAYMENT,-996.92");
+    expect(output).toContain("2025-04-07,PIX TRANSFER 05/04,-900.00");
+    expect(output).toContain("2025-04-07,INTEREST PAID,0.01");
+    // Should not contain balance lines
+    expect(output).not.toContain("SALDO");
+    expect(output).not.toContain("BALANCE");
+    // Clean up
+    fs.unlinkSync(ITAU_OUT);
+  });
+
+  it("should throw for itau processor if header is missing", () => {
+    const badFile = path.join(__dirname, "../itau-bad.csv");
+    fs.writeFileSync(badFile, "not a real header\nfoo;bar;baz", "latin1");
+    expect(() => processCsvFile(badFile, ITAU_OUT, undefined, "itau")).toThrow(
+      "No Itau data header found"
+    );
+    fs.unlinkSync(badFile);
   });
 });
