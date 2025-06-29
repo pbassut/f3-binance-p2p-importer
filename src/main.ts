@@ -13,15 +13,16 @@ const upload = multer({ dest: path.join(__dirname, "../uploads") });
 app.use(express.static(path.join(__dirname, "../frontend/dist")));
 
 function detectProcessorType(filePath: string): ProcessorType {
-  const firstLine = fs.readFileSync(filePath, "utf8").split(/\r?\n/)[0];
-  if (firstLine.includes("Order Number") && firstLine.includes("Order Type")) {
-    return "binance";
-  }
-  if (
-    firstLine.toLowerCase().includes("data;") ||
-    firstLine.toLowerCase().includes("lançamentos")
-  ) {
-    return "itau";
+  const lines = fs.readFileSync(filePath, "utf8").split(/\r?\n/).slice(0, 20);
+  for (const line of lines) {
+    const lower = line.toLowerCase();
+    if (lower.includes("order number") && lower.includes("order type")) {
+      return "binance";
+    }
+    // Itau: look for a header with 'data;' and 'valor (r$)' (semicolon-delimited)
+    if (lower.includes("data;") && lower.includes("valor (r$)")) {
+      return "itau";
+    }
   }
   return "binance"; // fallback
 }

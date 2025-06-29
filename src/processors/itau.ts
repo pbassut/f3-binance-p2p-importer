@@ -53,7 +53,9 @@ export function processCsvFile(
   const raw = fs.readFileSync(inputPath, "latin1");
   const lines = raw.split(/\r?\n/);
   // Find header line
-  const headerIdx = lines.findIndex((l) => l.toLowerCase().startsWith("data;"));
+  const headerIdx = lines.findIndex((l) =>
+    l.toLowerCase().startsWith("transactions;")
+  );
   if (headerIdx === -1) throw new Error("No Itau data header found");
   const dataLines = lines.slice(headerIdx + 1);
   const rows: OutputRow[] = [];

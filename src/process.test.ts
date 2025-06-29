@@ -14,8 +14,8 @@ const TEST_OUTPUT = path.join(OUTPUT_DIR, "test.csv");
 
 const OUT_CSV = path.join(__dirname, "../example.out.csv");
 
-const ITAU_SAMPLE = path.join(__dirname, "../itau-sample.csv");
-const ITAU_OUT = path.join(__dirname, "../itau-sample.out.csv");
+const ITAU_SAMPLE = path.join(__dirname, "../sample-csv/itau-sample.csv");
+const ITAU_OUT = path.join(__dirname, "../sample-csv/itau-sample.out.csv");
 
 beforeAll(() => {
   if (!fs.existsSync(INPUT_DIR)) fs.mkdirSync(INPUT_DIR);
@@ -26,8 +26,6 @@ afterAll(() => {
   if (fs.existsSync(TEST_INPUT)) fs.unlinkSync(TEST_INPUT);
   if (fs.existsSync(TEST_OUTPUT)) fs.unlinkSync(TEST_OUTPUT);
   if (fs.existsSync(OUT_CSV)) fs.unlinkSync(OUT_CSV);
-  if (fs.existsSync(ITAU_SAMPLE)) fs.unlinkSync(ITAU_SAMPLE);
-  if (fs.existsSync(ITAU_OUT)) fs.unlinkSync(ITAU_OUT);
   // No cleanup needed for i18n instance
 });
 
