@@ -66,7 +66,6 @@ app.post("/api/upload", upload.single("file"), async (req, res) => {
       /\/$/,
       ""
     )}/dataimporter/autoupload?secret=${encodeURIComponent(secret)}`;
-    console.log("posting to", url);
     const fireflyRes = await axios.post(url, formData, {
       headers: {
         ...formData.getHeaders(),
