@@ -61,8 +61,9 @@ app.post("/api/upload", upload.single("file"), async (req, res) => {
     const configPath = path.join(
       __dirname,
       "importer-configs",
-      "binance-p2p.json"
+      `${processorType}.json`
     );
+    console.log(`Using config file: ${configPath}`);
     // Prepare form data
     const formData = new FormData();
     formData.append("importable", fs.createReadStream(outputPath));

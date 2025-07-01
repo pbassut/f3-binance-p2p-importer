@@ -32,7 +32,7 @@ function isTransactionLine(line: string[]): boolean {
 }
 
 function parseValue(val: string): string {
-  // Convert -1.234,56 to -1234.56
+  // Convert -1.234,56 or 29,12 to -1234.56 or 29.12
   return val
     .replace(/\./g, "") // remove thousand sep
     .replace(",", ".");
@@ -50,11 +50,11 @@ export function processCsvFile(
   cb?: () => void
 ) {
   // Read as latin1, output as utf8
-  const raw = fs.readFileSync(inputPath, "latin1");
+  const raw = fs.readFileSync(inputPath, "utf8");
   const lines = raw.split(/\r?\n/);
   // Find header line
   const headerIdx = lines.findIndex((l) =>
-    l.toLowerCase().startsWith("transactions;")
+    l.toLowerCase().startsWith("lançamentos")
   );
   if (headerIdx === -1) throw new Error("No Itau data header found");
   const dataLines = lines.slice(headerIdx + 1);
