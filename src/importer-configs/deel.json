@@ -1,0 +1,5 @@
+{
+  "name": "Deel",
+  "description": "Deel transaction CSV processor",
+  "processor": "deel"
+}

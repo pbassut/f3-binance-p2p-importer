@@ -3,6 +3,7 @@ import i18next from "i18next";
 import path from "path";
 import * as binance from "./processors/binance";
 import * as itau from "./processors/itau";
+import * as deel from "./processors/deel";
 
 // --- i18next Initialization ---
 // Load translation files for English and Brazilian Portuguese
@@ -27,7 +28,7 @@ if (!i18next.isInitialized) {
   });
 }
 
-export type ProcessorType = "binance" | "itau";
+export type ProcessorType = "binance" | "itau" | "deel";
 
 export type InputRow = binance.InputRow;
 export type OutputRow = binance.OutputRow;
@@ -45,6 +46,8 @@ function getProcessor(type: ProcessorType = "binance"): Processor {
   switch (type) {
     case "itau":
       return itau;
+    case "deel":
+      return deel;
     case "binance":
     default:
       return binance;

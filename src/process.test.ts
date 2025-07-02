@@ -17,6 +17,9 @@ const OUT_CSV = path.join(__dirname, "../example.out.csv");
 const ITAU_SAMPLE = path.join(__dirname, "../sample-csv/itau-sample.csv");
 const ITAU_OUT = path.join(__dirname, "../sample-csv/itau-sample.out.csv");
 
+const DEEL_SAMPLE = path.join(__dirname, "../sample-csv/Deel Transactions.csv");
+const DEEL_OUT = path.join(__dirname, "../sample-csv/deel-test.out.csv");
+
 beforeAll(() => {
   if (!fs.existsSync(INPUT_DIR)) fs.mkdirSync(INPUT_DIR);
   if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR);
@@ -26,6 +29,7 @@ afterAll(() => {
   if (fs.existsSync(TEST_INPUT)) fs.unlinkSync(TEST_INPUT);
   if (fs.existsSync(TEST_OUTPUT)) fs.unlinkSync(TEST_OUTPUT);
   if (fs.existsSync(OUT_CSV)) fs.unlinkSync(OUT_CSV);
+  if (fs.existsSync(DEEL_OUT)) fs.unlinkSync(DEEL_OUT);
   // No cleanup needed for i18n instance
 });
 
@@ -168,5 +172,64 @@ describe("processCsvFile processor selection", () => {
       "No Itau data header found"
     );
     fs.unlinkSync(badFile);
+  });
+
+  it("should process Deel CSV with correct transaction types", () => {
+    processCsvFile(DEEL_SAMPLE, DEEL_OUT, undefined, "deel");
+    const output = fs.readFileSync(DEEL_OUT, "utf8");
+    const parsed = Papa.parse(output, { header: true, skipEmptyLines: true });
+    const rows = parsed.data as Record<string, string>[];
+    
+    // Should have correct headers
+    expect(output).toContain("Transaction ID");
+    expect(output).toContain("Description");
+    expect(output).toContain("Date Requested");
+    expect(output).toContain("Income");
+    expect(output).toContain("Expense");
+    
+    // Check that we have various transaction types
+    const descriptions = rows.map(r => r.Description);
+    expect(descriptions.some(d => d.includes("Payment from") || d.includes("Pagamento de"))).toBe(true);
+    expect(descriptions.some(d => d.includes("Withdrawal via") || d.includes("Saque via"))).toBe(true);
+    expect(descriptions.some(d => d.includes("Advance") || d.includes("antecipado") || d.includes("antecipação"))).toBe(true);
+    
+    // Check income/expense logic
+    const clientPayments = rows.filter(r => r.Description.includes("Payment from") || r.Description.includes("Pagamento de"));
+    const withdrawals = rows.filter(r => r.Description.includes("Withdrawal via") || r.Description.includes("Saque via"));
+    
+    // Client payments should be income when positive amount
+    for (const payment of clientPayments) {
+      const amount = parseFloat(payment.Amount || "0");
+      if (amount > 0) {
+        expect(payment.Income).toBe("true");
+        expect(payment.Expense).toBe("false");
+      }
+    }
+    
+    // Withdrawals should be expense when negative amount  
+    for (const withdrawal of withdrawals) {
+      const amount = parseFloat(withdrawal.Amount || "0");
+      if (amount < 0) {
+        expect(withdrawal.Income).toBe("false");
+        expect(withdrawal.Expense).toBe("true");
+      }
+    }
+    
+    // Clean up
+    fs.unlinkSync(DEEL_OUT);
+  });
+
+  it("should include transaction details in Notes field for Deel", () => {
+    processCsvFile(DEEL_SAMPLE, DEEL_OUT, undefined, "deel");
+    const output = fs.readFileSync(DEEL_OUT, "utf8");
+    const parsed = Papa.parse(output, { header: true, skipEmptyLines: true });
+    const rows = parsed.data as Record<string, string>[];
+    
+    // Notes should contain additional transaction details
+    const firstRow = rows[0];
+    expect(firstRow.Notes).toContain("Transaction Status:");
+    
+    // Clean up
+    fs.unlinkSync(DEEL_OUT);
   });
 });

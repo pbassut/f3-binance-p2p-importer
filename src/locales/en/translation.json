@@ -5,5 +5,10 @@
 	"Tax of {{asset}} from {{counterparty}}": "Tax of {{asset}} from {{counterparty}}",
 	"Tax of {{asset}} to {{counterparty}}": "Tax of {{asset}} to {{counterparty}}",
 	"Tax of {{asset}} with {{counterparty}}": "Tax of {{asset}} with {{counterparty}}",
+	"Payment from {{client}} for {{contract}}": "Payment from {{client}} for {{contract}}",
+	"Withdrawal via {{method}}": "Withdrawal via {{method}}",
+	"Advance payment": "Advance payment",
+	"Advance repayment": "Advance repayment",
+	"{{type}} transaction": "{{type}} transaction",
 	"{{key}}: {{value}}": "{{key}}: {{value}}"
 }

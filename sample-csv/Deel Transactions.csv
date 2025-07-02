@@ -1,0 +1,334 @@
+ID,Date Requested,Transaction Status,Transaction Type,Currency,Transaction Amount,Provider Fee,Amount Transferred,Currency Transferred,Client,Contract Name,Contract URL,Invoice URL,Withdraw Method,Withdraw Method Custom Name,Withdraw Account Holder Name,Trace ID,Trace ID Type,Transaction Statement URL
+7b534e8a-d607-4fd9-b1de-b9858e12dc24,2025-06-30 01:36:22,completed,client_payment,USD,6875.00,,,,John Doe (john@company.com),Jane Smith (Fixed),https://app.deel.com/contract/abc123,https://app.deel.com/invoice/4tgQ9PbAQMPFFg3rER2hh,,,,,,
+7a2210b7-ae57-456f-a1ba-e508d6a67adc,2025-06-13 01:18:44,completed,withdrawal,USD,-6875.00,0,37216.1,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/eb3f873a-7524-438d-9978-105f37955bec
+30dd5559-3318-4098-a4ac-95704c5b8b31,2025-06-13 01:18:44,completed,client_payment,USD,6875.00,,,,John Doe (john@company.com),Jane Smith (Fixed),https://app.deel.com/contract/abc123,https://app.deel.com/invoice/bf27fq5NRAHM4nTYrEpJp,,,,,,
+ca646b68-d5fb-4238-adba-602a2a8158ac,2025-05-30 01:41:53,completed,withdrawal,USD,-6875.00,0,38085.09,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/3f5d89b8-d57e-4960-9668-78f99b5729c8
+975bae31-cf8a-4fc2-a6f3-2802d53ad282,2025-05-30 01:41:53,completed,client_payment,USD,6875.00,,,,John Doe (john@company.com),Jane Smith (Fixed),https://app.deel.com/contract/abc123,https://app.deel.com/invoice/JpgpTA9t9FFKTf7pUEgku,,,,,,
+23d36c02-fd88-4a5d-aaff-b3642e808dd3,2025-05-15 01:16:50,completed,withdrawal,USD,-6875.00,0,37890.86,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/29d75497-19c7-4ec0-8a84-a444875bbb0c
+9a469130-6e4c-454c-8bcc-127d104cea39,2025-05-15 01:16:50,completed,client_payment,USD,6875.00,,,,John Doe (john@company.com),Jane Smith (Fixed),https://app.deel.com/contract/abc123,https://app.deel.com/invoice/f6qEBpundhu3utGe95EHG,,,,,,
+368e601b-1f47-41c7-9caf-d230dd5a14dd,2025-04-30 01:37:48,completed,withdrawal,USD,-343.75,0,1872.64,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/726a9401-d1ee-4e7e-9786-3e56480fa771
+88f4e024-2e74-43f7-a9c8-4781335ea39f,2025-04-30 01:37:48,completed,advance_repayment,USD,-6341.02,,,,,,,,,,,,,
+9e6b4bd0-7e28-4454-b032-453486678933,2025-04-30 01:37:48,completed,advance_repayment,USD,-190.23,,,,,,,,,,,,,
+be6da48f-109b-420e-9d93-f68be9894b39,2025-04-30 01:37:48,completed,client_payment,USD,6875.00,,,,John Doe (john@company.com),Jane Smith (Fixed),https://app.deel.com/contract/abc123,https://app.deel.com/invoice/7jmDQQJ5Y68ay6KYBtQJH,,,,,,
+e7fd0cb4-e02e-4e9a-8815-b361f6fc2578,2025-04-15 08:33:14,completed,withdrawal,USD,-6341.02,0,36302.81,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/a0564a59-528e-440b-b796-f7e4344e4260
+174aaeef-a51d-49ed-a1e8-6817d27ff5f3,2025-04-15 08:32:56,completed,advance,USD,6341.02,,,,,,,,,,,,,
+1f0c1e3b-d17a-4c4a-b31d-d879b457bad8,2025-04-15 01:14:13,completed,withdrawal,USD,-343.75,0,1950.8,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/b278b64f-2729-46b5-a27b-73f9d38b7465
+cd746ade-25e4-4f83-b70e-9872b3627dcb,2025-04-15 01:14:13,completed,advance_repayment,USD,-6341.02,,,,,,,,,,,,,
+15f8c6db-68af-40a1-ab13-c292d1321b13,2025-04-15 01:14:13,completed,advance_repayment,USD,-190.23,,,,,,,,,,,,,
+9ab87431-0249-4730-b810-75ecc756141e,2025-04-15 01:14:13,completed,client_payment,USD,6875.00,,,,John Doe (john@company.com),Jane Smith (Fixed),https://app.deel.com/contract/abc123,https://app.deel.com/invoice/H3B48DDgQ3PRyGUDAUuUE,,,,,,
+1f42ea83-6e77-4499-93c5-842571fc0bc2,2025-03-31 10:31:41,completed,withdrawal,USD,-6341.02,0,35627.18,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/584c01ba-de51-47d0-8400-599761a92da3
+fad83428-c1e0-4f3f-a787-859db6981352,2025-03-31 10:31:20,completed,advance,USD,6341.02,,,,,,,,,,,,,
+38512bfe-b22c-4838-a123-0385cfd770a5,2025-03-31 01:37:16,completed,withdrawal,USD,-343.75,0,1918.85,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/5da0c1d7-97e5-42b1-8fa0-1c369945e540
+936dc292-7a4c-40c7-8559-e0a079b0d49b,2025-03-31 01:37:15,completed,advance_repayment,USD,-6341.02,,,,,,,,,,,,,
+9ef5b00b-1198-430d-b1ac-e3810dde08d7,2025-03-31 01:37:15,completed,advance_repayment,USD,-190.23,,,,,,,,,,,,,
+5f455d41-fdf8-4622-a1a6-833c6c73db1f,2025-03-31 01:37:15,completed,client_payment,USD,6875.00,,,,John Doe (john@company.com),Jane Smith (Fixed),https://app.deel.com/contract/abc123,https://app.deel.com/invoice/9BMu5uGTUphTnGKP5qYQu,,,,,,
+4e264e0a-e3da-4fec-93a7-13de2fcdd298,2025-03-14 06:38:32,completed,withdrawal,USD,-6341.02,0,35614.16,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/7c1854cc-551d-48a9-b5ea-a76102caafea
+3a40abae-e4d3-44f1-bb40-8580573f1935,2025-03-14 06:38:10,completed,advance,USD,6341.02,,,,,,,,,,,,,
+03919ac7-9345-404c-ba1f-2737747cec67,2025-03-14 01:18:19,completed,withdrawal,USD,-343.75,0,1932.31,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/18fd5248-67c7-4a12-a569-84c4c9cfc328
+76e7f05c-af12-4963-a545-ba4b39caa795,2025-03-14 01:18:18,completed,advance_repayment,USD,-6341.02,,,,,,,,,,,,,
+66d37322-2490-44dd-ba8f-8a160c5c7e0c,2025-03-14 01:18:18,completed,advance_repayment,USD,-190.23,,,,,,,,,,,,,
+12941fa8-4b8e-4491-941b-052be92641f6,2025-03-14 01:18:18,completed,client_payment,USD,6875.00,,,,John Doe (john@company.com),Jane Smith (Fixed),https://app.deel.com/contract/abc123,https://app.deel.com/invoice/Gt4mpp9hJ5GEapP42EYpm,,,,,,
+035f2eab-6145-42d9-8f72-2fc1144bafc8,2025-03-04 04:31:14,completed,withdrawal,USD,-6341.02,0,36480.71,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/3371d75b-f906-4a90-9bd8-c7c9bed433a7
+a21522de-2c84-4f4d-a7f8-959418d8b5d9,2025-03-04 04:30:27,completed,advance,USD,6341.02,,,,,,,,,,,,,
+e5b15960-d809-461a-9473-a58bb01d3160,2025-03-02 11:04:55,completed,withdrawal,USD,-79.00,0,437.05,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/9922f041-f873-42c6-baeb-925b6b987f76
+bf62cc74-371f-4bf6-a314-95339347301b,2025-03-02 11:04:28,completed,withdrawal,USD,-6796.00,0,39099.6,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/b72abac4-0c89-4354-8498-d508e76963f0
+2449b6ba-2322-424f-9574-edcde354dd4d,2025-02-28 03:38:08,completed,client_payment,USD,6875.00,,,,John Doe (john@company.com),Jane Smith (Fixed),https://app.deel.com/contract/abc123,https://app.deel.com/invoice/jfRUbEHhqKMt7fBUfT9FH,,,,,,
+623d3fa5-7c5f-4fe7-a802-894207b6b961,2025-02-15 08:29:48,completed,withdrawal,USD,-343.75,0,1900.69,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/26b6daf5-2234-40c9-a80b-70ada5ff00ae
+2c088f55-72f2-43cc-8d40-2fd74aed2acf,2025-02-14 03:11:24,completed,advance_repayment,USD,-6341.02,,,,,,,,,,,,,
+9a5c1f78-69bb-4b1b-8693-6bb2c5a54531,2025-02-14 03:11:24,completed,advance_repayment,USD,-190.23,,,,,,,,,,,,,
+c266b63f-5bb2-46ac-a5d5-196cdd5eaa42,2025-02-14 03:11:24,completed,client_payment,USD,6875.00,,,,John Doe (john@company.com),Jane Smith (Fixed),https://app.deel.com/contract/abc123,https://app.deel.com/invoice/Pp6Gk6a7nkAAA74PnHbmR,,,,,,
+8fe158f9-279c-44b4-b82f-1150becba67d,2025-02-06 08:16:54,completed,withdrawal,USD,-6341.02,0,35717.05,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/83a9173c-c0c9-4601-8b09-34d29c7bb321
+1c834f43-9e85-438c-896d-1718154bc007,2025-02-06 08:16:05,completed,advance,USD,6341.02,,,,,,,,,,,,,
+bd4e3e78-ad1a-414d-811c-cde86e537bb6,2025-02-01 11:33:02,completed,withdrawal,USD,-28.00,0,142.42,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/e8bc1315-18fe-48b1-b8ae-b7487d58f337
+e6cd8b3e-190b-4c8f-9c3c-c3dd97a24dc4,2025-02-01 11:32:29,completed,withdrawal,USD,-6847.00,0,39099.26,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/567574b2-1cd6-4c01-a0ea-18e535dc205c
+2ed561a5-ef69-483c-a103-b1e6c641d265,2025-01-31 03:12:59,completed,client_payment,USD,6875.00,,,,John Doe (john@company.com),Jane Smith (Fixed),https://app.deel.com/contract/abc123,https://app.deel.com/invoice/knAyF4N2DHbnKbh9FknYF,,,,,,
+93b984b1-dc2d-40b7-b8db-7d5f4b3f719d,2025-01-15 10:21:10,completed,withdrawal,USD,-275.00,0,1610.43,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/f3600d28-875d-4a88-bc6a-9c2885c61732
+fa0e25f0-3559-410a-8544-1829e7ac46bb,2025-01-15 10:20:43,completed,withdrawal,USD,-6600.00,0,39069.52,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/e96bed7f-bab3-4044-8ad8-c42f13a809eb
+f3b28283-415c-4922-8972-cb2a0a8042e1,2025-01-15 03:08:10,completed,client_payment,USD,6875.00,,,,John Doe (john@company.com),Jane Smith (Fixed),https://app.deel.com/contract/abc123,https://app.deel.com/invoice/p6T7P7MAYn8hPethMfDYG,,,,,,
+1567e26b-69ca-4b86-bcda-ad01065cd1d0,2025-01-03 11:23:43,completed,withdrawal,USD,-343.75,0,2048.46,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/b8e8af1d-ed4f-4ae3-98e3-6077f0d0dca8
+105af166-e536-4679-a792-7aeedaf67b3c,2024-12-31 03:03:26,completed,advance_repayment,USD,-6341.02,,,,,,,,,,,,,
+72b25eae-8a6c-4975-96d1-0d65216ee2d0,2024-12-31 03:03:26,completed,advance_repayment,USD,-190.23,,,,,,,,,,,,,
+df0c87ae-f69a-473d-b394-67e0bbd7c95a,2024-12-31 03:03:26,completed,client_payment,USD,6875.00,,,,John Doe (john@company.com),Jane Smith (Fixed),https://app.deel.com/contract/abc123,https://app.deel.com/invoice/JFqg3hmTM6BDaydkp9BY5,,,,,,
+486c8df9-aac2-4daa-bc39-0c5fa1cfab50,2024-12-19 09:09:22,completed,withdrawal,USD,-6341.02,0,38139.43,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/c7dcf30c-c601-4f70-be99-9f549c4c67ed
+fa904ed6-1394-493a-a939-25dd9d1af410,2024-12-19 09:08:48,completed,advance,USD,6341.02,,,,,,,,,,,,,
+9e5fa676-315c-4066-a227-3a7ce21ca065,2024-12-15 08:16:37,completed,withdrawal,USD,-343.75,0,2014.54,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/8535181c-f214-4c03-a8e6-3a84c89a4e16
+51107a51-969d-46f0-ba33-f40dc52986e2,2024-12-13 03:08:17,completed,advance_repayment,USD,-6341.02,,,,,,,,,,,,,
+26b487f9-8754-4d17-8111-c5c6b94b0574,2024-12-13 03:08:17,completed,advance_repayment,USD,-190.23,,,,,,,,,,,,,
+cbff13bc-e9f9-4b43-9add-725958a28867,2024-12-13 03:08:17,completed,client_payment,USD,6875.00,,,,John Doe (john@company.com),Jane Smith (Fixed),https://app.deel.com/contract/abc123,https://app.deel.com/invoice/rRR2ay97j4M8gKKKaQEnd,,,,,,
+37c666ef-4cbf-4658-83d8-9383439cbd56,2024-12-09 01:00:45,completed,withdrawal,USD,-6341.02,0,37608.22,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/a52b6d61-8216-415a-8289-cbd90f5acaef
+1aad4663-2527-487f-b6b5-dc7a362fcf2b,2024-12-09 01:00:27,completed,advance,USD,6341.02,,,,,,,,,,,,,
+a81f6c54-9cb6-48b9-9880-1f27542ca66b,2024-12-04 02:22:51,completed,withdrawal,USD,-258.00,0,1504.3,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/1b3232ea-a964-42e8-842a-3ff5c7d472e1
+aae81fe1-5c3c-4f60-9861-37dea47c36d8,2024-12-03 07:01:45,completed,withdrawal,USD,-6617.00,0,39098.36,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/80e9ab10-9bc4-4616-a36a-c89c97e81476
+4d107f49-0318-4a9c-9eca-74c7365b45bd,2024-12-03 11:53:21,completed,client_payment,USD,6875.00,,,,John Doe (john@company.com),Jane Smith (Fixed),https://app.deel.com/contract/abc123,https://app.deel.com/invoice/pj3H9U7UfHPdurmBPnnbu,,,,,,
+dfe9dedd-cce6-40d0-8374-e37e2f43ea66,2024-11-15 03:07:30,completed,withdrawal,USD,-6875.00,0,38909.72,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/a1a71786-25a2-4a47-933d-d3fe14210088
+6fa1aa05-3b71-4c97-ad49-c6ff56b99e81,2024-11-15 03:07:29,completed,client_payment,USD,6875.00,,,,John Doe (john@company.com),Jane Smith (Fixed),https://app.deel.com/contract/abc123,https://app.deel.com/invoice/AR8mPFbYkbhHdJUtg2pHY,,,,,,
+fc92d0e6-f445-47fd-ac17-a0f045c410b3,2024-10-31 01:09:12,completed,withdrawal,USD,-6875.00,0,38730.95,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/b4b3fda6-74d7-48a7-bf3e-642704b844c4
+ad014e6f-4fe8-4329-bfdc-c3580e16c8e7,2024-10-31 01:09:11,completed,client_payment,USD,6875.00,,,,John Doe (john@company.com),Jane Smith (Fixed),https://app.deel.com/contract/abc123,https://app.deel.com/invoice/nyTr5FT2h7Q6RthqnMAug,,,,,,
+0c35ced9-ddd1-4ca3-bb56-a16f39123f6e,2024-10-15 01:06:51,completed,withdrawal,USD,-6875.00,0,37610.61,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/f8f738bb-0a16-433b-8494-68e118e4e2ce
+82376277-6e09-4b05-99ca-d68f1be326f4,2024-10-15 01:06:51,completed,client_payment,USD,6875.00,,,,John Doe (john@company.com),Jane Smith (Fixed),https://app.deel.com/contract/abc123,https://app.deel.com/invoice/Km6HTNq8kFna95KEm3ype,,,,,,
+923b0ec2-24eb-47e4-b65a-fbd58271c8fe,2024-09-30 01:07:58,completed,withdrawal,USD,-6875.00,0,36525.21,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/4c1edd01-9ea8-497b-9a68-ff2a4b4b4730
+747e8ed6-344f-449c-91f2-4d4600a537ae,2024-09-30 01:07:58,completed,client_payment,USD,6875.00,,,,John Doe (john@company.com),Jane Smith (Fixed),https://app.deel.com/contract/abc123,https://app.deel.com/invoice/QdjQfjDRKPYj7At8kAHk2,,,,,,
+e9559b95-6fb7-4d05-bb7f-8d020ec72a75,2024-09-13 01:06:48,completed,withdrawal,USD,-6875.00,0,37821.91,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/54c9f2f4-e3cf-46c6-8c98-f35d01de4996
+fef34e0b-e038-4e71-88b3-b901c5af3f03,2024-09-13 01:06:47,completed,client_payment,USD,6875.00,,,,John Doe (john@company.com),Jane Smith (Fixed),https://app.deel.com/contract/abc123,https://app.deel.com/invoice/JRkThD9nGDkJMryaernEA,,,,,,
+0e16e389-da80-420a-9616-113b52d3f028,2024-08-30 01:08:16,completed,withdrawal,USD,-6875.00,0,37833.62,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/e0e7f657-cf63-4ac4-8b14-78fa14577087
+554a0c93-7cdd-46b9-8b1c-62e6e465d3d0,2024-08-30 01:08:16,completed,client_payment,USD,6875.00,,,,John Doe (john@company.com),Jane Smith (Fixed),https://app.deel.com/contract/abc123,https://app.deel.com/invoice/pHjy2PtNArB529hD27G4a,,,,,,
+72512771-abf0-45aa-8e21-d0802aa610d6,2024-08-15 03:30:40,completed,withdrawal,USD,-6875.00,0,36909.49,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/a7ec419b-d4f5-4b45-a8e7-54a95575dc43
+c37c820e-a111-4b0d-945a-db0e10fb6c3a,2024-08-15 03:30:40,completed,client_payment,USD,6875.00,,,,John Doe (john@company.com),Jane Smith (Fixed),https://app.deel.com/contract/abc123,https://app.deel.com/invoice/khrMTGm2pD25m98H88jNJ,,,,,,
+cdca3d4c-3895-4c23-8681-1981b0f97b6f,2024-07-31 01:05:16,completed,withdrawal,USD,-6875.00,0,37719.66,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/8e2623e7-3846-4b6d-b7c1-d2666820f040
+56fa9862-4ebd-452e-878c-1455bd89cf8d,2024-07-31 01:05:15,completed,client_payment,USD,6875.00,,,,John Doe (john@company.com),Jane Smith (Fixed),https://app.deel.com/contract/abc123,https://app.deel.com/invoice/64pfRmmpqPehBe57Q45M4,,,,,,
+7a207cd4-6796-4f6b-8383-8fc8346cf86d,2024-07-15 01:03:40,completed,withdrawal,USD,-343.75,0,1807.58,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/861b85c7-c517-45ce-b711-522252cf9af0
+bf905924-1d55-4011-8b9a-2aa168237127,2024-07-15 01:03:39,completed,advance_repayment,USD,-6341.02,,,,,,,,,,,,,
+f60b2355-4dcb-4ed6-9ce9-f90fefcf19d8,2024-07-15 01:03:39,completed,advance_repayment,USD,-190.23,,,,,,,,,,,,,
+7afc7d1a-691d-4d23-82dd-6da6910d9ffc,2024-07-15 01:03:39,completed,client_payment,USD,6875.00,,,,John Doe (john@company.com),Jane Smith (Fixed),https://app.deel.com/contract/abc123,https://app.deel.com/invoice/Y7Ge5J45MyH7EPEKtkAUE,,,,,,
+26460ecc-97b3-459c-925f-403cfd4ee93f,2024-07-05 10:24:35,completed,withdrawal,BRL,-34873.24,0,34873.24,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/fc9e4060-8a13-45ec-bc7e-ed0bf563dde9
+22636ab6-7304-46a8-a4b5-bc0737241d5a,2024-07-05 10:24:21,completed,advance,BRL,34873.24,,,,,,,,,,,,,
+0b0eaa92-2eaf-4f4a-96c3-be4377c7d4c8,2024-06-28 01:05:15,completed,withdrawal,USD,-6875.00,0,36979.75,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/5e788581-78d1-47d3-9a47-972dca15b707
+05442212-fcad-4c99-8b3a-513e47600573,2024-06-28 01:05:14,completed,client_payment,USD,6875.00,,,,John Doe (john@company.com),Jane Smith (Fixed),https://app.deel.com/contract/abc123,https://app.deel.com/invoice/Dku3MyF67YpmKbppj6uKh,,,,,,
+1fce6fab-5954-42bc-b397-249fb303f151,2024-06-14 01:04:06,completed,withdrawal,USD,-6875.00,0,36044.12,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/1b12dc91-c6dc-4f02-9f9a-f7f49aea863d
+ae6fe5d1-24de-440a-b88e-de3c45e80072,2024-06-14 01:04:05,completed,client_payment,USD,6875.00,,,,John Doe (john@company.com),Jane Smith (Fixed),https://app.deel.com/contract/abc123,https://app.deel.com/invoice/GPJkEGNUMYpKfqKgJpjR5,,,,,,
+5f153efa-e6a6-42f0-8460-b37bb860f4ce,2024-05-31 01:05:31,completed,withdrawal,USD,-6875.00,0,34957.46,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/46ab02b2-c02b-4e91-bccf-6b2bb19f6a47
+bcdfd164-7b00-4a69-87f7-112b1e45113e,2024-05-31 01:05:30,completed,client_payment,USD,6875.00,,,,John Doe (john@company.com),Jane Smith (Fixed),https://app.deel.com/contract/abc123,https://app.deel.com/invoice/8mn4fY4A7GMAH2KeGUAuA,,,,,,
+3eb73bcd-6e04-45ef-bddb-801de6bd5f94,2024-05-15 01:04:23,completed,withdrawal,USD,-344.80,0,1716.16,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/54ce8981-ad00-4763-9186-9e336e366bb6
+495578bb-d691-4c77-b013-961dc5d84006,2024-05-15 01:04:22,completed,advance_repayment,USD,-6340.00,,,,,,,,,,,,,
+ea84e687-839b-4cf0-a637-aa1b4c7e34e7,2024-05-15 01:04:22,completed,advance_repayment,USD,-190.20,,,,,,,,,,,,,
+81a79206-76ac-4998-ab70-0057bf3d7178,2024-05-15 01:04:22,completed,client_payment,USD,6875.00,,,,John Doe (john@company.com),Jane Smith (Fixed),https://app.deel.com/contract/abc123,https://app.deel.com/invoice/2JpJ4na25M4AdmJaqUUtr,,,,,,
+e7cd8530-67e5-4b9b-b60a-941c33a01362,2024-05-01 02:55:47,completed,withdrawal,USD,-6340.00,0,32196.11,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/ec4aa3c2-6f4f-41c6-b94c-0e6c24c73ac4
+124281e4-d2c4-4670-9456-ba299439ab43,2024-05-01 02:54:08,completed,advance,USD,6340.00,,,,,,,,,,,,,
+d7467dd6-a26b-4b8d-978a-f424e26c15eb,2024-04-30 01:06:08,completed,withdrawal,USD,-6875.00,0,34390.57,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/6e7fd008-30cb-45dc-ad4e-e03b219bbfde
+e202cb29-0c1c-4a96-bd2f-19304beaf709,2024-04-30 01:06:08,completed,client_payment,USD,6875.00,,,,John Doe (john@company.com),Jane Smith (Fixed),https://app.deel.com/contract/abc123,https://app.deel.com/invoice/B5emndnn4aA8FjJnUpApm,,,,,,
+bb75ede3-c6f4-4ccc-9341-35f018ad4d5a,2024-04-15 01:05:08,completed,withdrawal,USD,-6875.00,0,34400.96,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/1ef1b18b-69d5-452f-a03a-7f536e3b4f2c
+6ac07b3c-7899-4b8f-9398-bebef00959de,2024-04-15 01:05:08,completed,client_payment,USD,6875.00,,,,John Doe (john@company.com),Jane Smith (Fixed),https://app.deel.com/contract/abc123,https://app.deel.com/invoice/Qyp6jdqkrGFMad2y5MgHd,,,,,,
+b9b6c328-b03b-42e7-8f96-28c06ed8a0d7,2024-04-02 03:42:08,completed,withdrawal,USD,-3476.00,0,17175.01,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/34eb1809-c8a4-4579-830a-241a8127ac85
+caa21099-9c9b-4bcc-a36b-7f39365b64d8,2024-03-28 02:05:06,failure,withdrawal,USD,-3476.00,,,,,,,,bank_transfer,,Jane Smith,,,
+8e937ed2-d256-418c-9d3d-6d9462b48209,2024-03-28 02:05:06,completed,advance_repayment,USD,-500.00,,,,,,,,,,,,,
+f7008a4a-7c8a-4774-b0e6-c5f917f68d41,2024-03-28 02:05:06,completed,advance_repayment,USD,-15.00,,,,,,,,,,,,,
+3a49521e-e41f-4dab-b76c-b9eda7d5144e,2024-03-28 02:05:05,completed,advance_repayment,USD,-800.00,,,,,,,,,,,,,
+eb2b180b-57fa-4071-b4d6-79a02148de1a,2024-03-28 02:05:05,completed,advance_repayment,USD,-24.00,,,,,,,,,,,,,
+7b7a46c5-7ba1-44f7-94a4-80325837a076,2024-03-28 02:05:05,completed,advance_repayment,USD,-2000.00,,,,,,,,,,,,,
+4c46a6d5-c7ec-40ad-9b64-1beb13fbe647,2024-03-28 02:05:05,completed,advance_repayment,USD,-60.00,,,,,,,,,,,,,
+f5215778-e6ec-4be0-b7d0-8ba9fbf1b63e,2024-03-28 02:05:05,completed,client_payment,USD,6875.00,,,,John Doe (john@company.com),Jane Smith (Fixed),https://app.deel.com/contract/abc123,https://app.deel.com/invoice/BMUdJNyPju24Ed68h8nFK,,,,,,
+9df1b08b-b1ca-4e27-ab0a-995a2eea18f9,2024-03-21 10:08:00,completed,withdrawal,USD,-500.00,0,2417.65,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/5eb96fe2-e95a-4005-a728-7832ddb1d9b0
+3a8518ff-403e-4dfb-ae2c-0f0d446c7fc9,2024-03-21 10:07:34,completed,advance,USD,500.00,,,,,,,,,,,,,
+00b633a6-7843-4b88-b3e0-866b4d0ae35d,2024-03-20 10:55:54,completed,withdrawal,USD,-800.00,0,3909.56,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/bb6e3111-e426-4bf0-a460-035047cda980
+40e675fd-5dd9-40ba-a5d6-9771921fc9bd,2024-03-20 10:55:24,completed,advance,USD,800.00,,,,,,,,,,,,,
+97a3c778-0c80-492c-a9c2-e7c932342294,2024-03-15 12:31:35,completed,withdrawal,USD,-2000.00,0,9746.48,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/aa657db6-64b6-44f1-aa42-6c0d4d3b9fd2
+429d2a85-3614-462c-8aba-ca58d99cea2e,2024-03-15 12:31:20,completed,advance,USD,2000.00,,,,,,,,,,,,,
+19d3c22c-55df-41ff-9e40-c26a82dd219f,2024-03-15 01:04:35,completed,withdrawal,USD,-343.75,0,1664.54,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/573daf81-8380-4854-bab7-d9a92268fb29
+3b662a14-4e39-4e90-95ed-74efca57a7b4,2024-03-15 01:04:34,completed,advance_repayment,USD,-6341.02,,,,,,,,,,,,,
+603c9ffb-c5ac-42de-aa0f-0a7031d7a71b,2024-03-15 01:04:34,completed,advance_repayment,USD,-190.23,,,,,,,,,,,,,
+4d160eae-92f5-428b-b7b9-fac4bbf0f4f0,2024-03-15 01:04:34,completed,client_payment,USD,6875.00,,,,John Doe (john@company.com),Jane Smith (Fixed),https://app.deel.com/contract/abc123,https://app.deel.com/invoice/Q5kqJYf86EaF6P3pdNr4Q,,,,,,
+1e4317e7-7981-4a70-a001-e80486be54e2,2024-03-07 06:08:21,completed,withdrawal,USD,-6341.02,0,30588.09,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/dc4a7eb6-8709-4ea6-9433-af8ab242edb7
+8f4c6295-e090-4f73-8fa1-ec79c5965512,2024-03-07 06:08:09,completed,advance,USD,6341.02,,,,,,,,,,,,,
+015cfd60-cf80-4ba0-b8ab-7caac12371fd,2024-02-29 10:52:23,completed,withdrawal,USD,-5845.00,0,28516.8,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/e60740e2-46fe-490f-a8f8-93311b3ecdc7
+bdb6b3f7-c86a-4d84-90fd-0654ff1925a6,2024-02-29 03:04:46,completed,advance_repayment,USD,-500.00,,,,,,,,,,,,,
+47dbbc9f-2214-424a-a19e-fecb812968b7,2024-02-29 03:04:46,completed,advance_repayment,USD,-15.00,,,,,,,,,,,,,
+a62a3d46-54e4-4a3d-a455-caa7219b7e11,2024-02-29 03:04:46,completed,advance_repayment,USD,-500.00,,,,,,,,,,,,,
+9e79b47d-2b4c-4260-a121-962ce2ee92bb,2024-02-29 03:04:46,completed,advance_repayment,USD,-15.00,,,,,,,,,,,,,
+479db273-8b33-47a0-b0a8-16b0d7ed1a6b,2024-02-29 03:04:46,completed,client_payment,USD,6875.00,,,,John Doe (john@company.com),Jane Smith (Fixed),https://app.deel.com/contract/abc123,https://app.deel.com/invoice/JAA9Qg6NeeugANjuYYRbG,,,,,,
+3a32e2bc-7948-4f08-b902-4954619b652c,2024-02-26 06:38:58,completed,withdrawal,USD,-500.00,0,2420.66,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/f62dbd2a-f052-4f14-9270-a6e9186c2445
+78c9da1a-f022-421b-8405-ab14affbe9b5,2024-02-26 06:38:30,completed,advance,USD,500.00,,,,,,,,,,,,,
+448afb07-1c35-4574-b951-a4bd6ab3901b,2024-02-26 10:55:33,completed,withdrawal,USD,-500.00,0,2427.43,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/798dc36b-4341-4c90-abf2-3cb58fd21f06
+0b132fe2-b95c-446b-9c52-3fdde3dc28de,2024-02-26 10:55:10,completed,advance,USD,500.00,,,,,,,,,,,,,
+31aaf632-1abe-4dcc-8aa9-c13fed44f54a,2024-02-15 09:42:19,completed,withdrawal,USD,-6875.00,0,33355.45,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/9eaedb01-aa28-40f0-bf10-7f298c7c3b80
+51c18c2a-5df5-45e0-b212-a8f3140e7ad7,2024-02-15 03:02:50,completed,client_payment,USD,6875.00,,,,John Doe (john@company.com),Jane Smith (Fixed),https://app.deel.com/contract/abc123,https://app.deel.com/invoice/K67kmYBRnPQgBu5aygH8E,,,,,,
+0b21a6de-e7bf-407b-befd-acc2f3ca6527,2024-01-31 02:13:24,completed,withdrawal,USD,-6875.00,0,33212.74,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/f24002c2-889a-420f-8408-06a9883dfc05
+2f370675-3000-4bce-9916-c2d2a4087913,2024-01-31 03:03:52,completed,client_payment,USD,6875.00,,,,John Doe (john@company.com),Jane Smith (Fixed),https://app.deel.com/contract/abc123,https://app.deel.com/invoice/bRJn8fGkT7am8uhnM85bR,,,,,,
+2bf05d9b-c5d8-4e30-a5f1-be7e75341328,2024-01-15 11:26:00,completed,withdrawal,USD,-5845.00,0,27847.77,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/bb91359c-ae97-4f93-b280-9378b1cd178e
+09e4e008-8c66-4af1-87b7-0221ceb51d96,2024-01-15 03:02:26,completed,advance_repayment,USD,-1000.00,,,,,,,,,,,,,
+af96a0cf-c435-4db6-b881-d20dafc73b67,2024-01-15 03:02:26,completed,advance_repayment,USD,-30.00,,,,,,,,,,,,,
+97471ee1-5429-46b7-b7da-c1efb1220701,2024-01-15 03:02:26,completed,client_payment,USD,6875.00,,,,John Doe (john@company.com),Jane Smith (Fixed),https://app.deel.com/contract/abc123,https://app.deel.com/invoice/KE595rnrkHBkGJnj3MRtB,,,,,,
+86f28d51-02c2-43ba-b65a-acc9257b5f4c,2024-01-08 05:56:13,completed,withdrawal,USD,-1000.00,0,4751.92,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/0c20a494-fb4e-49ce-a429-10076da6b895
+b2f6866d-acf9-4f32-a8e1-31bca36b2d2e,2024-01-08 05:55:48,completed,advance,USD,1000.00,,,,,,,,,,,,,
+1497f582-e903-463e-998a-7561ab10ff0f,2024-01-01 02:26:44,completed,withdrawal,USD,-4248.50,0,20148.11,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/42c95a1e-9a24-48ea-8971-ac129f18e491
+178d4ca1-56bb-4b16-b7da-ac65acb09784,2023-12-24 11:00:54,completed,advance_repayment,USD,-1000.00,,,,,,,,,,,,,
+1ee495b7-1f6d-4489-8732-b1d016f9e0a5,2023-12-24 11:00:54,completed,advance_repayment,USD,-30.00,,,,,,,,,,,,,
+02ee337e-5e69-442e-939b-e98da2bf1d7a,2023-12-24 11:00:54,completed,advance_repayment,USD,-1550.00,,,,,,,,,,,,,
+b7783626-8892-433e-9bb6-049aa8ece620,2023-12-24 11:00:54,completed,advance_repayment,USD,-46.50,,,,,,,,,,,,,
+7c069e2f-689a-432e-8e38-bc23b82760f5,2023-12-24 11:00:53,completed,client_payment,USD,6875.00,,,,John Doe (john@company.com),Jane Smith (Fixed),https://app.deel.com/contract/abc123,https://app.deel.com/invoice/QxbDEkMI1JaDl2ZbKk95t,,,,,,
+c91f0583-6843-43b3-8ccf-0a1550dc6e0a,2023-12-21 10:57:13,completed,withdrawal,USD,-1000.00,0,4760.54,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/e681f52b-fe3c-4bc9-868d-700838800ed2
+0a76a065-0eef-4411-8e91-99676705d41c,2023-12-21 10:56:44,completed,advance,USD,1000.00,,,,,,,,,,,,,
+d487046d-3c4f-494c-8525-59e289713b4b,2023-12-19 03:24:21,completed,withdrawal,USD,-1550.00,0,7355.29,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/d5f53de1-6c91-48c1-80da-bb033a19bc7a
+86ccf664-0cf8-4809-9709-375765c4f30d,2023-12-19 03:23:46,completed,advance,USD,1550.00,,,,,,,,,,,,,
+981b0939-a65c-40e7-a9dc-bdb7aa6a883c,2023-12-11 04:20:18,completed,withdrawal,USD,-6860.00,0,33082.21,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/75bfd706-59ab-4aa0-9cfd-15d329b045ae
+30bb3c9a-95b9-48fe-8681-19ffa55ee5ec,2023-12-11 04:20:18,completed,client_payment,USD,6875.00,,,,John Doe (john@company.com),Jane Smith (Fixed),https://app.deel.com/contract/abc123,https://app.deel.com/invoice/RkOOnTgtzY42DStoZ-74J,,,,,,
+ec974e92-17b5-46c9-8d9d-1746d1a3a70f,2023-11-27 11:41:09,completed,withdrawal,USD,-6860.00,0,32842.39,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/b12b18a1-62fb-451a-bf0b-7d74e3cad967
+f8d09033-ad13-4abb-8a3b-a24dc9211e11,2023-11-27 11:41:08,completed,client_payment,USD,6875.00,,,,John Doe (john@company.com),Jane Smith (Fixed),https://app.deel.com/contract/abc123,https://app.deel.com/invoice/-_bBs5qSJLygIhFpu4std,,,,,,
+a5ecc3f2-b969-499e-9ec5-2b911a1318e1,2023-11-15 04:07:51,completed,withdrawal,USD,-6875.00,0,32734.13,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/c216cf85-2705-4b09-9027-d37175359702
+ac9a1525-75e2-49d8-a962-b7a58fa67ad2,2023-11-15 03:03:17,completed,client_payment,USD,6875.00,,,,John Doe (john@company.com),Jane Smith (Fixed),https://app.deel.com/contract/abc123,https://app.deel.com/invoice/9jU5Ofdvhrj2aUJr2KypY,,,,,,
+5e54852b-da36-4074-8e02-fa51fdae7e41,2023-10-31 01:33:00,completed,withdrawal,USD,-6875.00,0,33957.42,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/716ca8e2-da7a-437e-83dd-af9469eb0956
+cad3ad2a-e529-4f08-a922-5a79f4e5aa2f,2023-10-31 01:06:29,completed,client_payment,USD,6875.00,,,,John Doe (john@company.com),Jane Smith (Fixed),https://app.deel.com/contract/abc123,https://app.deel.com/invoice/5JIu4WREFmkv-LQtM8ZD6,,,,,,
+c57b0ac0-9498-4c42-a53f-a713dc6de5c0,2023-10-13 02:09:46,completed,withdrawal,USD,-6875.00,0,33994.34,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/848cbec8-16e8-4dfd-95c6-bfee7f636a16
+5ccda796-80fa-4618-8195-73ae3996f6c5,2023-10-13 01:05:47,completed,client_payment,USD,6875.00,,,,John Doe (john@company.com),Jane Smith (Fixed),https://app.deel.com/contract/abc123,https://app.deel.com/invoice/udlIeQflk42jVCEe-I3cZ,,,,,,
+47a93624-df47-46cf-81b0-8674e891202c,2023-10-02 11:52:17,completed,withdrawal,USD,-343.77,0,1688.86,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/4f343462-b689-48c0-af3d-a28e4e02e549
+97a9a06d-463f-44cd-9abb-c20ac011cc46,2023-09-29 01:08:40,completed,advance_repayment,USD,-6341.00,,,,,,,,,,,,,
+98ce3456-60bf-4398-b9b7-3c3007439c61,2023-09-29 01:08:40,completed,advance_repayment,USD,-190.23,,,,,,,,,,,,,
+b061168a-7e8f-43be-a991-dc60c4aa1f00,2023-09-29 01:08:40,completed,client_payment,USD,6875.00,,,,John Doe (john@company.com),Jane Smith (Fixed),https://app.deel.com/contract/abc123,https://app.deel.com/invoice/p-dhz0Z-GWrS6D94Xv6Uo,,,,,,
+6562fd8a-1968-4397-ab27-ccf46eb23111,2023-09-13 12:42:21,completed,withdrawal,USD,-6341.00,0,30733.71,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/f82fbd96-b6ee-4624-a79f-79753bc7dac7
+38676644-3795-4fc5-b049-c245796c7b4a,2023-09-13 12:41:39,completed,advance,USD,6341.00,,,,,,,,,,,,,
+992d7264-81dc-4370-a6d4-7f70e3968b8f,2023-09-12 11:15:51,completed,withdrawal,USD,-6860.00,0,33260.5,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/f58bc994-b71b-4077-a872-ddb8f4275c1f
+ed8355d8-c340-4bf2-afe5-f09391694dba,2023-09-12 11:15:51,completed,client_payment,USD,6875.00,,,,John Doe (john@company.com),Jane Smith (Fixed),https://app.deel.com/contract/abc123,https://app.deel.com/invoice/lIfVIO-M-TMGsZ48tgWFk,,,,,,
+260aa12a-5f70-4005-97bf-95e5ddba08f1,2023-08-28 12:39:44,completed,withdrawal,USD,-6860.00,0,32904.99,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/fafda61d-769e-480f-94e5-1ac8b5b14129
+fb053678-2f2c-474c-83e1-7a7df51ff3d2,2023-08-28 12:39:44,completed,client_payment,USD,6875.00,,,,John Doe (john@company.com),Jane Smith (Fixed),https://app.deel.com/contract/abc123,https://app.deel.com/invoice/wBUbUVM-zAgMSxfrGc55V,,,,,,
+c4e39b56-9962-4131-8a9e-24af63b4dc92,2023-08-15 01:27:15,completed,withdrawal,USD,-6875.00,0,33426.28,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/798cfcd4-123c-462d-b028-784aed6f243f
+6f83c377-dcb5-4065-bb00-e1f14b2fe89b,2023-08-15 01:02:02,completed,client_payment,USD,6875.00,,,,John Doe (john@company.com),Jane Smith (Fixed),https://app.deel.com/contract/abc123,https://app.deel.com/invoice/FjKhlHHYKZFGwBjo_Zk8W,,,,,,
+c1d17ff1-ea72-4e8b-b092-de344f0abbc8,2023-08-05 11:41:53,completed,withdrawal,USD,-37.79,0,165.56,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/582a38d6-08b6-474a-95f2-e207b49ffeec
+e7b4f9ff-3b5b-4c51-a938-4064f4b934ac,2023-08-02 05:38:35,completed,client_payment,USD,37.79,,,,John Doe (john@company.com),Jane Smith (Fixed),https://app.deel.com/contract/abc123,https://app.deel.com/invoice/x84eaU-MpzX5Q55VNttdX,,,,,,
+aa17f021-e765-4e88-94ea-7dc8813bf682,2023-07-31 02:47:50,completed,withdrawal,USD,-6275.00,0,29119.31,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/f3f47e70-3546-41ba-91f8-15d670749bc9
+1f59b08a-43a1-46a2-8692-4700e77d0c8c,2023-07-31 01:52:37,completed,withdrawal,USD,-600.00,0,600,USD,,,,,bank_transfer,,"SECUREFRAME, INC",021000025307742,ACH,https://app.deel.com/withdraw-statement/f01abef5-4ea0-418c-90cc-d4cebf6fb229
+636be9e8-68ff-450f-86fc-b28ba93cc99e,2023-07-31 01:04:08,completed,client_payment,USD,6875.00,,,,John Doe (john@company.com),Jane Smith (Fixed),https://app.deel.com/contract/abc123,https://app.deel.com/invoice/-UacllQjBdzWinfGxIW5m,,,,,,
+e3bccdb5-7535-4249-926d-a5a33e7da686,2023-07-14 01:01:58,completed,withdrawal,USD,-6875.00,0,32305.03,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/1bfd261c-8923-48d3-acae-d09cd6990161
+4bd71c81-54b0-4307-8b92-5113b1309432,2023-07-14 01:01:58,completed,client_payment,USD,6875.00,,,,John Doe (john@company.com),Jane Smith (Fixed),https://app.deel.com/contract/abc123,https://app.deel.com/invoice/pSrGUTqtdZDB96mUgxt9W,,,,,,
+ce49ac0c-3d0b-4a62-9071-e956eac82caf,2023-06-30 01:14:33,completed,withdrawal,USD,-6875.00,0,32407.24,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/b29153c4-c766-43f2-a4ba-4663d13f79d3
+b18b19fb-a984-4be5-8368-61be609db60f,2023-06-30 01:05:47,completed,client_payment,USD,6875.00,,,,John Doe (john@company.com),Jane Smith (Fixed),https://app.deel.com/contract/abc123,https://app.deel.com/invoice/KEGlJDip7u9ssqPhlZ5Cy,,,,,,
+e44f2f87-59e3-45bc-99f9-d5db538a2aa2,2023-06-15 07:44:33,completed,withdrawal,USD,-3500.00,0,3500,USD,,,,,bank_transfer,,Patrick Farias Bassut Souza,021000020972382,ACH,https://app.deel.com/withdraw-statement/7b0f2018-1dc4-4227-9f42-bb3b40be3dc9
+363bfaeb-5017-4aed-85ce-991779097bca,2023-06-15 07:44:22,completed,withdrawal,USD,-1500.00,0,7065.59,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/3e5e97d0-0b9c-425f-8aa8-ffd5a07b278a
+02bbc3a2-0095-454f-8026-4e515c10a8b0,2023-06-15 07:38:10,completed,withdrawal,USD,-1875.00,0,1875,USD,,,,,bank_transfer,,Patrick Farias Bassut Souza,021000020972370,ACH,https://app.deel.com/withdraw-statement/0733d390-644d-41b8-95f7-cc76900b8d35
+7c101068-772b-4a62-bbb4-87de35a7a54f,2023-06-15 01:01:41,completed,client_payment,USD,6875.00,,,,John Doe (john@company.com),Jane Smith (Fixed),https://app.deel.com/contract/abc123,https://app.deel.com/invoice/brFY3WFKh8qx8WJ0L2Rnf,,,,,,
+bcc24d56-9582-4dd1-a2a0-4d7787a8cb79,2023-05-31 12:16:47,completed,withdrawal,USD,-6875.00,0,34494.32,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/ee22119c-2989-4fef-8294-c2105297a744
+55ca6378-b03e-4e6c-866a-3f2146d6fc70,2023-05-31 01:04:38,completed,advance_repayment,USD,-50.00,,,,,,,,,,,,,
+18e73739-c9da-4c4d-a25a-90117f3cc60a,2023-05-31 01:04:38,completed,client_payment,USD,6875.00,,,,John Doe (john@company.com),Jane Smith (Fixed),https://app.deel.com/contract/abc123,https://app.deel.com/invoice/wM7eEmyl_0CgIWSFNGDSt,,,,,,
+f10726e0-b96e-48db-af50-26208cf621fd,2023-05-30 06:18:44,completed,advance,USD,50.00,,,,,,,,,,,,,
+970dc675-9c19-47a6-8d01-8e06301d146c,2023-05-15 11:54:38,completed,withdrawal,USD,-6875.00,0,33085.39,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/72d107da-a94c-4432-8485-42b6f711b5f3
+4086bffc-ef08-44ba-908f-3f52d6180f65,2023-05-15 01:01:45,completed,client_payment,USD,6875.00,,,,John Doe (john@company.com),Jane Smith (Fixed),https://app.deel.com/contract/abc123,https://app.deel.com/invoice/Wm38fXlrOSO5tGhXy63ia,,,,,,
+8d7b163d-59a4-4459-b012-2e81e93d971e,2023-04-30 10:21:02,completed,withdrawal,USD,-6875.00,0,33587.79,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/58700a67-09c5-4388-8be1-d8652204c88b
+872f47b3-c322-4a8c-9bb4-8425653cdea6,2023-04-28 01:03:04,completed,client_payment,USD,6875.00,,,,John Doe (john@company.com),Jane Smith (Fixed),https://app.deel.com/contract/abc123,https://app.deel.com/invoice/si6NOZghyQ5t9KGnmtEAL,,,,,,
+3466464b-879f-4505-8e92-23f37a0adb05,2023-04-16 11:55:35,completed,withdrawal,USD,-6875.00,0,33067.53,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/e4f2fe6e-9437-4bc9-8467-f1ae3ccdcb5b
+6950e706-c56a-4d90-b76a-6abc127fd54c,2023-04-14 01:02:26,completed,client_payment,USD,6875.00,,,,John Doe (john@company.com),Jane Smith (Fixed),https://app.deel.com/contract/abc123,https://app.deel.com/invoice/hoqF9mEZCwY0suoTgPe4n,,,,,,
+ea87a921-0cc7-4a78-8cd8-a0bda8788408,2023-04-06 01:32:08,completed,withdrawal,USD,-7794.16,0,38437.73,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/aa46dcf9-9257-4a0e-8533-52ce5251bdfb
+90bf9fcf-b83c-4e9f-998a-1e98cb5011d6,2023-04-05 01:01:41,completed,client_payment,USD,2555.70,,,,John Doe (john@company.com),Patrick Bassut,https://app.deel.com/contract/m4zz5ye,https://app.deel.com/invoice/nxRO7ZmSgCfmXIuEyCBjk,,,,,,
+aaa33f8a-ff6d-4000-a486-4af400e514d7,2023-04-05 01:01:31,completed,client_payment,USD,5238.46,,,,John Doe (john@company.com),Patrick Bassut,https://app.deel.com/contract/m4zz5ye,https://app.deel.com/invoice/jZgklnoVQZpPtlGkw40vD,,,,,,
+dbe8f737-fad2-4059-a04d-3adf78fc5217,2023-03-20 01:00:37,completed,withdrawal,USD,-6707.41,0,34668.04,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/0188a69a-1175-49ce-b7d7-649514681d9b
+7443fe05-7187-4a08-9e7e-4f9507527b28,2023-03-20 01:00:36,completed,client_payment,USD,6707.41,,,,John Doe (john@company.com),Patrick Bassut,https://app.deel.com/contract/m4zz5ye,https://app.deel.com/invoice/0segYfDCS1srmjJbjdXcK,,,,,,
+2d12081b-2f07-400c-b958-f0f497d12fbf,2023-03-03 03:03:46,completed,withdrawal,USD,-648.90,0,3291.93,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/9ab950ee-26ca-43f0-b874-dd0dcebdb4f5
+654c05b4-cc8d-4880-a884-300eb0bb01ab,2023-03-03 03:03:45,completed,client_payment,USD,648.90,,,,John Doe (john@company.com),Patrick Bassut,https://app.deel.com/contract/m4zz5ye,https://app.deel.com/invoice/LNLjokwg0i5OVDho345EX,,,,,,
+4374e316-f8c9-4683-8ca9-7a710428845d,2023-03-03 03:03:43,completed,withdrawal,USD,-1330.35,0,6765.34,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/8872602b-cd55-4831-86f4-da84b30760bc
+3dd512b0-7754-4197-8647-995a8a29de7a,2023-03-03 03:03:43,completed,client_payment,USD,1330.35,,,,John Doe (john@company.com),Patrick Bassut,https://app.deel.com/contract/m4zz5ye,https://app.deel.com/invoice/P_OUSaTTmIvm9XFclPqrA,,,,,,
+8f676887-29fc-4c13-895f-ba7777e8b6c5,2023-03-03 03:03:21,completed,withdrawal,USD,-3141.60,0,15997.4,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/99626c53-f507-44ac-b2dc-05658e89a51f
+a5934d3e-c5e0-4054-aaf2-c437976b6a5b,2023-03-03 03:03:21,completed,client_payment,USD,3141.60,,,,John Doe (john@company.com),Patrick Bassut,https://app.deel.com/contract/m4zz5ye,https://app.deel.com/invoice/yhzK12SqJyV4dVjRzIT54,,,,,,
+f0071abd-9941-49d0-bff1-a806a93e81f9,2023-02-20 03:01:19,completed,withdrawal,USD,-668.85,0,3371.9,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/01b53f3d-7dde-4c94-b278-593f3d342897
+657b9729-fdf2-472b-86d7-9fd78b6614a9,2023-02-20 03:01:19,completed,client_payment,USD,668.85,,,,John Doe (john@company.com),Patrick Bassut,https://app.deel.com/contract/m4zz5ye,https://app.deel.com/invoice/wH-epfCxVzO9PfeyEKMiV,,,,,,
+6a6429da-0513-4860-b659-38250a36dca1,2023-02-20 03:01:17,completed,withdrawal,USD,-1289.40,0,6514.6,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/bc55efa4-875d-4184-a277-c7fe342691ac
+eab7bcd0-80a9-480e-9a5d-c8c58aefb7ac,2023-02-20 03:01:17,completed,client_payment,USD,1289.40,,,,John Doe (john@company.com),Patrick Bassut,https://app.deel.com/contract/m4zz5ye,https://app.deel.com/invoice/lV2pEt2RG-8ZMJkLCDk69,,,,,,
+a1af9999-c071-4b5b-9e56-c85f4ed9599a,2023-02-20 03:01:15,completed,withdrawal,USD,-988.89,0,4992.73,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/2e910cef-13a4-4cc4-aa4b-7909ea6ccca0
+6b6781fa-ab6f-4363-9ecf-648ec06cdfe5,2023-02-20 03:01:14,completed,advance_repayment,USD,-3906.20,,,,,,,,,,,,,
+8c3edf16-076e-42bc-bed5-4a17e18f5316,2023-02-20 03:01:14,completed,client_payment,USD,4895.09,,,,John Doe (john@company.com),Patrick Bassut,https://app.deel.com/contract/m4zz5ye,https://app.deel.com/invoice/XHNDIVVT6aXH55DR_uE5Z,,,,,,
+ef2ed889-a2a2-450b-82c8-5b4e0deb2cbf,2023-02-03 03:30:27,completed,advance_repayment,USD,-493.80,,,,,,,,,,,,,
+eacdb896-8a79-4765-83e2-113d176ea616,2023-02-03 03:30:27,completed,advance_repayment,USD,-132.00,,,,,,,,,,,,,
+cab6c9bc-c792-46ff-b25b-18f6cb483f09,2023-02-03 03:30:27,completed,client_payment,USD,625.80,,,,John Doe (john@company.com),Patrick Bassut,https://app.deel.com/contract/m4zz5ye,https://app.deel.com/invoice/1X9DrHlEzs_7urXNNvOej,,,,,,
+2a186869-827d-4648-b96f-6d3c9524508a,2023-02-03 03:24:38,completed,withdrawal,USD,-4400.00,0,4400,USD,,,,,bank_transfer,,Patrick Farias Bassut Souza,021000028064409,ACH,https://app.deel.com/withdraw-statement/4206fb0e-8998-4903-bbf6-0836b8981ab3
+2cf1f80a-bfac-4a64-bd41-4a803888eecf,2023-02-03 02:04:02,completed,advance,USD,4400.00,,,,,,,,,,,,,
+010357db-8476-4b3c-9947-1ed1e583eeec,2023-02-03 03:01:34,completed,withdrawal,USD,-2386.65,0,11797.76,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/0379f6c8-77ab-4316-9348-77fa3273e214
+4375ee59-8553-4a7a-a5e5-607d790bceb4,2023-02-03 03:01:33,completed,client_payment,USD,2386.65,,,,John Doe (john@company.com),Patrick Bassut,https://app.deel.com/contract/m4zz5ye,https://app.deel.com/invoice/ZfXbCCPhmJ0WaWtOHplkf,,,,,,
+22332112-754a-4428-9059-e64ab9ade33a,2023-02-03 03:01:17,completed,withdrawal,USD,-192.21,0,936.23,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/4071e193-3db0-4f9f-b574-444ee266d697
+dffa1d46-cd46-4dcd-b26e-3ae1a3a0208c,2023-02-03 03:01:17,completed,advance_repayment,USD,-4010.33,,,,,,,,,,,,,
+5a78ab63-9f2a-4e2e-a3bb-b2bb8ca4a6ea,2023-02-03 03:01:17,completed,advance_repayment,USD,-120.31,,,,,,,,,,,,,
+685b4860-bbc6-45b9-aadb-7f57a38e75bc,2023-02-03 03:01:17,completed,client_payment,USD,4322.85,,,,John Doe (john@company.com),Patrick Bassut,https://app.deel.com/contract/m4zz5ye,https://app.deel.com/invoice/HB5MZqjFIxJ4cbuZfoNK-,,,,,,
+249cae72-5f51-40cc-8dfb-fe9406d5a7cb,2023-01-19 11:39:07,completed,withdrawal,USD,-4010.33,0,20430.27,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/53cf6f3f-3288-4051-a961-d64915522f61
+5ab0dfe8-b19a-413e-9438-397bfe05165f,2023-01-19 11:24:42,completed,advance,USD,4010.33,,,,,,,,,,,,,
+bc42a746-6589-4c9b-9be6-b67940dd0910,2023-01-19 11:05:05,completed,withdrawal,USD,-542.62,0,2746.21,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/b257de99-6fc7-4c32-94d7-dfcf8a68ed66
+0231a365-72d4-4c44-87fa-22ecfe23d3e2,2023-01-19 11:05:05,completed,client_payment,USD,548.10,,,,John Doe (john@company.com),Patrick Bassut,https://app.deel.com/contract/m4zz5ye,https://app.deel.com/invoice/cjixg-D2yM3uTWd4zE9lZ,,,,,,
+405f8937-a47d-4e26-bd9d-bdbf889b9268,2023-01-16 10:30:12,completed,withdrawal,USD,-2610.00,0,13053.24,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/64b1c664-8a44-4c09-bc58-6a90d617093f
+953765a0-fd48-4fe6-a8d1-dcc4fe19cafe,2023-01-16 10:30:12,completed,client_payment,USD,2625.00,,,,John Doe (john@company.com),Patrick Bassut,https://app.deel.com/contract/m4zz5ye,https://app.deel.com/invoice/OE9_jFiUZDh2otXxQWK0Z,,,,,,
+70918cb4-a0f9-4e32-8edf-b6835d95b12a,2023-01-05 03:01:19,completed,withdrawal,USD,-3158.39,0,16795.4,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/39a9a5f5-728c-448b-877a-8874be171f6f
+507361c8-7b2e-4106-b047-bbb7edbfdd0a,2023-01-05 03:01:19,completed,client_payment,USD,3158.39,,,,John Doe (john@company.com),Patrick Bassut,https://app.deel.com/contract/m4zz5ye,https://app.deel.com/invoice/W5rEmu3OsxWlhhUTgcGkT,,,,,,
+bae3acb1-9717-4efd-9464-46c36d2c1a57,2022-12-19 09:03:57,completed,withdrawal,USD,-1351.35,0,6994.4,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/d0125687-bd87-4a58-b490-84274649e277
+fe01a1ae-f057-42c5-b33d-f5c8d54ab0cd,2022-12-19 09:03:57,completed,client_payment,USD,1351.35,,,,John Doe (john@company.com),Patrick Bassut,https://app.deel.com/contract/m4zz5ye,https://app.deel.com/invoice/zBzsWV9wgwAXOeR3Farn0,,,,,,
+4380c44b-f9ed-445f-accd-e1adedd204b2,2022-12-19 09:03:47,completed,withdrawal,USD,-1246.35,0,6449.7,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/a6a6aeb9-f51f-42f1-944c-fc9956cefb30
+47d0de1e-3148-4bbd-b526-842e5694a8a1,2022-12-19 09:03:47,completed,client_payment,USD,1246.35,,,,John Doe (john@company.com),Patrick Bassut,https://app.deel.com/contract/m4zz5ye,https://app.deel.com/invoice/lmqXuaQHNN6DPUcBfv7o3,,,,,,
+2c20280e-bbcb-429d-b91b-5cce2de493a0,2022-12-19 09:03:23,completed,withdrawal,USD,-1759.80,0,9113.12,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/8b6f4a72-2b76-447c-951e-d130b4bd2421
+032a05a7-cff5-4879-bb80-38b8208a1e2f,2022-12-19 09:03:22,completed,client_payment,USD,1759.80,,,,John Doe (john@company.com),Patrick Bassut,https://app.deel.com/contract/m4zz5ye,https://app.deel.com/invoice/2oKi8FnIaD916T4SzY0pG,,,,,,
+4f1717e8-2783-4fce-8b80-a1a6f0eb17fa,2022-12-13 02:51:04,completed,withdrawal,USD,-1873.95,0,9759.19,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/4938d13f-b3d9-4afc-a15a-2e94a729c465
+0760c0e0-33ed-4cef-bcc3-4b9653cfddce,2022-12-13 02:51:04,completed,client_payment,USD,1888.95,,,,John Doe (john@company.com),Patrick Bassut,https://app.deel.com/contract/m4zz5ye,https://app.deel.com/invoice/oaehvguxuFvjezg_mYN7g,,,,,,
+9cc848f7-142b-4ace-8769-a2549e5f31ad,2022-12-06 05:02:52,completed,withdrawal,USD,-530.25,0,2728.32,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/ff9ab1f9-eba3-4e2c-ab9a-26de28a2416c
+af157aa6-7e85-4e51-8b5f-035ed6c84304,2022-12-06 05:02:52,completed,client_payment,USD,530.25,,,,John Doe (john@company.com),Patrick Bassut,https://app.deel.com/contract/m4zz5ye,https://app.deel.com/invoice/z8AW0oSHUR_UPPBv8y3z8,,,,,,
+0f0526ff-061e-464a-864f-87b1608e0494,2022-12-05 03:01:21,completed,withdrawal,USD,-537.60,0,2734.18,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/bb612ad1-8545-44f4-b28b-c1cf59998456
+6effd8d1-30fe-429f-9f6c-2c4e5e73ea84,2022-12-05 03:01:21,completed,client_payment,USD,537.60,,,,John Doe (john@company.com),Patrick Bassut,https://app.deel.com/contract/m4zz5ye,https://app.deel.com/invoice/xemyQmRsv7TdYpEb8FrTh,,,,,,
+2ed1b376-8d32-4fb6-8764-ada149b2e29e,2022-11-30 09:17:57,completed,withdrawal,USD,-5649.74,0,28698.53,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/2cafdff7-0ee0-42a5-8c8e-1799790ffac7
+453af2cb-1a45-4869-a803-78d9af800171,2022-11-30 09:17:57,completed,client_payment,USD,5664.74,,,,John Doe (john@company.com),Patrick Bassut,https://app.deel.com/contract/m4zz5ye,https://app.deel.com/invoice/N8-7W1x_vmdFcG_M4RXQV,,,,,,
+be0fa2ec-a073-44af-b05d-974161d0820c,2022-11-23 04:59:37,completed,withdrawal,USD,-1254.75,0,6587.02,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/8ea39924-f1c7-4297-a99d-042928f177ee
+710f8738-e9f6-49aa-b952-e88b94d356c8,2022-11-23 04:59:37,completed,client_payment,USD,1254.75,,,,John Doe (john@company.com),Patrick Bassut,https://app.deel.com/contract/m4zz5ye,https://app.deel.com/invoice/N2Mcfco5xqxm7o9-PDd2J,,,,,,
+ad818f00-dd2b-4aa1-b834-b40afd1ed705,2022-11-18 03:01:17,completed,withdrawal,USD,-2970.45,0,15772.35,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/0ad1bb86-27d2-4562-8202-8b4d1e14fc94
+48b133aa-6dde-459a-8b19-d0c1a7e448bd,2022-11-18 03:01:17,completed,client_payment,USD,2970.45,,,,John Doe (john@company.com),Patrick Bassut,https://app.deel.com/contract/m4zz5ye,https://app.deel.com/invoice/gwLVgFDQ7ElbJIkCg-3gy,,,,,,
+455a4fe3-a6cc-4119-9e8c-83bc2f86cd75,2022-11-18 03:01:08,completed,withdrawal,USD,-2623.95,0,13930.62,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/6b227c7f-b421-4fc3-ad6d-130ddb86ff9f
+30e4e711-aa78-4384-aec7-1f6e53705283,2022-11-18 03:01:07,completed,client_payment,USD,2623.95,,,,John Doe (john@company.com),Patrick Bassut,https://app.deel.com/contract/m4zz5ye,https://app.deel.com/invoice/n0TCqKFe4EynrubV9y4vD,,,,,,
+6718c5dd-6980-419e-8b44-809a111742ef,2022-11-07 03:59:22,completed,withdrawal,USD,-2301.85,0,11534.17,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/8a099c10-9b6c-4a2e-8c4a-71b1215fbce3
+c63c037f-6cfe-4372-ae58-503062b9bd5d,2022-11-07 03:59:22,completed,advance_repayment,USD,-751.55,,,,,,,,,,,,,
+1889c9b9-4bdb-42e9-8be5-4279f971cf87,2022-11-07 03:59:22,completed,client_payment,USD,3053.40,,,,John Doe (john@company.com),Patrick Bassut,https://app.deel.com/contract/m4zz5ye,https://app.deel.com/invoice/23pZsfoucgqKpRdA9zknC,,,,,,
+5e8f7d42-81e8-480b-a105-7c7aea3a318e,2022-11-04 01:01:10,completed,advance_repayment,USD,-4238.85,,,,,,,,,,,,,
+e3c7bfad-eeca-41cf-864b-612c5b4da2b6,2022-11-04 01:01:10,completed,client_payment,USD,4238.85,,,,John Doe (john@company.com),Patrick Bassut,https://app.deel.com/contract/m4zz5ye,https://app.deel.com/invoice/unNFgwi6HXr_U0ZhOUCRN,,,,,,
+5226f7e5-1a14-4fe5-abf7-5b76acc90379,2022-11-04 01:00:55,completed,advance_repayment,USD,-9.60,,,,,,,,,,,,,
+8c4aace7-2da7-4b17-84ba-9e8ff3744e71,2022-11-04 01:00:55,completed,advance_repayment,USD,-150.00,,,,,,,,,,,,,
+450e3048-a86a-4739-8d61-df9752a61ba5,2022-11-04 01:00:55,completed,client_payment,USD,159.60,,,,John Doe (john@company.com),Patrick Bassut,https://app.deel.com/contract/m4zz5ye,https://app.deel.com/invoice/gzchKXoYSivoY-uzqLK80,,,,,,
+0f30214c-20c2-4abc-8cb3-a36c287fe048,2022-10-25 12:10:24,completed,withdrawal,USD,-5000.00,0,26008.46,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/ee7ad353-4c9a-41ee-a8ff-96082792121c
+3cde20b3-9a88-4ff3-8d3a-56569d20e5cd,2022-10-25 01:46:57,completed,advance,USD,5000.00,,,,,,,,,,,,,
+18c25a00-fd3e-4c60-b673-322c3a30485c,2022-10-20 01:00:41,completed,withdrawal,USD,-1649.80,0,8505.69,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/8f772915-d516-40a6-9285-ce44125e21b6
+30d99679-f1d1-42cc-bf7e-8aba71af1f1f,2022-10-20 01:00:41,completed,advance_repayment,USD,-375.64,,,,,,,,,,,,,
+71c3f551-41d2-4e58-83e9-d01e99384cc0,2022-10-20 01:00:41,completed,client_payment,USD,2025.44,,,,John Doe (john@company.com),Patrick Bassut,https://app.deel.com/contract/m4zz5ye,https://app.deel.com/invoice/Ew1oKmdgJ6svk3c3i_Aj6,,,,,,
+e273ec4a-fc6b-449b-a628-7015a48e7add,2022-10-20 01:00:39,completed,advance_repayment,USD,-4624.36,,,,,,,,,,,,,
+d967654c-8246-41b0-ac27-333b17dba51b,2022-10-20 01:00:39,completed,advance_repayment,USD,-150.00,,,,,,,,,,,,,
+eb934096-b4d2-4ee1-be1b-87ce108ab13f,2022-10-20 01:00:39,completed,client_payment,USD,4774.36,,,,John Doe (john@company.com),Patrick Bassut,https://app.deel.com/contract/m4zz5ye,https://app.deel.com/invoice/cKp4hlQ4JGk96jy1mvPn7,,,,,,
+2ce01775-5e60-4f1e-af33-3060d79ad9ee,2022-10-06 02:54:44,completed,withdrawal,USD,-5000.00,0,25508.95,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/e2f2fe05-9f04-4ecd-bf02-b179449efaec
+6dc56db3-2d66-44d1-a9b5-018c3e0e4faf,2022-10-05 12:16:07,completed,advance,USD,5000.00,,,,,,,,,,,,,
+2446bf9e-0921-4556-acef-b98dafa8fa85,2022-10-05 01:01:20,completed,withdrawal,USD,-24.67,0,109.61,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/0730487c-e032-463c-8965-ec6c40f9c090
+2491d716-3800-4e76-b236-412f3d0fc811,2022-10-05 01:01:19,completed,advance_repayment,USD,-536.03,,,,,,,,,,,,,
+d768087d-c4a5-4c88-ae60-782fc6b489c2,2022-10-05 01:01:19,completed,client_payment,USD,560.70,,,,John Doe (john@company.com),Patrick Bassut,https://app.deel.com/contract/m4zz5ye,https://app.deel.com/invoice/p8np5nCicjTBYeTqQR9Pt,,,,,,
+2a670cdf-d2f4-44d2-8753-889d264a3f02,2022-10-05 01:01:18,completed,advance_repayment,USD,-2944.20,,,,,,,,,,,,,
+73981470-623a-4b3a-b5d4-943dd2641e81,2022-10-05 01:01:18,completed,client_payment,USD,2944.20,,,,John Doe (john@company.com),Patrick Bassut,https://app.deel.com/contract/m4zz5ye,https://app.deel.com/invoice/gCd6f7uiRaeVvCSV1rqKh,,,,,,
+50af0a5c-473e-4a10-814b-479261be0db5,2022-10-05 01:01:08,completed,advance_repayment,USD,-3752.02,,,,,,,,,,,,,
+e1f7892d-1cc0-4c90-bd4d-d980c4d5aef7,2022-10-05 01:01:08,completed,advance_repayment,USD,-216.97,,,,,,,,,,,,,
+bc21be8b-4ac9-43f2-a678-99efc8a1d24d,2022-10-05 01:01:08,completed,client_payment,USD,3968.99,,,,John Doe (john@company.com),Patrick Bassut,https://app.deel.com/contract/m4zz5ye,https://app.deel.com/invoice/V4_aHJtnNSAqlZCmiehNe,,,,,,
+65817777-665b-4f35-b827-f1176644a14c,2022-09-21 01:14:12,completed,withdrawal,USD,-7232.25,0,36704.66,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/73cbf77c-c332-4245-83d2-80f4ea9fd003
+49950351-3667-42f6-8c7e-90a1f190e645,2022-09-20 03:44:45,completed,advance,USD,7232.25,,,,,,,,,,,,,
+6495dd2a-f087-42d0-bbf4-6151687d47a3,2022-09-20 03:26:01,completed,withdrawal,USD,-76.65,0,378.87,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/d3f9a6c3-0abc-45f5-a32f-271027cd2405
+7d9d4877-821e-4356-b4ac-9b2c5d455420,2022-09-20 03:26:01,completed,advance_repayment,USD,-473.55,,,,,,,,,,,,,
+d3b7933c-daa4-4be4-bc4e-e5b7d418f90e,2022-09-20 03:26:01,completed,client_payment,USD,550.20,,,,John Doe (john@company.com),Patrick Bassut,https://app.deel.com/contract/m4zz5ye,https://app.deel.com/invoice/rqQwhWdbzjs03mQVqdVqP,,,,,,
+3407c6d7-95b8-4afb-a7bb-0bd9bee162bb,2022-09-20 01:00:48,completed,advance_repayment,USD,-2131.50,,,,,,,,,,,,,
+6bb5cdb2-a6fe-438b-9a11-7ab20f91984c,2022-09-20 01:00:48,completed,client_payment,USD,2131.50,,,,John Doe (john@company.com),Patrick Bassut,https://app.deel.com/contract/m4zz5ye,https://app.deel.com/invoice/aFMg2CGfk6Novat45jx20,,,,,,
+e370ee7f-7ca8-4912-9617-bba14a0b1d61,2022-09-20 01:00:44,completed,advance_repayment,USD,-4620.58,,,,,,,,,,,,,
+1cfaf20e-8181-425a-a42a-ea554694cf05,2022-09-20 01:00:44,completed,advance_repayment,USD,-216.77,,,,,,,,,,,,,
+5e11eaa0-cec5-486d-bf65-56d4d2e34649,2022-09-20 01:00:44,completed,client_payment,USD,4837.35,,,,John Doe (john@company.com),Patrick Bassut,https://app.deel.com/contract/m4zz5ye,https://app.deel.com/invoice/OXVItVxTkYgrNUA1iBwlw,,,,,,
+d15ddec2-61db-43a2-8d11-f5fe6670bf7b,2022-09-09 03:11:30,completed,withdrawal,USD,-7225.63,0,36513.22,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/6db2d709-6995-4ef5-b9bc-f6b6a451efc2
+d30d6115-3b82-47af-a670-1e2c3d6f66f0,2022-09-09 02:18:51,completed,advance,USD,7225.63,,,,,,,,,,,,,
+860ff2fd-0bcc-442c-8cb9-2e31cb828813,2022-09-09 11:05:49,completed,withdrawal,USD,-1325.10,0,6699.16,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/d5f1c94b-031f-4bb8-8f4a-619099c12134
+ae64b165-cc11-4558-a5bf-60ed08f87cc9,2022-09-09 11:05:49,completed,client_payment,USD,1325.10,,,,John Doe (john@company.com),Patrick Bassut,https://app.deel.com/contract/m4zz5ye,https://app.deel.com/invoice/epv6bjB2fC_utEGFwu8n2,,,,,,
+acaa3330-141c-4bfc-a35f-373191533a1c,2022-09-05 01:00:58,completed,withdrawal,USD,-1118.95,0,5656.49,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/558d240a-005f-479c-b840-52ad6a1a400a
+a0a49c9b-9f14-461c-a272-79a55410c1d9,2022-09-05 01:00:58,completed,advance_repayment,USD,-5600.00,,,,,,,,,,,,,
+50b136cf-9e66-476a-9600-49d142fe6619,2022-09-05 01:00:58,completed,advance_repayment,USD,-168.00,,,,,,,,,,,,,
+7aee49ed-d75c-4a9c-8c8e-3518e179c5b3,2022-09-05 01:00:58,completed,client_payment,USD,6886.95,,,,John Doe (john@company.com),Patrick Bassut,https://app.deel.com/contract/m4zz5ye,https://app.deel.com/invoice/9lo7Pz7pwlLSOyqDU5Ite,,,,,,
+f07b24a5-89af-49d9-ba18-4d15302ca0bb,2022-08-31 11:21:25,completed,withdrawal,USD,-168.00,0,837.84,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/2424d863-d0ba-467f-9534-c15b7209cc18
+b0ae5bd2-b3d9-4f02-90d2-ff4cfb4af173,2022-08-22 01:28:32,completed,withdrawal,USD,-5600.00,0,28322.36,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/f8070377-7fe5-4af3-8626-8b8fd3ef71c0
+6709db44-855b-4b36-8a51-bd39b13660b7,2022-08-22 12:58:58,cancelled,withdrawal,USD,-5600.00,,,,,,,,bank_transfer,,Jane Smith,,,
+60cbd12a-f97f-450f-aaa0-388a0acb1a99,2022-08-22 12:30:37,completed,advance,USD,5600.00,,,,,,,,,,,,,
+26ae6dff-0ab1-4537-b261-1cd76c2e9893,2022-08-22 11:23:15,completed,withdrawal,USD,-531.30,0,2685.17,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/7999b12a-8383-4a8f-ab30-43bb1ebda91b
+27e8737b-7b17-4d20-9c0b-48265ca9e640,2022-08-22 11:23:15,completed,advance_repayment,USD,-5600.00,,,,,,,,,,,,,
+06746b62-358f-46a1-9346-d73bf3629d4b,2022-08-22 11:23:15,completed,advance_repayment,USD,-168.00,,,,,,,,,,,,,
+c6e45163-04c9-4b2d-8cf1-0647766d9e42,2022-08-22 11:23:15,completed,client_payment,USD,699.30,,,,John Doe (john@company.com),Patrick Bassut,https://app.deel.com/contract/m4zz5ye,https://app.deel.com/invoice/Vjt4PNfRUgE4zaJ5YEr5D,,,,,,
+ed8e96ce-7134-456d-81fd-9dd3aebb870c,2022-08-19 08:49:20,completed,advance,USD,5600.00,,,,,,,,,,,,,
+2c6e5ead-449a-49d3-8945-080d7d737d6d,2022-08-19 01:00:45,completed,withdrawal,USD,-1176.00,0,5940.97,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/13cbcf06-d468-4b75-9471-200e2123c413
+29bb1695-5970-4721-abcc-61840703a55b,2022-08-19 01:00:45,completed,client_payment,USD,1176.00,,,,John Doe (john@company.com),Patrick Bassut,https://app.deel.com/contract/m4zz5ye,https://app.deel.com/invoice/jm9vx93uCCJiQ6nOBA0Nu,,,,,,
+72552d31-480c-427c-8c18-a643d0cb5d6d,2022-08-19 01:00:36,completed,withdrawal,USD,-486.66,0,2449.55,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/d26a6413-1086-433c-81d2-747c92c374d5
+409482dd-1516-42df-b2f9-14158808c67e,2022-08-19 01:00:36,completed,advance_repayment,USD,-5001.68,,,,,,,,,,,,,
+c3ac8e46-a602-4a10-9e00-8a81d31d4d20,2022-08-19 01:00:36,completed,client_payment,USD,5488.34,,,,John Doe (john@company.com),Patrick Bassut,https://app.deel.com/contract/m4zz5ye,https://app.deel.com/invoice/11c8jMgYXF4jK45F3vksv,,,,,,
+d71356e0-5981-480a-8b4a-674a7777cea1,2022-08-05 01:01:08,completed,advance_repayment,USD,-267.18,,,,,,,,,,,,,
+f0d1c3db-777d-4622-b1da-ea45d341cf65,2022-08-05 01:01:08,completed,advance_repayment,USD,-158.07,,,,,,,,,,,,,
+50a13e7b-40e8-4905-8988-491436b2963c,2022-08-05 01:01:08,completed,client_payment,USD,425.25,,,,John Doe (john@company.com),Patrick Bassut,https://app.deel.com/contract/m4zz5ye,https://app.deel.com/invoice/tHYPiv8NJLIlDmSM3v0Bz,,,,,,
+15584806-49e2-4c9f-ad3d-5156957ebe38,2022-08-02 01:02:32,completed,withdrawal,USD,-5268.86,0,26760.22,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/bb1cb768-bd4e-4e7c-9eb6-d3775538e501
+96dadf18-fde3-44c6-9e87-3926d54974e4,2022-08-01 08:03:48,completed,advance,USD,5268.86,,,,,,,,,,,,,
+7ed9353f-b173-45b0-ae64-55fb988d88dd,2022-08-01 07:50:02,completed,withdrawal,USD,-5744.25,0,29174.93,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/516273f9-c907-42c6-afc4-6a68969b41ed
+468a27e6-28ab-49bf-a09e-714b41ba2943,2022-08-01 07:50:02,completed,client_payment,USD,5759.25,,,,John Doe (john@company.com),Patrick Bassut,https://app.deel.com/contract/m4zz5ye,https://app.deel.com/invoice/piz3_VU1VEMs_HCQMaH3S,,,,,,
+9ead6ca3-8a9e-4092-897b-23f58e7781de,2022-07-22 11:00:21,completed,withdrawal,USD,-517.65,0,2746.11,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/b617d7b5-75e8-4005-a9f8-fe9f20744a57
+af5f83de-ab64-4dd6-ba08-4e848f09936f,2022-07-22 11:00:21,completed,client_payment,USD,517.65,,,,John Doe (john@company.com),Patrick Bassut,https://app.deel.com/contract/m4zz5ye,https://app.deel.com/invoice/yyEnyvitiLjryq12tHzxz,,,,,,
+30230488-b1bf-4879-8c75-d0d4949552dd,2022-07-19 11:57:23,completed,withdrawal,USD,-716.22,0,3783.86,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/f3bb7025-dfe5-401f-a965-e9b4c6d97bbc
+193336e2-7b09-4806-a544-3e4adcd59fb1,2022-07-19 11:57:23,completed,client_payment,USD,723.45,,,,John Doe (john@company.com),Patrick Bassut,https://app.deel.com/contract/m4zz5ye,https://app.deel.com/invoice/YziWy4YpbcxIiTYONB2Pj,,,,,,
+4eba77b7-e36c-404e-a30e-825abd3ed8ea,2022-07-15 01:36:20,completed,withdrawal,USD,-6753.31,0,35704.42,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/084078fa-5756-4619-a981-ed1aae703b77
+6971697b-0c7d-4dbb-ab05-4059105b77c0,2022-07-15 01:36:20,completed,client_payment,USD,6768.31,,,,John Doe (john@company.com),Patrick Bassut,https://app.deel.com/contract/m4zz5ye,https://app.deel.com/invoice/43ytI_Bl-8WKtHv2mxEb-,,,,,,
+ff6a86d6-aec5-4151-a177-7e62b11ad8e3,2022-07-07 04:30:19,completed,withdrawal,USD,-1089.90,0,5699.33,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/3c8dbc90-23f1-4110-a3e0-3470f821450f
+22d10ac5-40f4-471c-8bbb-d6757d7438a7,2022-07-07 04:30:19,completed,client_payment,USD,1089.90,,,,John Doe (john@company.com),Patrick Bassut,https://app.deel.com/contract/m4zz5ye,https://app.deel.com/invoice/jsP_T92nGfv5gyZmRORoW,,,,,,
+610f3413-59ab-40db-a8cf-b00b5c39942f,2022-07-05 01:00:48,completed,withdrawal,USD,-6560.41,0,34250.48,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/e9c3acf7-8a6c-4b9d-8dad-3187aa96242a
+ecedd4b7-eb1d-4aa5-8830-b34e7e5df12e,2022-07-05 01:00:48,completed,client_payment,USD,6560.41,,,,John Doe (john@company.com),Patrick Bassut,https://app.deel.com/contract/m4zz5ye,https://app.deel.com/invoice/Nx8_PXZkwHx5BIE0pHoBH,,,,,,
+c0cd50ee-9ffa-4b66-a0a1-4c39b9027e7d,2022-06-22 11:30:14,completed,withdrawal,USD,-504.00,0,2524.56,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/ee3b1ab5-8bcb-4add-a893-79aff9ca62cc
+ed1a2159-f524-4244-9cf1-03bbadccdd75,2022-06-22 11:30:14,completed,client_payment,USD,504.00,,,,John Doe (john@company.com),Patrick Bassut,https://app.deel.com/contract/m4zz5ye,https://app.deel.com/invoice/xJFWEqrUI8XAfFIiCz6gl,,,,,,
+a5e797a8-70f4-4c5d-9af8-2946a708ffb6,2022-06-16 01:13:25,completed,withdrawal,USD,-5025.00,0,24870.32,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/32d9888f-e720-46e7-b688-c65a6260585a
+549a1a12-e0ca-497f-9fc4-626eb234b774,2022-06-16 01:13:25,completed,client_payment,USD,5040.00,,,,John Doe (john@company.com),Patrick Bassut,https://app.deel.com/contract/m4zz5ye,https://app.deel.com/invoice/cv5drf2xZV4kX7hGOiy-x,,,,,,
+62e37ef5-e264-45c8-9a7d-463a9cf8801a,2022-06-09 10:30:14,completed,withdrawal,USD,-504.00,0,2409.83,BRL,,,,,bank_transfer,,Jane Smith,,,https://app.deel.com/withdraw-statement/fe87a7a8-0fa6-4c7c-aa2b-f606f8b139a4
+db2a25a3-ad07-4bb0-9fb4-972b40bfe7e3,2022-06-09 10:30:14,completed,client_payment,USD,504.00,,,,John Doe (john@company.com),Patrick Bassut,https://app.deel.com/contract/m4zz5ye,https://app.deel.com/invoice/wIOcEXAX_eVoDilhhJAyM,,,,,,
