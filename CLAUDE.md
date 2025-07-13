@@ -22,3 +22,4 @@
 
 - Always add unit tests + e2e tests to features added or bugs fixed
 - ALWAYS run unit tests or e2e tests after they are modified
+- ALL TESTS MUST BE PASSING. Every time a feature is added or changed we need to make sure all tests pass. THIS IS MANDATORY. We can only call the feature done when tests are fully passing.
