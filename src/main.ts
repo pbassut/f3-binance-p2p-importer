@@ -5,6 +5,12 @@ import fs from "fs";
 import axios from "axios";
 import FormData from "form-data";
 import { processCsvFile, setI18nLanguage, ProcessorType } from "./process";
+import dotenv from "dotenv";
+import { EmailMonitor } from "./email/email-monitor";
+import { EmailMonitorConfig } from "./email/email-config";
+
+// Load environment variables from .env file
+dotenv.config();
 
 const app = express();
 const upload = multer({ dest: path.join(__dirname, "../uploads") });
@@ -23,13 +29,20 @@ function detectProcessorType(filePath: string): ProcessorType {
     if (lower.includes("data;") && lower.includes("valor (r$)")) {
       return "itau";
     }
+    // Deel: look for specific headers
+    if (lower.includes("transaction id") && lower.includes("transaction type") && lower.includes("payment method")) {
+      return "deel";
+    }
   }
   return "binance"; // fallback
 }
 
 // API endpoint for file upload and forwarding to Firefly-III Data Importer
 app.post("/api/upload", upload.single("file"), async (req, res) => {
-  const { token, fireflyUrl, secret } = req.body;
+  const token = process.env.FIREFLY_TOKEN;
+  const fireflyUrl = process.env.FIREFLY_URL;
+  const secret = process.env.FIREFLY_SECRET;
+  
   setI18nLanguage("pt-BR");
   if (!req.file) {
     console.log("No file uploaded");
@@ -38,10 +51,10 @@ app.post("/api/upload", upload.single("file"), async (req, res) => {
       .json({ success: false, message: "No file uploaded" });
   }
   if (!token || !fireflyUrl || !secret) {
-    console.log("Missing Firefly token, URL, or secret");
+    console.log("Missing Firefly environment variables (FIREFLY_TOKEN, FIREFLY_URL, FIREFLY_SECRET)");
     return res.status(400).json({
       success: false,
-      message: "Missing Firefly token, URL, or secret",
+      message: "Missing Firefly environment variables. Please set FIREFLY_TOKEN, FIREFLY_URL, and FIREFLY_SECRET",
     });
   }
   const inputPath = req.file.path;
@@ -99,6 +112,46 @@ app.post("/api/upload", upload.single("file"), async (req, res) => {
 // All other GET requests not handled before will return the React app
 app.get(/^\/(?!api).*/, (req, res) => {
   res.sendFile(path.join(__dirname, "../frontend/dist/index.html"));
+});
+
+// Initialize email monitor if configured
+let emailMonitor: EmailMonitor | null = null;
+
+if (process.env.EMAIL_HOST && process.env.EMAIL_USER && process.env.EMAIL_PASSWORD) {
+  try {
+    // Parse email processor configuration from environment
+    const emailProcessors = process.env.EMAIL_PROCESSORS 
+      ? JSON.parse(process.env.EMAIL_PROCESSORS)
+      : [];
+
+    const emailConfig: EmailMonitorConfig = {
+      host: process.env.EMAIL_HOST,
+      port: parseInt(process.env.EMAIL_PORT || "993"),
+      tls: process.env.EMAIL_TLS !== "false",
+      user: process.env.EMAIL_USER,
+      password: process.env.EMAIL_PASSWORD,
+      mailbox: process.env.EMAIL_MAILBOX || "INBOX",
+      checkIntervalMinutes: parseInt(process.env.EMAIL_CHECK_INTERVAL || "5"),
+      processors: emailProcessors
+    };
+
+    emailMonitor = new EmailMonitor(emailConfig);
+    emailMonitor.start();
+    console.log("Email monitoring started");
+  } catch (error) {
+    console.error("Failed to start email monitoring:", error);
+  }
+} else {
+  console.log("Email monitoring not configured. Set EMAIL_HOST, EMAIL_USER, and EMAIL_PASSWORD to enable.");
+}
+
+// Graceful shutdown
+process.on("SIGINT", () => {
+  console.log("Shutting down gracefully...");
+  if (emailMonitor) {
+    emailMonitor.stop();
+  }
+  process.exit(0);
 });
 
 app.listen(3001, () => console.log("Test server running on 3001"));

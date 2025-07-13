@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState } from "react";
 import {
   Box,
   Button,
@@ -6,7 +6,6 @@ import {
   Paper,
   LinearProgress,
   Alert,
-  TextField,
   Accordion,
   AccordionSummary,
   AccordionDetails,
@@ -20,31 +19,7 @@ const App: React.FC = () => {
   const [uploading, setUploading] = useState(false);
   const [success, setSuccess] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const [token, setToken] = useState<string>("");
-  const [fireflyUrl, setFireflyUrl] = useState<string>("");
-  const [secret, setSecret] = useState<string>("");
   const [responseJson, setResponseJson] = useState<any>(null);
-
-  // Load from localStorage on mount
-  useEffect(() => {
-    const savedToken = localStorage.getItem("fireflyToken");
-    const savedUrl = localStorage.getItem("fireflyUrl");
-    const savedSecret = localStorage.getItem("fireflySecret");
-    if (savedToken) setToken(savedToken);
-    if (savedUrl) setFireflyUrl(savedUrl);
-    if (savedSecret) setSecret(savedSecret);
-  }, []);
-
-  // Persist token, url, and secret to localStorage on change
-  useEffect(() => {
-    localStorage.setItem("fireflyToken", token);
-  }, [token]);
-  useEffect(() => {
-    localStorage.setItem("fireflyUrl", fireflyUrl);
-  }, [fireflyUrl]);
-  useEffect(() => {
-    localStorage.setItem("fireflySecret", secret);
-  }, [secret]);
 
   const handleFileChange = async (
     event: React.ChangeEvent<HTMLInputElement>
@@ -57,9 +32,6 @@ const App: React.FC = () => {
     try {
       const formData = new FormData();
       formData.append("file", file);
-      formData.append("token", token);
-      formData.append("fireflyUrl", fireflyUrl);
-      formData.append("secret", secret);
       const res = await axios.post("/api/upload", formData, {
         headers: {
           Accept: "application/json",
@@ -90,43 +62,11 @@ const App: React.FC = () => {
           Firefly-III File Importer
         </Typography>
         <Box display="flex" flexDirection="column" alignItems="center" gap={2}>
-          <TextField
-            label="Firefly-III API URL"
-            type="url"
-            value={fireflyUrl}
-            onChange={(e) => setFireflyUrl(e.target.value)}
-            fullWidth
-            required
-            disabled={uploading}
-            sx={{ mb: 2 }}
-            placeholder="https://your-firefly-url"
-          />
-          <TextField
-            label="Firefly-III API Token"
-            type="password"
-            value={token}
-            onChange={(e) => setToken(e.target.value)}
-            fullWidth
-            required
-            disabled={uploading}
-            sx={{ mb: 2 }}
-          />
-          <TextField
-            label="Firefly Data Importer Secret"
-            type="text"
-            value={secret}
-            onChange={(e) => setSecret(e.target.value)}
-            fullWidth
-            required
-            disabled={uploading}
-            sx={{ mb: 2 }}
-            placeholder="Your Firefly Data Importer Secret"
-          />
           <Button
             variant="contained"
             component="label"
             startIcon={<CloudUploadIcon />}
-            disabled={uploading || !token || !fireflyUrl || !secret}
+            disabled={uploading}
             sx={{ width: "100%" }}
           >
             {uploading ? "Uploading..." : "Upload File"}

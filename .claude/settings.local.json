@@ -5,7 +5,12 @@
       "Bash(npm run build:*)",
       "Bash(npx:*)",
       "Bash(npm test)",
-      "Bash(cp:*)"
+      "Bash(cp:*)",
+      "Bash(npm install:*)",
+      "Bash(mkdir:*)",
+      "Bash(npm run test:e2e:*)",
+      "Bash(ls:*)",
+      "Bash(npm run dev:*)"
     ],
     "deny": []
   }
