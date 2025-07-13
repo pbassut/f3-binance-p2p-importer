@@ -1,11 +1,11 @@
-import * as Imap from "imap";
+import Imap from "imap";
 import { simpleParser, ParsedMail, Attachment } from "mailparser";
 import fs from "fs";
 import path from "path";
 import { processCsvFile, ProcessorType } from "../process";
 import { EmailMonitorConfig, EmailProcessorConfig } from "./email-config";
 import axios from "axios";
-import * as FormData from "form-data";
+import FormData from "form-data";
 
 export class EmailMonitor {
   private imap: Imap;
@@ -81,8 +81,8 @@ export class EmailMonitor {
     fetch.on("message", (msg, seqno) => {
       console.log(`Processing message #${seqno}`);
       
-      msg.on("body", (stream) => {
-        simpleParser(stream, async (err, parsed) => {
+      msg.on("body", (stream: any) => {
+        simpleParser(stream, async (err: any, parsed: ParsedMail) => {
           if (err) {
             console.error("Error parsing email:", err);
             return;
@@ -159,17 +159,22 @@ export class EmailMonitor {
       fs.writeFileSync(tempInputPath, attachment.content);
       console.log(`Saved attachment: ${tempInputPath}`);
 
-      // Process the CSV file
-      await new Promise<void>((resolve, reject) => {
-        processCsvFile(
-          tempInputPath,
-          tempOutputPath,
-          () => resolve(),
-          processorConfig.processorType
-        );
-      });
-
-      console.log(`Processed CSV: ${tempOutputPath}`);
+      // Process the CSV file or pass through if processorType is "csv"
+      if (processorConfig.processorType === "csv") {
+        // For "csv" type, just copy the file without processing
+        fs.copyFileSync(tempInputPath, tempOutputPath);
+        console.log(`CSV passthrough: ${tempOutputPath}`);
+      } else {
+        await new Promise<void>((resolve, reject) => {
+          processCsvFile(
+            tempInputPath,
+            tempOutputPath,
+            () => resolve(),
+            processorConfig.processorType as ProcessorType
+          );
+        });
+        console.log(`Processed CSV: ${tempOutputPath}`);
+      }
 
       // Send to Firefly-III if configured
       if (process.env.FIREFLY_URL && process.env.FIREFLY_TOKEN) {

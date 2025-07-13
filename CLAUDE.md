@@ -5,8 +5,14 @@
 
 # Development Style
 
+## General
+
 - Avoid complex abstractions or "clever" code. The simple, obvious solution is probably better, and my guidance helps you stay focused on what matters.
 - Treat tokens and secrets with EXTREME CARE! That is, never hard-code them into the codebase. Always parameterize them through environment variables.
+
+## Tools
+
+- When running, monitoring a process output, killing a process or doing anything terminal-related, use desktop-commander.
 
 ## Workflow
 

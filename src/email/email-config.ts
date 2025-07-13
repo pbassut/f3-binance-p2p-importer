@@ -2,7 +2,7 @@ import { ProcessorType } from "../process";
 
 export interface EmailProcessorConfig {
   senderEmail: string;
-  processorType: ProcessorType;
+  processorType: ProcessorType | "csv";
   importerConfig: string;
 }
 
