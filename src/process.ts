@@ -3,7 +3,9 @@ import i18next from "i18next";
 import path from "path";
 import * as binance from "./processors/binance";
 import * as itau from "./processors/itau";
+import * as itauCreditcard from "./processors/itau-creditcard";
 import * as deel from "./processors/deel";
+import * as rico from "./processors/rico";
 
 // --- i18next Initialization ---
 // Load translation files for English and Brazilian Portuguese
@@ -28,7 +30,7 @@ if (!i18next.isInitialized) {
   });
 }
 
-export type ProcessorType = "binance" | "itau" | "deel";
+export type ProcessorType = "binance" | "itau" | "itau-creditcard" | "deel" | "rico";
 
 export type InputRow = binance.InputRow;
 export type OutputRow = binance.OutputRow;
@@ -46,8 +48,12 @@ function getProcessor(type: ProcessorType = "binance"): Processor {
   switch (type) {
     case "itau":
       return itau;
+    case "itau-creditcard":
+      return itauCreditcard;
     case "deel":
       return deel;
+    case "rico":
+      return rico;
     case "binance":
     default:
       return binance;

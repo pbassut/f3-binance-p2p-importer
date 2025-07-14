@@ -4,6 +4,7 @@ export interface EmailProcessorConfig {
   senderEmail: string;
   processorType: ProcessorType | "csv";
   importerConfig: string;
+  subjectPattern?: string; // Optional regex pattern to match email subjects
 }
 
 export interface EmailMonitorConfig {

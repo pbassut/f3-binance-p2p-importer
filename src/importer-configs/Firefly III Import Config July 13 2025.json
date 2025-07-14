@@ -1,49 +1,36 @@
 {
     "version": 3,
     "source": "ff3-importer-1.6.3",
-    "created_at": "2025-07-02T22:40:00-03:00",
-    "date": "Y-m-d H:i:s",
-    "default_account": 1,
-    "delimiter": "comma",
+    "created_at": "2025-07-13T22:03:06-03:00",
+    "date": "d\/m\/Y",
+    "default_account": 19,
+    "delimiter": "semicolon",
     "headers": true,
     "rules": true,
     "skip_form": false,
     "add_import_tag": true,
     "roles": [
-        "external-id",
-        "description",
         "date_transaction",
-        "note",
+        "description",
+        "_ignore",
         "amount",
-        "account-name",
-        "opposing-name"
+        "_ignore"
     ],
     "do_mapping": [
         false,
         false,
         false,
         false,
-        false,
-        true,
-        true
+        false
     ],
-    "mapping": {
-        "5": {
-            "false": 16,
-            "true": 1
-        },
-        "6": {
-            "false": 18,
-            "true": 11
-        }
-    },
-    "duplicate_detection_method": "classic",
+    "mapping": [],
+    "duplicate_detection_method": "cell",
     "ignore_duplicate_lines": true,
-    "unique_column_index": 0,
-    "unique_column_type": "internal_reference",
+    "unique_column_index": 1,
+    "unique_column_type": "description",
     "flow": "file",
     "content_type": "csv",
-    "custom_tag": "Deel Import",
+    "custom_tag": "Rico Import",
     "identifier": "0",
     "connection": "0",
     "ignore_spectre_categories": false,
@@ -61,5 +48,5 @@
     "nordigen_requisitions": [],
     "nordigen_max_days": "90",
     "conversion": false,
-    "ignore_duplicate_transactions": true
+    "ignore_duplicate_transactions": false
 }

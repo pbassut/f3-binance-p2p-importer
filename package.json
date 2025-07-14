@@ -14,7 +14,9 @@
     "test": "vitest run",
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
-    "process:example": "ts-node scripts/process-example.ts"
+    "process:example": "ts-node scripts/process-example.ts",
+    "process:nubank": "ts-node scripts/process-nubank.ts",
+    "test:email": "ts-node scripts/test-email-login.ts"
   },
   "keywords": [],
   "author": "",

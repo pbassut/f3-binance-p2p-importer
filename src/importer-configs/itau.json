@@ -26,7 +26,7 @@
     "unique_column_type": "internal_reference",
     "flow": "file",
     "content_type": "csv",
-    "custom_tag": "Ita\u00fa Import",
+    "custom_tag": "Itaú Import",
     "identifier": "0",
     "connection": "0",
     "ignore_spectre_categories": false,

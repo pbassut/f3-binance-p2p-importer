@@ -46,7 +46,7 @@
     "unique_column_type": "internal_reference",
     "flow": "file",
     "content_type": "csv",
-    "custom_tag": "Binance P2P",
+    "custom_tag": "Binance P2P Import",
     "identifier": "0",
     "connection": "0",
     "ignore_spectre_categories": false,

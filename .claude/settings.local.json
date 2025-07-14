@@ -12,7 +12,14 @@
       "Bash(ls:*)",
       "Bash(npm run dev:*)",
       "mcp__desktop-commander__execute_command",
-      "mcp__desktop-commander__force_terminate"
+      "mcp__desktop-commander__force_terminate",
+      "mcp__desktop-commander__read_file",
+      "mcp__desktop-commander__search_files",
+      "mcp__desktop-commander__write_file",
+      "mcp__desktop-commander__edit_block",
+      "mcp__desktop-commander__list_directory",
+      "mcp__desktop-commander__read_output",
+      "Bash(git add:*)"
     ],
     "deny": []
   }

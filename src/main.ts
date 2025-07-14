@@ -19,21 +19,49 @@ const upload = multer({ dest: path.join(__dirname, "../uploads") });
 app.use(express.static(path.join(__dirname, "../frontend/dist")));
 
 function detectProcessorType(filePath: string): ProcessorType {
-  const lines = fs.readFileSync(filePath, "utf8").split(/\r?\n/).slice(0, 20);
+  console.log(`Detecting processor type for file: ${filePath}`);
+  const content = fs.readFileSync(filePath, "utf8");
+  
+  // Check for BOM
+  const hasBOM = content.charCodeAt(0) === 0xFEFF;
+  if (hasBOM) {
+    console.log("BOM detected in file, removing it");
+  }
+  
+  // Remove BOM if present
+  const cleanContent = content.replace(/^\uFEFF/, '');
+  const lines = cleanContent.split(/\r?\n/).slice(0, 20);
+  
+  console.log(`First line of file: ${lines[0]}`);
+  
   for (const line of lines) {
     const lower = line.toLowerCase();
     if (lower.includes("order number") && lower.includes("order type")) {
+      console.log("Detected Binance format");
       return "binance";
+    }
+    // Itau Credit Card: look for comma-delimited header with 'data,lançamento,valor'
+    if (lower === "data,lançamento,valor" || (lower.includes("data,") && lower.includes("lançamento,") && lower.includes("valor") && !lower.includes(";"))) {
+      console.log("Detected Itaú Credit Card format");
+      return "itau-creditcard";
     }
     // Itau: look for a header with 'data;' and 'valor (r$)' (semicolon-delimited)
     if (lower.includes("data;") && lower.includes("valor (r$)")) {
+      console.log("Detected Itaú format");
       return "itau";
     }
     // Deel: look for specific headers
     if (lower.includes("transaction id") && lower.includes("transaction type") && lower.includes("payment method")) {
+      console.log("Detected Deel format");
       return "deel";
     }
+    // Rico: look for semicolon-delimited headers with Data;Estabelecimento;Portador;Valor;Parcela
+    if (lower.includes("data;estabelecimento;portador;valor;parcela")) {
+      console.log("Detected Rico format");
+      return "rico";
+    }
   }
+  console.log("No specific format detected, falling back to Binance");
   return "binance"; // fallback
 }
 
@@ -117,7 +145,7 @@ app.get(/^\/(?!api).*/, (req, res) => {
 // Initialize email monitor if configured
 let emailMonitor: EmailMonitor | null = null;
 
-if (process.env.EMAIL_HOST && process.env.EMAIL_USER && process.env.EMAIL_PASSWORD) {
+if (process.env.EMAIL_HOST && process.env.EMAIL_USER && process.env.EMAIL_PASSWORD && process.env.EMAIL_DISABLED !== "true") {
   try {
     // Parse email processor configuration from environment
     const emailProcessors = process.env.EMAIL_PROCESSORS 
