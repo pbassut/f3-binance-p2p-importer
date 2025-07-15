@@ -8,6 +8,7 @@ import { processCsvFile, setI18nLanguage, ProcessorType } from "./process";
 import dotenv from "dotenv";
 import { EmailMonitor } from "./email/email-monitor";
 import { EmailMonitorConfig } from "./email/email-config";
+import * as XLSX from "xlsx";
 
 // Load environment variables from .env file
 dotenv.config();
@@ -17,6 +18,76 @@ const upload = multer({ dest: path.join(__dirname, "../uploads") });
 
 // Serve static files from the React app build
 app.use(express.static(path.join(__dirname, "../frontend/dist")));
+
+function convertXlsToCsv(xlsPath: string): string {
+  console.log(`Converting XLS file to CSV: ${xlsPath}`);
+  
+  // Read the Excel file
+  const workbook = XLSX.readFile(xlsPath);
+  
+  // Get the first worksheet
+  const sheetName = workbook.SheetNames[0];
+  const worksheet = workbook.Sheets[sheetName];
+  
+  // Convert to CSV
+  const csvContent = XLSX.utils.sheet_to_csv(worksheet);
+  
+  // Process the CSV to extract only transaction data
+  const lines = csvContent.split('\n');
+  const transactions: string[] = ['data,lançamento,valor']; // Header for output
+  
+  let inTransactionSection = false;
+  for (const line of lines) {
+    const trimmedLine = line.trim();
+    
+    // Look for transaction header
+    if (trimmedLine.startsWith('data,lançamento,') && trimmedLine.includes('valor')) {
+      inTransactionSection = true;
+      continue; // Skip the header line itself
+    }
+    
+    // Stop at total lines or empty sections
+    if (inTransactionSection && (
+      trimmedLine.includes('total') || 
+      trimmedLine === ',' || 
+      trimmedLine === '' ||
+      trimmedLine === ',,,'
+    )) {
+      inTransactionSection = false;
+      continue;
+    }
+    
+    // Collect transaction lines
+    if (inTransactionSection && trimmedLine && !trimmedLine.startsWith(',')) {
+      // Handle CSV with potential quoted values containing commas
+      const dateMatch = line.match(/^(\d{2}\/\d{2}\/\d{4}),/);
+      if (dateMatch) {
+        const date = dateMatch[1];
+        
+        // Extract description and value using regex to handle quoted values
+        const restOfLine = line.substring(dateMatch[0].length);
+        
+        // Try to match: description,,"quoted value" or description,,value or description,value
+        const match = restOfLine.match(/^([^,]+),+["']?R?\$?\s*([\d,]+\.?\d*)["']?\s*$/);
+        if (match) {
+          const description = match[1].trim();
+          const value = match[2].replace(/,/g, ''); // Remove thousand separators
+          
+          if (date && description && value) {
+            transactions.push(`${date},${description},${value}`);
+          }
+        }
+      }
+    }
+  }
+  
+  // Write to a temporary CSV file
+  const csvPath = xlsPath + '.csv';
+  fs.writeFileSync(csvPath, transactions.join('\n'), 'utf8');
+  
+  console.log(`XLS converted to CSV with ${transactions.length - 1} transactions: ${csvPath}`);
+  return csvPath;
+}
 
 function detectProcessorType(filePath: string): ProcessorType {
   console.log(`Detecting processor type for file: ${filePath}`);
@@ -67,6 +138,7 @@ function detectProcessorType(filePath: string): ProcessorType {
 
 // API endpoint for file upload and forwarding to Firefly-III Data Importer
 app.post("/api/upload", upload.single("file"), async (req, res) => {
+  console.log("=== File upload endpoint hit ===");
   const token = process.env.FIREFLY_TOKEN;
   const fireflyUrl = process.env.FIREFLY_URL;
   const secret = process.env.FIREFLY_SECRET;
@@ -85,7 +157,15 @@ app.post("/api/upload", upload.single("file"), async (req, res) => {
       message: "Missing Firefly environment variables. Please set FIREFLY_TOKEN, FIREFLY_URL, and FIREFLY_SECRET",
     });
   }
-  const inputPath = req.file.path;
+  let inputPath = req.file.path;
+  const originalName = req.file.originalname.toLowerCase();
+  
+  // Check if the file is an Excel file and convert it to CSV
+  if (originalName.endsWith('.xls') || originalName.endsWith('.xlsx')) {
+    console.log(`Excel file detected: ${originalName}`);
+    inputPath = convertXlsToCsv(inputPath);
+  }
+  
   const outputPath = inputPath + ".out.csv";
   const processorType = detectProcessorType(inputPath);
   console.log(

@@ -23003,3 +23003,1998 @@ Searching for unread emails from: todomundo@nubank.com.br
 No unread emails found from configured senders
 => 'IDLE IDLE'
 <= '+ idling'
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+[dotenv@17.0.1] injecting env (11) from .env – [tip] encrypt with dotenvx: https://dotenvx.com
+Connecting to imap.zoho.com:993 as patrick@bassut.com.br
+Starting email monitor...
+Email monitoring started
+Test server running on 3001
+[connection] Connected to host
+<= '* OK svwall.zoho.com IMAP4 Server (Zoho Mail IMAP4rev1 Server version 1.0)'
+=> 'A0 CAPABILITY'
+<= '* CAPABILITY IMAP4rev1 UNSELECT CHILDREN XLIST NAMESPACE IDLE MOVE ID AUTH=PLAIN SASL-IR UIDPLUS ESEARCH LIST-EXTENDED LIST-STATUS WITHIN LITERAL- ACL CONDSTORE'
+<= 'A0 OK CAPABILITY completed'
+=> 'A1 LOGIN "patrick@bassut.com.br" "F7YkjpJtc5Q0"'
+<= '* CAPABILITY IMAP4rev1 UNSELECT CHILDREN XLIST NAMESPACE IDLE MOVE ID AUTH=PLAIN SASL-IR UIDPLUS ESEARCH LIST-EXTENDED LIST-STATUS WITHIN LITERAL- ACL CONDSTORE'
+<= 'A1 OK Success'
+=> 'A2 NAMESPACE'
+<= '* NAMESPACE (("" "/")) NIL NIL'
+<= 'A2 OK NAMESPACE completed'
+=> 'A3 LIST "" ""'
+<= '* LIST (\\Noselect) "/" ""'
+<= 'A3 OK Success'
+IMAP connection ready
+=> 'A4 SELECT "INBOX" (CONDSTORE)'
+<= '* 2382 EXISTS'
+<= '* 559 RECENT'
+<= '* OK [UNSEEN 2382]'
+<= '* OK [UIDVALIDITY 2] UIDs valid'
+<= '* OK [UIDNEXT 2385] Predicted next UID'
+<= '* OK [HIGHESTMODSEQ 1000000000000002772]'
+<= '* FLAGS (\\Answered \\Flagged \\Deleted \\Seen \\Draft)'
+<= '* OK [PERMANENTFLAGS (\\* \\Answered \\Flagged \\Deleted \\Seen \\Draft)] Permanent flags'
+<= 'A4 OK [READ-WRITE] SELECT completed'
+Mailbox "INBOX" opened
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> 'A5 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A5 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A6 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A6 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A7 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A7 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A8 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A8 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+[dotenv@17.0.1] injecting env (11) from .env – [tip] encrypt with dotenvx: https://dotenvx.com
+Connecting to imap.zoho.com:993 as patrick@bassut.com.br
+Starting email monitor...
+Email monitoring started
+Test server running on 3001
+[connection] Connected to host
+<= '* OK svwall.zoho.com IMAP4 Server (Zoho Mail IMAP4rev1 Server version 1.0)'
+=> 'A0 CAPABILITY'
+<= '* CAPABILITY IMAP4rev1 UNSELECT CHILDREN XLIST NAMESPACE IDLE MOVE ID AUTH=PLAIN SASL-IR UIDPLUS ESEARCH LIST-EXTENDED LIST-STATUS WITHIN LITERAL- ACL CONDSTORE'
+<= 'A0 OK CAPABILITY completed'
+=> 'A1 LOGIN "patrick@bassut.com.br" "F7YkjpJtc5Q0"'
+<= '* CAPABILITY IMAP4rev1 UNSELECT CHILDREN XLIST NAMESPACE IDLE MOVE ID AUTH=PLAIN SASL-IR UIDPLUS ESEARCH LIST-EXTENDED LIST-STATUS WITHIN LITERAL- ACL CONDSTORE'
+<= 'A1 OK Success'
+=> 'A2 NAMESPACE'
+<= '* NAMESPACE (("" "/")) NIL NIL'
+<= 'A2 OK NAMESPACE completed'
+=> 'A3 LIST "" ""'
+<= '* LIST (\\Noselect) "/" ""'
+<= 'A3 OK Success'
+IMAP connection ready
+=> 'A4 SELECT "INBOX" (CONDSTORE)'
+<= '* 2382 EXISTS'
+<= '* 559 RECENT'
+<= '* OK [UNSEEN 2382]'
+<= '* OK [UIDVALIDITY 2] UIDs valid'
+<= '* OK [UIDNEXT 2385] Predicted next UID'
+<= '* OK [HIGHESTMODSEQ 1000000000000002772]'
+<= '* FLAGS (\\Answered \\Flagged \\Deleted \\Seen \\Draft)'
+<= '* OK [PERMANENTFLAGS (\\* \\Answered \\Flagged \\Deleted \\Seen \\Draft)] Permanent flags'
+<= 'A4 OK [READ-WRITE] SELECT completed'
+Mailbox "INBOX" opened
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> 'A5 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A5 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+[dotenv@17.0.1] injecting env (11) from .env – [tip] encrypt with dotenvx: https://dotenvx.com
+Connecting to imap.zoho.com:993 as patrick@bassut.com.br
+Starting email monitor...
+Email monitoring started
+Test server running on 3001
+[connection] Connected to host
+<= '* OK svwall.zoho.com IMAP4 Server (Zoho Mail IMAP4rev1 Server version 1.0)'
+=> 'A0 CAPABILITY'
+<= '* CAPABILITY IMAP4rev1 UNSELECT CHILDREN XLIST NAMESPACE IDLE MOVE ID AUTH=PLAIN SASL-IR UIDPLUS ESEARCH LIST-EXTENDED LIST-STATUS WITHIN LITERAL- ACL CONDSTORE'
+<= 'A0 OK CAPABILITY completed'
+=> 'A1 LOGIN "patrick@bassut.com.br" "F7YkjpJtc5Q0"'
+<= '* CAPABILITY IMAP4rev1 UNSELECT CHILDREN XLIST NAMESPACE IDLE MOVE ID AUTH=PLAIN SASL-IR UIDPLUS ESEARCH LIST-EXTENDED LIST-STATUS WITHIN LITERAL- ACL CONDSTORE'
+<= 'A1 OK Success'
+=> 'A2 NAMESPACE'
+<= '* NAMESPACE (("" "/")) NIL NIL'
+<= 'A2 OK NAMESPACE completed'
+=> 'A3 LIST "" ""'
+<= '* LIST (\\Noselect) "/" ""'
+<= 'A3 OK Success'
+IMAP connection ready
+=> 'A4 SELECT "INBOX" (CONDSTORE)'
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+<= '* 2382 EXISTS'
+<= '* 559 RECENT'
+<= '* OK [UNSEEN 2382]'
+<= '* OK [UIDVALIDITY 2] UIDs valid'
+<= '* OK [UIDNEXT 2385] Predicted next UID'
+<= '* OK [HIGHESTMODSEQ 1000000000000002772]'
+<= '* FLAGS (\\Answered \\Flagged \\Deleted \\Seen \\Draft)'
+<= '* OK [PERMANENTFLAGS (\\* \\Answered \\Flagged \\Deleted \\Seen \\Draft)] Permanent flags'
+<= 'A4 OK [READ-WRITE] SELECT completed'
+Mailbox "INBOX" opened
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> 'A5 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+[dotenv@17.0.1] injecting env (11) from .env – [tip] encrypt with dotenvx: https://dotenvx.com
+Connecting to imap.zoho.com:993 as patrick@bassut.com.br
+Starting email monitor...
+Email monitoring started
+Test server running on 3001
+[connection] Connected to host
+<= '* OK svwall.zoho.com IMAP4 Server (Zoho Mail IMAP4rev1 Server version 1.0)'
+=> 'A0 CAPABILITY'
+<= '* CAPABILITY IMAP4rev1 UNSELECT CHILDREN XLIST NAMESPACE IDLE MOVE ID AUTH=PLAIN SASL-IR UIDPLUS ESEARCH LIST-EXTENDED LIST-STATUS WITHIN LITERAL- ACL CONDSTORE'
+<= 'A0 OK CAPABILITY completed'
+=> 'A1 LOGIN "patrick@bassut.com.br" "F7YkjpJtc5Q0"'
+<= '* CAPABILITY IMAP4rev1 UNSELECT CHILDREN XLIST NAMESPACE IDLE MOVE ID AUTH=PLAIN SASL-IR UIDPLUS ESEARCH LIST-EXTENDED LIST-STATUS WITHIN LITERAL- ACL CONDSTORE'
+<= 'A1 OK Success'
+=> 'A2 NAMESPACE'
+<= '* NAMESPACE (("" "/")) NIL NIL'
+<= 'A2 OK NAMESPACE completed'
+=> 'A3 LIST "" ""'
+<= '* LIST (\\Noselect) "/" ""'
+<= 'A3 OK Success'
+IMAP connection ready
+=> 'A4 SELECT "INBOX" (CONDSTORE)'
+<= '* 2382 EXISTS'
+<= '* 559 RECENT'
+<= '* OK [UNSEEN 2382]'
+<= '* OK [UIDVALIDITY 2] UIDs valid'
+<= '* OK [UIDNEXT 2385] Predicted next UID'
+<= '* OK [HIGHESTMODSEQ 1000000000000002772]'
+<= '* FLAGS (\\Answered \\Flagged \\Deleted \\Seen \\Draft)'
+<= '* OK [PERMANENTFLAGS (\\* \\Answered \\Flagged \\Deleted \\Seen \\Draft)] Permanent flags'
+<= 'A4 OK [READ-WRITE] SELECT completed'
+Mailbox "INBOX" opened
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> 'A5 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A5 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+=== File upload endpoint hit ===
+Detecting processor type for file: /Users/patrickbassut/Programming/f3-binance-p2p-importer/uploads/333ba1e1921bb3d1ef0ba1e2473ac51c
+BOM detected in file, removing it
+First line of file: data,lançamento,valor
+Detected Itaú Credit Card format
+File uploaded: /Users/patrickbassut/Programming/f3-binance-p2p-importer/uploads/333ba1e1921bb3d1ef0ba1e2473ac51c, detected processor: itau-creditcard
+Processing file with itau-creditcard processor...
+Processing complete: /Users/patrickbassut/Programming/f3-binance-p2p-importer/uploads/333ba1e1921bb3d1ef0ba1e2473ac51c.out.csv
+Using config file: /Users/patrickbassut/Programming/f3-binance-p2p-importer/src/importer-configs/itau-creditcard.json
+Posting to Firefly: https://financas.patrick.bassut.com.br/dataimporter/autoupload?secret=L*!sa9UF2QBdYvUoypD_
+Upload and import successful.
+=== File upload endpoint hit ===
+Detecting processor type for file: /Users/patrickbassut/Programming/f3-binance-p2p-importer/uploads/29bf0025ffc025aa9d48aa6f0d936f71
+BOM detected in file, removing it
+First line of file: data,lançamento,valor
+Detected Itaú Credit Card format
+File uploaded: /Users/patrickbassut/Programming/f3-binance-p2p-importer/uploads/29bf0025ffc025aa9d48aa6f0d936f71, detected processor: itau-creditcard
+Processing file with itau-creditcard processor...
+Processing complete: /Users/patrickbassut/Programming/f3-binance-p2p-importer/uploads/29bf0025ffc025aa9d48aa6f0d936f71.out.csv
+Using config file: /Users/patrickbassut/Programming/f3-binance-p2p-importer/src/importer-configs/itau-creditcard.json
+Posting to Firefly: https://financas.patrick.bassut.com.br/dataimporter/autoupload?secret=L*!sa9UF2QBdYvUoypD_
+Upload and import successful.
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+[connection] Error: Error: read ECONNRESET
+IMAP error: Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:216:20) {
+  errno: -54,
+  code: 'ECONNRESET',
+  syscall: 'read',
+  source: 'socket'
+}
+[connection] Closed
+=== File upload endpoint hit ===
+Detecting processor type for file: /Users/patrickbassut/Programming/f3-binance-p2p-importer/uploads/56962b298655989fc4f8b7657777b668
+BOM detected in file, removing it
+First line of file: data,lançamento,valor
+Detected Itaú Credit Card format
+File uploaded: /Users/patrickbassut/Programming/f3-binance-p2p-importer/uploads/56962b298655989fc4f8b7657777b668, detected processor: itau-creditcard
+Processing file with itau-creditcard processor...
+Processing complete: /Users/patrickbassut/Programming/f3-binance-p2p-importer/uploads/56962b298655989fc4f8b7657777b668.out.csv
+Using config file: /Users/patrickbassut/Programming/f3-binance-p2p-importer/src/importer-configs/itau-creditcard.json
+Posting to Firefly: https://financas.patrick.bassut.com.br/dataimporter/autoupload?secret=L*!sa9UF2QBdYvUoypD_
+Upload and import successful.
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+[dotenv@17.0.1] injecting env (11) from .env – [tip] encrypt with dotenvx: https://dotenvx.com
+Connecting to imap.zoho.com:993 as patrick@bassut.com.br
+Starting email monitor...
+Email monitoring started
+Test server running on 3001
+[connection] Connected to host
+<= '* OK svwall.zoho.com IMAP4 Server (Zoho Mail IMAP4rev1 Server version 1.0)'
+=> 'A0 CAPABILITY'
+<= '* CAPABILITY IMAP4rev1 UNSELECT CHILDREN XLIST NAMESPACE IDLE MOVE ID AUTH=PLAIN SASL-IR UIDPLUS ESEARCH LIST-EXTENDED LIST-STATUS WITHIN LITERAL- ACL CONDSTORE'
+<= 'A0 OK CAPABILITY completed'
+=> 'A1 LOGIN "patrick@bassut.com.br" "F7YkjpJtc5Q0"'
+<= '* CAPABILITY IMAP4rev1 UNSELECT CHILDREN XLIST NAMESPACE IDLE MOVE ID AUTH=PLAIN SASL-IR UIDPLUS ESEARCH LIST-EXTENDED LIST-STATUS WITHIN LITERAL- ACL CONDSTORE'
+<= 'A1 OK Success'
+=> 'A2 NAMESPACE'
+<= '* NAMESPACE (("" "/")) NIL NIL'
+<= 'A2 OK NAMESPACE completed'
+=> 'A3 LIST "" ""'
+<= '* LIST (\\Noselect) "/" ""'
+<= 'A3 OK Success'
+IMAP connection ready
+=> 'A4 SELECT "INBOX" (CONDSTORE)'
+<= '* 2385 EXISTS'
+<= '* 562 RECENT'
+<= '* OK [UNSEEN 2382]'
+<= '* OK [UIDVALIDITY 2] UIDs valid'
+<= '* OK [UIDNEXT 2388] Predicted next UID'
+<= '* OK [HIGHESTMODSEQ 1000000000000002775]'
+<= '* FLAGS (\\Answered \\Flagged \\Deleted \\Seen \\Draft)'
+<= '* OK [PERMANENTFLAGS (\\* \\Answered \\Flagged \\Deleted \\Seen \\Draft)] Permanent flags'
+<= 'A4 OK [READ-WRITE] SELECT completed'
+Mailbox "INBOX" opened
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> 'A5 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH 2387'
+<= 'A5 OK Success'
+Found 1 unread emails from todomundo@nubank.com.br
+=> 'A6 UID FETCH 2387 (MODSEQ UID FLAGS INTERNALDATE BODY[])'
+<= '* 2385 FETCH (MODSEQ (1000000000000002775) FLAGS (\\Seen) INTERNALDATE "15-Jul-2025 00:22:18 +0000" UID 2387 BODY[] {42978}'
+Processing message #2385
+<= '* 2385 FETCH (MODSEQ (1000000000000002775) FLAGS (\\Seen) INTERNALDATE "15-Jul-2025 00:22:18 +0000" UID 2387 )'
+<= 'A6 OK Success'
+=> 'IDLE IDLE'
+Finished processing emails
+
+Processing email #2385:
+Subject: Você recebeu um reembolso!
+From: "Nubank" <todomundo@nubank.com.br>
+Date: Mon Jul 14 2025 21:22:15 GMT-0300 (Brasilia Standard Time)
+Has attachments: false
+Using csv processor (nubank.json) for email from todomundo@nubank.com.br
+Email #2385 has no attachments
+<= '+ idling'
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+[dotenv@17.0.1] injecting env (11) from .env – [tip] encrypt with dotenvx: https://dotenvx.com
+Connecting to imap.zoho.com:993 as patrick@bassut.com.br
+Starting email monitor...
+Email monitoring started
+Test server running on 3001
+[connection] Connected to host
+<= '* OK svwall.zoho.com IMAP4 Server (Zoho Mail IMAP4rev1 Server version 1.0)'
+=> 'A0 CAPABILITY'
+<= '* CAPABILITY IMAP4rev1 UNSELECT CHILDREN XLIST NAMESPACE IDLE MOVE ID AUTH=PLAIN SASL-IR UIDPLUS ESEARCH LIST-EXTENDED LIST-STATUS WITHIN LITERAL- ACL CONDSTORE'
+<= 'A0 OK CAPABILITY completed'
+=> 'A1 LOGIN "patrick@bassut.com.br" "F7YkjpJtc5Q0"'
+<= '* CAPABILITY IMAP4rev1 UNSELECT CHILDREN XLIST NAMESPACE IDLE MOVE ID AUTH=PLAIN SASL-IR UIDPLUS ESEARCH LIST-EXTENDED LIST-STATUS WITHIN LITERAL- ACL CONDSTORE'
+<= 'A1 OK Success'
+=> 'A2 NAMESPACE'
+<= '* NAMESPACE (("" "/")) NIL NIL'
+<= 'A2 OK NAMESPACE completed'
+=> 'A3 LIST "" ""'
+<= '* LIST (\\Noselect) "/" ""'
+<= 'A3 OK Success'
+IMAP connection ready
+=> 'A4 SELECT "INBOX" (CONDSTORE)'
+<= '* 2385 EXISTS'
+<= '* 561 RECENT'
+<= '* OK [UNSEEN 2382]'
+<= '* OK [UIDVALIDITY 2] UIDs valid'
+<= '* OK [UIDNEXT 2388] Predicted next UID'
+<= '* OK [HIGHESTMODSEQ 1000000000000002776]'
+<= '* FLAGS (\\Answered \\Flagged \\Deleted \\Seen \\Draft)'
+<= '* OK [PERMANENTFLAGS (\\* \\Answered \\Flagged \\Deleted \\Seen \\Draft)] Permanent flags'
+<= 'A4 OK [READ-WRITE] SELECT completed'
+Mailbox "INBOX" opened
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> 'A5 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A5 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+[dotenv@17.0.1] injecting env (11) from .env – [tip] encrypt with dotenvx: https://dotenvx.com
+Connecting to imap.zoho.com:993 as patrick@bassut.com.br
+Starting email monitor...
+Email monitoring started
+Test server running on 3001
+[connection] Connected to host
+<= '* OK svwall.zoho.com IMAP4 Server (Zoho Mail IMAP4rev1 Server version 1.0)'
+=> 'A0 CAPABILITY'
+<= '* CAPABILITY IMAP4rev1 UNSELECT CHILDREN XLIST NAMESPACE IDLE MOVE ID AUTH=PLAIN SASL-IR UIDPLUS ESEARCH LIST-EXTENDED LIST-STATUS WITHIN LITERAL- ACL CONDSTORE'
+<= 'A0 OK CAPABILITY completed'
+=> 'A1 LOGIN "patrick@bassut.com.br" "F7YkjpJtc5Q0"'
+<= '* CAPABILITY IMAP4rev1 UNSELECT CHILDREN XLIST NAMESPACE IDLE MOVE ID AUTH=PLAIN SASL-IR UIDPLUS ESEARCH LIST-EXTENDED LIST-STATUS WITHIN LITERAL- ACL CONDSTORE'
+<= 'A1 OK Success'
+=> 'A2 NAMESPACE'
+<= '* NAMESPACE (("" "/")) NIL NIL'
+<= 'A2 OK NAMESPACE completed'
+=> 'A3 LIST "" ""'
+<= '* LIST (\\Noselect) "/" ""'
+<= 'A3 OK Success'
+IMAP connection ready
+=> 'A4 SELECT "INBOX" (CONDSTORE)'
+<= '* 2385 EXISTS'
+<= '* 561 RECENT'
+<= '* OK [UNSEEN 2382]'
+<= '* OK [UIDVALIDITY 2] UIDs valid'
+<= '* OK [UIDNEXT 2388] Predicted next UID'
+<= '* OK [HIGHESTMODSEQ 1000000000000002776]'
+<= '* FLAGS (\\Answered \\Flagged \\Deleted \\Seen \\Draft)'
+<= '* OK [PERMANENTFLAGS (\\* \\Answered \\Flagged \\Deleted \\Seen \\Draft)] Permanent flags'
+<= 'A4 OK [READ-WRITE] SELECT completed'
+Mailbox "INBOX" opened
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> 'A5 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A5 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+[dotenv@17.0.1] injecting env (11) from .env – [tip] encrypt with dotenvx: https://dotenvx.com
+Connecting to imap.zoho.com:993 as patrick@bassut.com.br
+Starting email monitor...
+Email monitoring started
+Test server running on 3001
+[connection] Connected to host
+<= '* OK svwall.zoho.com IMAP4 Server (Zoho Mail IMAP4rev1 Server version 1.0)'
+=> 'A0 CAPABILITY'
+<= '* CAPABILITY IMAP4rev1 UNSELECT CHILDREN XLIST NAMESPACE IDLE MOVE ID AUTH=PLAIN SASL-IR UIDPLUS ESEARCH LIST-EXTENDED LIST-STATUS WITHIN LITERAL- ACL CONDSTORE'
+<= 'A0 OK CAPABILITY completed'
+=> 'A1 LOGIN "patrick@bassut.com.br" "F7YkjpJtc5Q0"'
+<= '* CAPABILITY IMAP4rev1 UNSELECT CHILDREN XLIST NAMESPACE IDLE MOVE ID AUTH=PLAIN SASL-IR UIDPLUS ESEARCH LIST-EXTENDED LIST-STATUS WITHIN LITERAL- ACL CONDSTORE'
+<= 'A1 OK Success'
+=> 'A2 NAMESPACE'
+<= '* NAMESPACE (("" "/")) NIL NIL'
+<= 'A2 OK NAMESPACE completed'
+=> 'A3 LIST "" ""'
+<= '* LIST (\\Noselect) "/" ""'
+<= 'A3 OK Success'
+IMAP connection ready
+=> 'A4 SELECT "INBOX" (CONDSTORE)'
+<= '* 2385 EXISTS'
+<= '* 561 RECENT'
+<= '* OK [UNSEEN 2382]'
+<= '* OK [UIDVALIDITY 2] UIDs valid'
+<= '* OK [UIDNEXT 2388] Predicted next UID'
+<= '* OK [HIGHESTMODSEQ 1000000000000002776]'
+<= '* FLAGS (\\Answered \\Flagged \\Deleted \\Seen \\Draft)'
+<= '* OK [PERMANENTFLAGS (\\* \\Answered \\Flagged \\Deleted \\Seen \\Draft)] Permanent flags'
+<= 'A4 OK [READ-WRITE] SELECT completed'
+Mailbox "INBOX" opened
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> 'A5 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A5 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+[dotenv@17.0.1] injecting env (11) from .env – [tip] encrypt with dotenvx: https://dotenvx.com
+Connecting to imap.zoho.com:993 as patrick@bassut.com.br
+Starting email monitor...
+Email monitoring started
+Test server running on 3001
+[connection] Connected to host
+<= '* OK svwall.zoho.com IMAP4 Server (Zoho Mail IMAP4rev1 Server version 1.0)'
+=> 'A0 CAPABILITY'
+<= '* CAPABILITY IMAP4rev1 UNSELECT CHILDREN XLIST NAMESPACE IDLE MOVE ID AUTH=PLAIN SASL-IR UIDPLUS ESEARCH LIST-EXTENDED LIST-STATUS WITHIN LITERAL- ACL CONDSTORE'
+<= 'A0 OK CAPABILITY completed'
+=> 'A1 LOGIN "patrick@bassut.com.br" "F7YkjpJtc5Q0"'
+<= '* CAPABILITY IMAP4rev1 UNSELECT CHILDREN XLIST NAMESPACE IDLE MOVE ID AUTH=PLAIN SASL-IR UIDPLUS ESEARCH LIST-EXTENDED LIST-STATUS WITHIN LITERAL- ACL CONDSTORE'
+<= 'A1 OK Success'
+=> 'A2 NAMESPACE'
+<= '* NAMESPACE (("" "/")) NIL NIL'
+<= 'A2 OK NAMESPACE completed'
+=> 'A3 LIST "" ""'
+<= '* LIST (\\Noselect) "/" ""'
+<= 'A3 OK Success'
+IMAP connection ready
+=> 'A4 SELECT "INBOX" (CONDSTORE)'
+<= '* 2385 EXISTS'
+<= '* 561 RECENT'
+<= '* OK [UNSEEN 2382]'
+<= '* OK [UIDVALIDITY 2] UIDs valid'
+<= '* OK [UIDNEXT 2388] Predicted next UID'
+<= '* OK [HIGHESTMODSEQ 1000000000000002776]'
+<= '* FLAGS (\\Answered \\Flagged \\Deleted \\Seen \\Draft)'
+<= '* OK [PERMANENTFLAGS (\\* \\Answered \\Flagged \\Deleted \\Seen \\Draft)] Permanent flags'
+<= 'A4 OK [READ-WRITE] SELECT completed'
+Mailbox "INBOX" opened
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> 'A5 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A5 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+[dotenv@17.0.1] injecting env (11) from .env – [tip] encrypt with dotenvx: https://dotenvx.com
+Connecting to imap.zoho.com:993 as patrick@bassut.com.br
+Starting email monitor...
+Email monitoring started
+Test server running on 3001
+[connection] Connected to host
+<= '* OK svwall.zoho.com IMAP4 Server (Zoho Mail IMAP4rev1 Server version 1.0)'
+=> 'A0 CAPABILITY'
+<= '* CAPABILITY IMAP4rev1 UNSELECT CHILDREN XLIST NAMESPACE IDLE MOVE ID AUTH=PLAIN SASL-IR UIDPLUS ESEARCH LIST-EXTENDED LIST-STATUS WITHIN LITERAL- ACL CONDSTORE'
+<= 'A0 OK CAPABILITY completed'
+=> 'A1 LOGIN "patrick@bassut.com.br" "F7YkjpJtc5Q0"'
+<= '* CAPABILITY IMAP4rev1 UNSELECT CHILDREN XLIST NAMESPACE IDLE MOVE ID AUTH=PLAIN SASL-IR UIDPLUS ESEARCH LIST-EXTENDED LIST-STATUS WITHIN LITERAL- ACL CONDSTORE'
+<= 'A1 OK Success'
+=> 'A2 NAMESPACE'
+<= '* NAMESPACE (("" "/")) NIL NIL'
+<= 'A2 OK NAMESPACE completed'
+=> 'A3 LIST "" ""'
+<= '* LIST (\\Noselect) "/" ""'
+<= 'A3 OK Success'
+IMAP connection ready
+=> 'A4 SELECT "INBOX" (CONDSTORE)'
+<= '* 2385 EXISTS'
+<= '* 561 RECENT'
+<= '* OK [UNSEEN 2382]'
+<= '* OK [UIDVALIDITY 2] UIDs valid'
+<= '* OK [UIDNEXT 2388] Predicted next UID'
+<= '* OK [HIGHESTMODSEQ 1000000000000002776]'
+<= '* FLAGS (\\Answered \\Flagged \\Deleted \\Seen \\Draft)'
+<= '* OK [PERMANENTFLAGS (\\* \\Answered \\Flagged \\Deleted \\Seen \\Draft)] Permanent flags'
+<= 'A4 OK [READ-WRITE] SELECT completed'
+Mailbox "INBOX" opened
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> 'A5 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A5 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+[dotenv@17.0.1] injecting env (11) from .env – [tip] encrypt with dotenvx: https://dotenvx.com
+Connecting to imap.zoho.com:993 as patrick@bassut.com.br
+Starting email monitor...
+Email monitoring started
+Test server running on 3001
+[connection] Connected to host
+<= '* OK svwall.zoho.com IMAP4 Server (Zoho Mail IMAP4rev1 Server version 1.0)'
+=> 'A0 CAPABILITY'
+<= '* CAPABILITY IMAP4rev1 UNSELECT CHILDREN XLIST NAMESPACE IDLE MOVE ID AUTH=PLAIN SASL-IR UIDPLUS ESEARCH LIST-EXTENDED LIST-STATUS WITHIN LITERAL- ACL CONDSTORE'
+<= 'A0 OK CAPABILITY completed'
+=> 'A1 LOGIN "patrick@bassut.com.br" "F7YkjpJtc5Q0"'
+<= '* CAPABILITY IMAP4rev1 UNSELECT CHILDREN XLIST NAMESPACE IDLE MOVE ID AUTH=PLAIN SASL-IR UIDPLUS ESEARCH LIST-EXTENDED LIST-STATUS WITHIN LITERAL- ACL CONDSTORE'
+<= 'A1 OK Success'
+=> 'A2 NAMESPACE'
+<= '* NAMESPACE (("" "/")) NIL NIL'
+<= 'A2 OK NAMESPACE completed'
+=> 'A3 LIST "" ""'
+<= '* LIST (\\Noselect) "/" ""'
+<= 'A3 OK Success'
+IMAP connection ready
+=> 'A4 SELECT "INBOX" (CONDSTORE)'
+<= '* 2385 EXISTS'
+<= '* 561 RECENT'
+<= '* OK [UNSEEN 2382]'
+<= '* OK [UIDVALIDITY 2] UIDs valid'
+<= '* OK [UIDNEXT 2388] Predicted next UID'
+<= '* OK [HIGHESTMODSEQ 1000000000000002776]'
+<= '* FLAGS (\\Answered \\Flagged \\Deleted \\Seen \\Draft)'
+<= '* OK [PERMANENTFLAGS (\\* \\Answered \\Flagged \\Deleted \\Seen \\Draft)] Permanent flags'
+<= 'A4 OK [READ-WRITE] SELECT completed'
+Mailbox "INBOX" opened
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> 'A5 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A5 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+[dotenv@17.0.1] injecting env (11) from .env – [tip] encrypt with dotenvx: https://dotenvx.com
+Connecting to imap.zoho.com:993 as patrick@bassut.com.br
+Starting email monitor...
+Email monitoring started
+Test server running on 3001
+[connection] Connected to host
+<= '* OK svwall.zoho.com IMAP4 Server (Zoho Mail IMAP4rev1 Server version 1.0)'
+=> 'A0 CAPABILITY'
+<= '* CAPABILITY IMAP4rev1 UNSELECT CHILDREN XLIST NAMESPACE IDLE MOVE ID AUTH=PLAIN SASL-IR UIDPLUS ESEARCH LIST-EXTENDED LIST-STATUS WITHIN LITERAL- ACL CONDSTORE'
+<= 'A0 OK CAPABILITY completed'
+=> 'A1 LOGIN "patrick@bassut.com.br" "F7YkjpJtc5Q0"'
+<= '* CAPABILITY IMAP4rev1 UNSELECT CHILDREN XLIST NAMESPACE IDLE MOVE ID AUTH=PLAIN SASL-IR UIDPLUS ESEARCH LIST-EXTENDED LIST-STATUS WITHIN LITERAL- ACL CONDSTORE'
+<= 'A1 OK Success'
+=> 'A2 NAMESPACE'
+<= '* NAMESPACE (("" "/")) NIL NIL'
+<= 'A2 OK NAMESPACE completed'
+=> 'A3 LIST "" ""'
+<= '* LIST (\\Noselect) "/" ""'
+<= 'A3 OK Success'
+IMAP connection ready
+=> 'A4 SELECT "INBOX" (CONDSTORE)'
+<= '* 2385 EXISTS'
+<= '* 561 RECENT'
+<= '* OK [UNSEEN 2382]'
+<= '* OK [UIDVALIDITY 2] UIDs valid'
+<= '* OK [UIDNEXT 2388] Predicted next UID'
+<= '* OK [HIGHESTMODSEQ 1000000000000002776]'
+<= '* FLAGS (\\Answered \\Flagged \\Deleted \\Seen \\Draft)'
+<= '* OK [PERMANENTFLAGS (\\* \\Answered \\Flagged \\Deleted \\Seen \\Draft)] Permanent flags'
+<= 'A4 OK [READ-WRITE] SELECT completed'
+Mailbox "INBOX" opened
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> 'A5 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A5 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+[dotenv@17.0.1] injecting env (11) from .env – [tip] encrypt with dotenvx: https://dotenvx.com
+Connecting to imap.zoho.com:993 as patrick@bassut.com.br
+Starting email monitor...
+Email monitoring started
+Test server running on 3001
+[connection] Connected to host
+<= '* OK svwall.zoho.com IMAP4 Server (Zoho Mail IMAP4rev1 Server version 1.0)'
+=> 'A0 CAPABILITY'
+<= '* CAPABILITY IMAP4rev1 UNSELECT CHILDREN XLIST NAMESPACE IDLE MOVE ID AUTH=PLAIN SASL-IR UIDPLUS ESEARCH LIST-EXTENDED LIST-STATUS WITHIN LITERAL- ACL CONDSTORE'
+<= 'A0 OK CAPABILITY completed'
+=> 'A1 LOGIN "patrick@bassut.com.br" "F7YkjpJtc5Q0"'
+<= '* CAPABILITY IMAP4rev1 UNSELECT CHILDREN XLIST NAMESPACE IDLE MOVE ID AUTH=PLAIN SASL-IR UIDPLUS ESEARCH LIST-EXTENDED LIST-STATUS WITHIN LITERAL- ACL CONDSTORE'
+<= 'A1 OK Success'
+=> 'A2 NAMESPACE'
+<= '* NAMESPACE (("" "/")) NIL NIL'
+<= 'A2 OK NAMESPACE completed'
+=> 'A3 LIST "" ""'
+<= '* LIST (\\Noselect) "/" ""'
+<= 'A3 OK Success'
+IMAP connection ready
+=> 'A4 SELECT "INBOX" (CONDSTORE)'
+<= '* 2385 EXISTS'
+<= '* 561 RECENT'
+<= '* OK [UNSEEN 2382]'
+<= '* OK [UIDVALIDITY 2] UIDs valid'
+<= '* OK [UIDNEXT 2388] Predicted next UID'
+<= '* OK [HIGHESTMODSEQ 1000000000000002776]'
+<= '* FLAGS (\\Answered \\Flagged \\Deleted \\Seen \\Draft)'
+<= '* OK [PERMANENTFLAGS (\\* \\Answered \\Flagged \\Deleted \\Seen \\Draft)] Permanent flags'
+<= 'A4 OK [READ-WRITE] SELECT completed'
+Mailbox "INBOX" opened
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> 'A5 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A5 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A6 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A6 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A7 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A7 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A8 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A8 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A9 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A9 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A10 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A10 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A11 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A11 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A12 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A12 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A13 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A13 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A14 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A14 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+[dotenv@17.0.1] injecting env (11) from .env – [tip] encrypt with dotenvx: https://dotenvx.com
+Connecting to imap.zoho.com:993 as patrick@bassut.com.br
+Starting email monitor...
+Email monitoring started
+Test server running on 3001
+[connection] Connected to host
+<= '* OK svwall.zoho.com IMAP4 Server (Zoho Mail IMAP4rev1 Server version 1.0)'
+=> 'A0 CAPABILITY'
+<= '* CAPABILITY IMAP4rev1 UNSELECT CHILDREN XLIST NAMESPACE IDLE MOVE ID AUTH=PLAIN SASL-IR UIDPLUS ESEARCH LIST-EXTENDED LIST-STATUS WITHIN LITERAL- ACL CONDSTORE'
+<= 'A0 OK CAPABILITY completed'
+=> 'A1 LOGIN "patrick@bassut.com.br" "F7YkjpJtc5Q0"'
+<= '* CAPABILITY IMAP4rev1 UNSELECT CHILDREN XLIST NAMESPACE IDLE MOVE ID AUTH=PLAIN SASL-IR UIDPLUS ESEARCH LIST-EXTENDED LIST-STATUS WITHIN LITERAL- ACL CONDSTORE'
+<= 'A1 OK Success'
+=> 'A2 NAMESPACE'
+<= '* NAMESPACE (("" "/")) NIL NIL'
+<= 'A2 OK NAMESPACE completed'
+=> 'A3 LIST "" ""'
+<= '* LIST (\\Noselect) "/" ""'
+<= 'A3 OK Success'
+IMAP connection ready
+=> 'A4 SELECT "INBOX" (CONDSTORE)'
+<= '* 2385 EXISTS'
+<= '* 561 RECENT'
+<= '* OK [UNSEEN 2382]'
+<= '* OK [UIDVALIDITY 2] UIDs valid'
+<= '* OK [UIDNEXT 2388] Predicted next UID'
+<= '* OK [HIGHESTMODSEQ 1000000000000002776]'
+<= '* FLAGS (\\Answered \\Flagged \\Deleted \\Seen \\Draft)'
+<= '* OK [PERMANENTFLAGS (\\* \\Answered \\Flagged \\Deleted \\Seen \\Draft)] Permanent flags'
+<= 'A4 OK [READ-WRITE] SELECT completed'
+Mailbox "INBOX" opened
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> 'A5 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A5 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+[dotenv@17.0.1] injecting env (11) from .env – [tip] encrypt with dotenvx: https://dotenvx.com
+Connecting to imap.zoho.com:993 as patrick@bassut.com.br
+Starting email monitor...
+Email monitoring started
+Test server running on 3001
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+[dotenv@17.0.1] injecting env (11) from .env – [tip] encrypt with dotenvx: https://dotenvx.com
+Connecting to imap.zoho.com:993 as patrick@bassut.com.br
+Starting email monitor...
+Email monitoring started
+Test server running on 3001
+[connection] Connected to host
+<= '* OK svwall.zoho.com IMAP4 Server (Zoho Mail IMAP4rev1 Server version 1.0)'
+=> 'A0 CAPABILITY'
+<= '* CAPABILITY IMAP4rev1 UNSELECT CHILDREN XLIST NAMESPACE IDLE MOVE ID AUTH=PLAIN SASL-IR UIDPLUS ESEARCH LIST-EXTENDED LIST-STATUS WITHIN LITERAL- ACL CONDSTORE'
+<= 'A0 OK CAPABILITY completed'
+=> 'A1 LOGIN "patrick@bassut.com.br" "F7YkjpJtc5Q0"'
+<= '* CAPABILITY IMAP4rev1 UNSELECT CHILDREN XLIST NAMESPACE IDLE MOVE ID AUTH=PLAIN SASL-IR UIDPLUS ESEARCH LIST-EXTENDED LIST-STATUS WITHIN LITERAL- ACL CONDSTORE'
+<= 'A1 OK Success'
+=> 'A2 NAMESPACE'
+<= '* NAMESPACE (("" "/")) NIL NIL'
+<= 'A2 OK NAMESPACE completed'
+=> 'A3 LIST "" ""'
+<= '* LIST (\\Noselect) "/" ""'
+<= 'A3 OK Success'
+IMAP connection ready
+=> 'A4 SELECT "INBOX" (CONDSTORE)'
+<= '* 2385 EXISTS'
+<= '* 561 RECENT'
+<= '* OK [UNSEEN 2382]'
+<= '* OK [UIDVALIDITY 2] UIDs valid'
+<= '* OK [UIDNEXT 2388] Predicted next UID'
+<= '* OK [HIGHESTMODSEQ 1000000000000002776]'
+<= '* FLAGS (\\Answered \\Flagged \\Deleted \\Seen \\Draft)'
+<= '* OK [PERMANENTFLAGS (\\* \\Answered \\Flagged \\Deleted \\Seen \\Draft)] Permanent flags'
+<= 'A4 OK [READ-WRITE] SELECT completed'
+Mailbox "INBOX" opened
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> 'A5 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A5 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A6 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A6 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A7 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A7 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A8 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A8 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A9 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A9 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A10 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A10 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A11 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A11 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A12 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A12 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A13 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A13 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A14 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A14 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A15 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A15 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A16 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A16 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A17 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A17 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A18 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A18 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A19 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A19 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A20 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A20 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A21 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A21 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A22 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A22 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+=> DONE
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+<= 'IDLE OK IDLE terminated'
+=> 'A23 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A23 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A24 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A24 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A25 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A25 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A26 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A26 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A27 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A27 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A28 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A28 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A29 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A29 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A30 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A30 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A31 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A31 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A32 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A32 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A33 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A33 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A34 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A34 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A35 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A35 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A36 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A36 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A37 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A37 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A38 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A38 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A39 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A39 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A40 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A40 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A41 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A41 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A42 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A42 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A43 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A43 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A44 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A44 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A45 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A45 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A46 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A46 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A47 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A47 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A48 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A48 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A49 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A49 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A50 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A50 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A51 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A51 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A52 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A52 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A53 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A53 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A54 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A54 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A55 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A55 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A56 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A56 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A57 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A57 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A58 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A58 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A59 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A59 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A60 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A60 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A61 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A61 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A62 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A62 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A63 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A63 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A64 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A64 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A65 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A65 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A66 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A66 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A67 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A67 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A68 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A68 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A69 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A69 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A70 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A70 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A71 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A71 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A72 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A72 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A73 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A73 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A74 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A74 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A75 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A75 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A76 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A76 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A77 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A77 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A78 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A78 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A79 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A79 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A80 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A80 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A81 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A81 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A82 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A82 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A83 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A83 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A84 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A84 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A85 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A85 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A86 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A86 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A87 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A87 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A88 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A88 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A89 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A89 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A90 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A90 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A91 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A91 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A92 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A92 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+=> DONE
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+[connection] Error: Error: read ETIMEDOUT
+IMAP error: Error: read ETIMEDOUT
+    at TCP.onStreamRead (node:internal/stream_base_commons:216:20) {
+  errno: -60,
+  code: 'ETIMEDOUT',
+  syscall: 'read',
+  source: 'socket'
+}
+[connection] Closed
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+[dotenv@17.0.1] injecting env (11) from .env – [tip] encrypt with dotenvx: https://dotenvx.com
+Connecting to imap.zoho.com:993 as patrick@bassut.com.br
+Starting email monitor...
+Email monitoring started
+Test server running on 3001
+[connection] Connected to host
+<= '* OK svwall.zoho.com IMAP4 Server (Zoho Mail IMAP4rev1 Server version 1.0)'
+=> 'A0 CAPABILITY'
+<= '* CAPABILITY IMAP4rev1 UNSELECT CHILDREN XLIST NAMESPACE IDLE MOVE ID AUTH=PLAIN SASL-IR UIDPLUS ESEARCH LIST-EXTENDED LIST-STATUS WITHIN LITERAL- ACL CONDSTORE'
+<= 'A0 OK CAPABILITY completed'
+=> 'A1 LOGIN "patrick@bassut.com.br" "F7YkjpJtc5Q0"'
+<= '* CAPABILITY IMAP4rev1 UNSELECT CHILDREN XLIST NAMESPACE IDLE MOVE ID AUTH=PLAIN SASL-IR UIDPLUS ESEARCH LIST-EXTENDED LIST-STATUS WITHIN LITERAL- ACL CONDSTORE'
+<= 'A1 OK Success'
+=> 'A2 NAMESPACE'
+<= '* NAMESPACE (("" "/")) NIL NIL'
+<= 'A2 OK NAMESPACE completed'
+=> 'A3 LIST "" ""'
+<= '* LIST (\\Noselect) "/" ""'
+<= 'A3 OK Success'
+IMAP connection ready
+=> 'A4 SELECT "INBOX" (CONDSTORE)'
+<= '* 2386 EXISTS'
+<= '* 562 RECENT'
+<= '* OK [UNSEEN 2382]'
+<= '* OK [UIDVALIDITY 2] UIDs valid'
+<= '* OK [UIDNEXT 2389] Predicted next UID'
+<= '* OK [HIGHESTMODSEQ 1000000000000002777]'
+<= '* FLAGS (\\Answered \\Flagged \\Deleted \\Seen \\Draft)'
+<= '* OK [PERMANENTFLAGS (\\* \\Answered \\Flagged \\Deleted \\Seen \\Draft)] Permanent flags'
+<= 'A4 OK [READ-WRITE] SELECT completed'
+Mailbox "INBOX" opened
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> 'A5 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A5 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+[dotenv@17.0.1] injecting env (11) from .env – [tip] encrypt with dotenvx: https://dotenvx.com
+Connecting to imap.zoho.com:993 as patrick@bassut.com.br
+Starting email monitor...
+Email monitoring started
+Test server running on 3001
+[connection] Connected to host
+<= '* OK svwall.zoho.com IMAP4 Server (Zoho Mail IMAP4rev1 Server version 1.0)'
+=> 'A0 CAPABILITY'
+<= '* CAPABILITY IMAP4rev1 UNSELECT CHILDREN XLIST NAMESPACE IDLE MOVE ID AUTH=PLAIN SASL-IR UIDPLUS ESEARCH LIST-EXTENDED LIST-STATUS WITHIN LITERAL- ACL CONDSTORE'
+<= 'A0 OK CAPABILITY completed'
+=> 'A1 LOGIN "patrick@bassut.com.br" "F7YkjpJtc5Q0"'
+<= '* CAPABILITY IMAP4rev1 UNSELECT CHILDREN XLIST NAMESPACE IDLE MOVE ID AUTH=PLAIN SASL-IR UIDPLUS ESEARCH LIST-EXTENDED LIST-STATUS WITHIN LITERAL- ACL CONDSTORE'
+<= 'A1 OK Success'
+=> 'A2 NAMESPACE'
+<= '* NAMESPACE (("" "/")) NIL NIL'
+<= 'A2 OK NAMESPACE completed'
+=> 'A3 LIST "" ""'
+<= '* LIST (\\Noselect) "/" ""'
+<= 'A3 OK Success'
+IMAP connection ready
+=> 'A4 SELECT "INBOX" (CONDSTORE)'
+<= '* 2386 EXISTS'
+<= '* 562 RECENT'
+<= '* OK [UNSEEN 2382]'
+<= '* OK [UIDVALIDITY 2] UIDs valid'
+<= '* OK [UIDNEXT 2389] Predicted next UID'
+<= '* OK [HIGHESTMODSEQ 1000000000000002777]'
+<= '* FLAGS (\\Answered \\Flagged \\Deleted \\Seen \\Draft)'
+<= '* OK [PERMANENTFLAGS (\\* \\Answered \\Flagged \\Deleted \\Seen \\Draft)] Permanent flags'
+<= 'A4 OK [READ-WRITE] SELECT completed'
+Mailbox "INBOX" opened
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> 'A5 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A5 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A6 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A6 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'

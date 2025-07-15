@@ -19,7 +19,12 @@ export type OutputRow = {
 };
 
 function toISODate(date: string): string {
-  // Convert YYYY-MM-DD to YYYY-MM-DD (already in correct format)
+  // Check if date is in DD/MM/YYYY format
+  if (date.includes('/')) {
+    const [d, m, y] = date.split('/');
+    return `${y}-${m.padStart(2, '0')}-${d.padStart(2, '0')}`;
+  }
+  // Already in YYYY-MM-DD format
   return date;
 }
 
@@ -48,15 +53,15 @@ export function processCsvFile(
       for (const row of results.data) {
         if (!row.data || !row.valor) continue;
         
-        // Credit card transactions are always expenses
+        // Flip signal: Credit card transactions become income (negative values)
         const amount = row.valor;
         
         rows.push({
           Date: toISODate(row.data),
           Description: cleanDescription(row.lançamento || ""),
           Amount: amount,
-          Expense: amount,
-          Income: "" // Credit card transactions are never income
+          Expense: "", // Flipped: no longer expense
+          Income: amount // Flipped: now income
         });
       }
       

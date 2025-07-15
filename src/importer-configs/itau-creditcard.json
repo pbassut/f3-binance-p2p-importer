@@ -1,9 +1,9 @@
 {
     "version": 3,
     "source": "ff3-importer-1.6.3",
-    "created_at": "2025-07-14T16:39:36-03:00",
+    "created_at": "2025-07-14T23:42:31-03:00",
     "date": "Y-m-d",
-    "default_account": 20,
+    "default_account": 62,
     "delimiter": "comma",
     "headers": true,
     "rules": true,
@@ -13,7 +13,7 @@
         "date_transaction",
         "description",
         "amount",
-        "amount_debit",
+        "_ignore",
         "_ignore"
     ],
     "do_mapping": [
@@ -30,7 +30,7 @@
     "unique_column_type": "internal_reference",
     "flow": "file",
     "content_type": "csv",
-    "custom_tag": "Itaú Credit Card Import",
+    "custom_tag": "Ita\u00fa Credit Card Import",
     "identifier": "0",
     "connection": "0",
     "ignore_spectre_categories": false,

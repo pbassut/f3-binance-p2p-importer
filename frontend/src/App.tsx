@@ -75,7 +75,7 @@ const App: React.FC = () => {
               hidden
               ref={fileInputRef}
               onChange={handleFileChange}
-              accept=".csv,.json,.ofx,.qif,.xml"
+              accept=".csv,.json,.ofx,.qif,.xml,.xls,.xlsx"
             />
           </Button>
           {uploading && <LinearProgress sx={{ width: "100%" }} />}

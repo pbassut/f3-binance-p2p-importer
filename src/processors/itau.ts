@@ -33,9 +33,13 @@ function isTransactionLine(line: string[]): boolean {
 
 function parseValue(val: string): string {
   // Convert -1.234,56 or 29,12 to -1234.56 or 29.12
-  return val
+  const numStr = val
     .replace(/\./g, "") // remove thousand sep
     .replace(",", ".");
+  
+  // Flip the signal: negative becomes positive, positive becomes negative
+  const num = parseFloat(numStr);
+  return (num * -1).toString();
 }
 
 function toISODate(date: string): string {
