@@ -14,8 +14,6 @@ export type OutputRow = {
   Date: string;
   Description: string;
   Amount: string;
-  Expense: string;
-  Income: string;
 };
 
 function toISODate(date: string): string {
@@ -53,15 +51,14 @@ export function processCsvFile(
       for (const row of results.data) {
         if (!row.data || !row.valor) continue;
         
-        // Flip signal: Credit card transactions become income (negative values)
-        const amount = row.valor;
+        // Flip signal: multiply by -1
+        const originalValue = parseFloat(row.valor.replace(',', '.'));
+        const flippedAmount = (originalValue * -1).toString();
         
         rows.push({
           Date: toISODate(row.data),
           Description: cleanDescription(row.lançamento || ""),
-          Amount: amount,
-          Expense: "", // Flipped: no longer expense
-          Income: amount // Flipped: now income
+          Amount: flippedAmount
         });
       }
       
@@ -71,7 +68,7 @@ export function processCsvFile(
       // Write as UTF-8 CSV
       const csvOut = Papa.unparse(rows, {
         header: true,
-        columns: ["Date", "Description", "Amount", "Expense", "Income"],
+        columns: ["Date", "Description", "Amount"],
         delimiter: ","
       });
       

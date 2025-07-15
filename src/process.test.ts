@@ -154,7 +154,7 @@ describe("processCsvFile processor selection", () => {
     processCsvFile(ITAU_SAMPLE, ITAU_OUT, undefined, "itau");
     const output = fs.readFileSync(ITAU_OUT, "utf8");
     // Should have only 3 real transactions
-    expect(output).toContain("Date,Description,Value");
+    expect(output).toContain("Date,Description,Amount");
     expect(output).toContain("2025-04-01,UTILITY PAYMENT,996.92");
     expect(output).toContain("2025-04-07,PIX TRANSFER 05/04,900");
     expect(output).toContain("2025-04-07,INTEREST PAID,-0.01");

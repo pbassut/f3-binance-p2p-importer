@@ -20831,3 +20831,324 @@ Searching for unread emails from: todomundo@nubank.com.br
 No unread emails found from configured senders
 => 'IDLE IDLE'
 <= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A7 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A7 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+=== File upload endpoint hit ===
+Excel file detected: fatura-excel.xls
+Converting XLS file to CSV: /Users/patrickbassut/Programming/f3-binance-p2p-importer/uploads/e9ec753f9124cd445b9e658ae1a8cfbc
+XLS converted to CSV with 35 transactions: /Users/patrickbassut/Programming/f3-binance-p2p-importer/uploads/e9ec753f9124cd445b9e658ae1a8cfbc.csv
+Detecting processor type for file: /Users/patrickbassut/Programming/f3-binance-p2p-importer/uploads/e9ec753f9124cd445b9e658ae1a8cfbc.csv
+First line of file: data,lançamento,valor
+Detected Itaú Credit Card format
+File uploaded: /Users/patrickbassut/Programming/f3-binance-p2p-importer/uploads/e9ec753f9124cd445b9e658ae1a8cfbc.csv, detected processor: itau-creditcard
+Processing file with itau-creditcard processor...
+Processing complete: /Users/patrickbassut/Programming/f3-binance-p2p-importer/uploads/e9ec753f9124cd445b9e658ae1a8cfbc.csv.out.csv
+Using config file: /Users/patrickbassut/Programming/f3-binance-p2p-importer/src/importer-configs/itau-creditcard.json
+Posting to Firefly: https://financas.patrick.bassut.com.br/dataimporter/autoupload?secret=L*!sa9UF2QBdYvUoypD_
+Upload and import successful.
+=== File upload endpoint hit ===
+Excel file detected: fatura-excel.xls
+Converting XLS file to CSV: /Users/patrickbassut/Programming/f3-binance-p2p-importer/uploads/39bb04c9c98d8711348a60045acc35d8
+XLS converted to CSV with 35 transactions: /Users/patrickbassut/Programming/f3-binance-p2p-importer/uploads/39bb04c9c98d8711348a60045acc35d8.csv
+Detecting processor type for file: /Users/patrickbassut/Programming/f3-binance-p2p-importer/uploads/39bb04c9c98d8711348a60045acc35d8.csv
+First line of file: data,lançamento,valor
+Detected Itaú Credit Card format
+File uploaded: /Users/patrickbassut/Programming/f3-binance-p2p-importer/uploads/39bb04c9c98d8711348a60045acc35d8.csv, detected processor: itau-creditcard
+Processing file with itau-creditcard processor...
+Processing complete: /Users/patrickbassut/Programming/f3-binance-p2p-importer/uploads/39bb04c9c98d8711348a60045acc35d8.csv.out.csv
+Using config file: /Users/patrickbassut/Programming/f3-binance-p2p-importer/src/importer-configs/itau-creditcard.json
+Posting to Firefly: https://financas.patrick.bassut.com.br/dataimporter/autoupload?secret=L*!sa9UF2QBdYvUoypD_
+Upload and import successful.
+=== File upload endpoint hit ===
+Excel file detected: fatura-excel.xls
+Converting XLS file to CSV: /Users/patrickbassut/Programming/f3-binance-p2p-importer/uploads/fde5708596c07c934e4e022bffce1d57
+XLS converted to CSV with 35 transactions: /Users/patrickbassut/Programming/f3-binance-p2p-importer/uploads/fde5708596c07c934e4e022bffce1d57.csv
+Detecting processor type for file: /Users/patrickbassut/Programming/f3-binance-p2p-importer/uploads/fde5708596c07c934e4e022bffce1d57.csv
+First line of file: data,lançamento,valor
+Detected Itaú Credit Card format
+File uploaded: /Users/patrickbassut/Programming/f3-binance-p2p-importer/uploads/fde5708596c07c934e4e022bffce1d57.csv, detected processor: itau-creditcard
+Processing file with itau-creditcard processor...
+Processing complete: /Users/patrickbassut/Programming/f3-binance-p2p-importer/uploads/fde5708596c07c934e4e022bffce1d57.csv.out.csv
+Using config file: /Users/patrickbassut/Programming/f3-binance-p2p-importer/src/importer-configs/itau-creditcard.json
+Posting to Firefly: https://financas.patrick.bassut.com.br/dataimporter/autoupload?secret=L*!sa9UF2QBdYvUoypD_
+Upload and import successful.
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A8 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A8 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A9 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A9 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A10 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A10 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A11 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A11 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A12 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A12 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/patrickbassut/Programming/f3-binance-p2p-importer/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/processors/itau.ts(78,7): error TS2353: Object literal may only specify known properties, and 'Value' does not exist in type 'OutputRow'.
+
+    at createTSError (/Users/patrickbassut/Programming/f3-binance-p2p-importer/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/patrickbassut/Programming/f3-binance-p2p-importer/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/patrickbassut/Programming/f3-binance-p2p-importer/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/patrickbassut/Programming/f3-binance-p2p-importer/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/patrickbassut/Programming/f3-binance-p2p-importer/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1824:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/patrickbassut/Programming/f3-binance-p2p-importer/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1427:32)
+    at Module._load (node:internal/modules/cjs/loader:1250:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14) {
+  diagnosticCodes: [ 2353 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+[dotenv@17.0.1] injecting env (11) from .env – [tip] encrypt with dotenvx: https://dotenvx.com
+Connecting to imap.zoho.com:993 as patrick@bassut.com.br
+Starting email monitor...
+Email monitoring started
+Test server running on 3001
+[connection] Connected to host
+<= '* OK svwall.zoho.com IMAP4 Server (Zoho Mail IMAP4rev1 Server version 1.0)'
+=> 'A0 CAPABILITY'
+<= '* CAPABILITY IMAP4rev1 UNSELECT CHILDREN XLIST NAMESPACE IDLE MOVE ID AUTH=PLAIN SASL-IR UIDPLUS ESEARCH LIST-EXTENDED LIST-STATUS WITHIN LITERAL- ACL CONDSTORE'
+<= 'A0 OK CAPABILITY completed'
+=> 'A1 LOGIN "patrick@bassut.com.br" "F7YkjpJtc5Q0"'
+<= '* CAPABILITY IMAP4rev1 UNSELECT CHILDREN XLIST NAMESPACE IDLE MOVE ID AUTH=PLAIN SASL-IR UIDPLUS ESEARCH LIST-EXTENDED LIST-STATUS WITHIN LITERAL- ACL CONDSTORE'
+<= 'A1 OK Success'
+=> 'A2 NAMESPACE'
+<= '* NAMESPACE (("" "/")) NIL NIL'
+<= 'A2 OK NAMESPACE completed'
+=> 'A3 LIST "" ""'
+<= '* LIST (\\Noselect) "/" ""'
+<= 'A3 OK Success'
+IMAP connection ready
+=> 'A4 SELECT "INBOX" (CONDSTORE)'
+<= '* 2386 EXISTS'
+<= '* 562 RECENT'
+<= '* OK [UNSEEN 2382]'
+<= '* OK [UIDVALIDITY 2] UIDs valid'
+<= '* OK [UIDNEXT 2389] Predicted next UID'
+<= '* OK [HIGHESTMODSEQ 1000000000000002777]'
+<= '* FLAGS (\\Answered \\Flagged \\Deleted \\Seen \\Draft)'
+<= '* OK [PERMANENTFLAGS (\\* \\Answered \\Flagged \\Deleted \\Seen \\Draft)] Permanent flags'
+<= 'A4 OK [READ-WRITE] SELECT completed'
+Mailbox "INBOX" opened
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> 'A5 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A5 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+[dotenv@17.0.1] injecting env (11) from .env – [tip] encrypt with dotenvx: https://dotenvx.com
+Connecting to imap.zoho.com:993 as patrick@bassut.com.br
+Starting email monitor...
+Email monitoring started
+Test server running on 3001
+[connection] Connected to host
+<= '* OK svwall.zoho.com IMAP4 Server (Zoho Mail IMAP4rev1 Server version 1.0)'
+=> 'A0 CAPABILITY'
+<= '* CAPABILITY IMAP4rev1 UNSELECT CHILDREN XLIST NAMESPACE IDLE MOVE ID AUTH=PLAIN SASL-IR UIDPLUS ESEARCH LIST-EXTENDED LIST-STATUS WITHIN LITERAL- ACL CONDSTORE'
+<= 'A0 OK CAPABILITY completed'
+=> 'A1 LOGIN "patrick@bassut.com.br" "F7YkjpJtc5Q0"'
+<= '* CAPABILITY IMAP4rev1 UNSELECT CHILDREN XLIST NAMESPACE IDLE MOVE ID AUTH=PLAIN SASL-IR UIDPLUS ESEARCH LIST-EXTENDED LIST-STATUS WITHIN LITERAL- ACL CONDSTORE'
+<= 'A1 OK Success'
+=> 'A2 NAMESPACE'
+<= '* NAMESPACE (("" "/")) NIL NIL'
+<= 'A2 OK NAMESPACE completed'
+=> 'A3 LIST "" ""'
+<= '* LIST (\\Noselect) "/" ""'
+<= 'A3 OK Success'
+IMAP connection ready
+=> 'A4 SELECT "INBOX" (CONDSTORE)'
+<= '* 2386 EXISTS'
+<= '* 562 RECENT'
+<= '* OK [UNSEEN 2382]'
+<= '* OK [UIDVALIDITY 2] UIDs valid'
+<= '* OK [UIDNEXT 2389] Predicted next UID'
+<= '* OK [HIGHESTMODSEQ 1000000000000002777]'
+<= '* FLAGS (\\Answered \\Flagged \\Deleted \\Seen \\Draft)'
+<= '* OK [PERMANENTFLAGS (\\* \\Answered \\Flagged \\Deleted \\Seen \\Draft)] Permanent flags'
+<= 'A4 OK [READ-WRITE] SELECT completed'
+Mailbox "INBOX" opened
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> 'A5 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A5 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/patrickbassut/Programming/f3-binance-p2p-importer/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/processors/itau-creditcard.ts(61,11): error TS2353: Object literal may only specify known properties, and 'Expense' does not exist in type 'OutputRow'.
+
+    at createTSError (/Users/patrickbassut/Programming/f3-binance-p2p-importer/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/patrickbassut/Programming/f3-binance-p2p-importer/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/patrickbassut/Programming/f3-binance-p2p-importer/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/patrickbassut/Programming/f3-binance-p2p-importer/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/patrickbassut/Programming/f3-binance-p2p-importer/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1824:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/patrickbassut/Programming/f3-binance-p2p-importer/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1427:32)
+    at Module._load (node:internal/modules/cjs/loader:1250:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14) {
+  diagnosticCodes: [ 2353 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+[dotenv@17.0.1] injecting env (11) from .env – [tip] encrypt with dotenvx: https://dotenvx.com
+Connecting to imap.zoho.com:993 as patrick@bassut.com.br
+Starting email monitor...
+Email monitoring started
+Test server running on 3001
+[connection] Connected to host
+<= '* OK svwall.zoho.com IMAP4 Server (Zoho Mail IMAP4rev1 Server version 1.0)'
+=> 'A0 CAPABILITY'
+<= '* CAPABILITY IMAP4rev1 UNSELECT CHILDREN XLIST NAMESPACE IDLE MOVE ID AUTH=PLAIN SASL-IR UIDPLUS ESEARCH LIST-EXTENDED LIST-STATUS WITHIN LITERAL- ACL CONDSTORE'
+<= 'A0 OK CAPABILITY completed'
+=> 'A1 LOGIN "patrick@bassut.com.br" "F7YkjpJtc5Q0"'
+<= '* CAPABILITY IMAP4rev1 UNSELECT CHILDREN XLIST NAMESPACE IDLE MOVE ID AUTH=PLAIN SASL-IR UIDPLUS ESEARCH LIST-EXTENDED LIST-STATUS WITHIN LITERAL- ACL CONDSTORE'
+<= 'A1 OK Success'
+=> 'A2 NAMESPACE'
+<= '* NAMESPACE (("" "/")) NIL NIL'
+<= 'A2 OK NAMESPACE completed'
+=> 'A3 LIST "" ""'
+<= '* LIST (\\Noselect) "/" ""'
+<= 'A3 OK Success'
+IMAP connection ready
+=> 'A4 SELECT "INBOX" (CONDSTORE)'
+<= '* 2386 EXISTS'
+<= '* 562 RECENT'
+<= '* OK [UNSEEN 2382]'
+<= '* OK [UIDVALIDITY 2] UIDs valid'
+<= '* OK [UIDNEXT 2389] Predicted next UID'
+<= '* OK [HIGHESTMODSEQ 1000000000000002777]'
+<= '* FLAGS (\\Answered \\Flagged \\Deleted \\Seen \\Draft)'
+<= '* OK [PERMANENTFLAGS (\\* \\Answered \\Flagged \\Deleted \\Seen \\Draft)] Permanent flags'
+<= 'A4 OK [READ-WRITE] SELECT completed'
+Mailbox "INBOX" opened
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> 'A5 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A5 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+[dotenv@17.0.1] injecting env (11) from .env – [tip] encrypt with dotenvx: https://dotenvx.com
+Connecting to imap.zoho.com:993 as patrick@bassut.com.br
+Starting email monitor...
+Email monitoring started
+Test server running on 3001
+[connection] Connected to host
+<= '* OK svwall.zoho.com IMAP4 Server (Zoho Mail IMAP4rev1 Server version 1.0)'
+=> 'A0 CAPABILITY'
+<= '* CAPABILITY IMAP4rev1 UNSELECT CHILDREN XLIST NAMESPACE IDLE MOVE ID AUTH=PLAIN SASL-IR UIDPLUS ESEARCH LIST-EXTENDED LIST-STATUS WITHIN LITERAL- ACL CONDSTORE'
+<= 'A0 OK CAPABILITY completed'
+=> 'A1 LOGIN "patrick@bassut.com.br" "F7YkjpJtc5Q0"'
+<= '* CAPABILITY IMAP4rev1 UNSELECT CHILDREN XLIST NAMESPACE IDLE MOVE ID AUTH=PLAIN SASL-IR UIDPLUS ESEARCH LIST-EXTENDED LIST-STATUS WITHIN LITERAL- ACL CONDSTORE'
+<= 'A1 OK Success'
+=> 'A2 NAMESPACE'
+<= '* NAMESPACE (("" "/")) NIL NIL'
+<= 'A2 OK NAMESPACE completed'
+=> 'A3 LIST "" ""'
+<= '* LIST (\\Noselect) "/" ""'
+<= 'A3 OK Success'
+IMAP connection ready
+=> 'A4 SELECT "INBOX" (CONDSTORE)'
+<= '* 2386 EXISTS'
+<= '* 562 RECENT'
+<= '* OK [UNSEEN 2382]'
+<= '* OK [UIDVALIDITY 2] UIDs valid'
+<= '* OK [UIDNEXT 2389] Predicted next UID'
+<= '* OK [HIGHESTMODSEQ 1000000000000002777]'
+<= '* FLAGS (\\Answered \\Flagged \\Deleted \\Seen \\Draft)'
+<= '* OK [PERMANENTFLAGS (\\* \\Answered \\Flagged \\Deleted \\Seen \\Draft)] Permanent flags'
+<= 'A4 OK [READ-WRITE] SELECT completed'
+Mailbox "INBOX" opened
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> 'A5 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A5 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'

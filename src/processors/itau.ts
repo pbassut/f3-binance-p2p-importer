@@ -11,7 +11,7 @@ export interface InputRow {
 export type OutputRow = {
   Date: string;
   Description: string;
-  Value: string;
+  Amount: string;
 };
 
 function isTransactionLine(line: string[]): boolean {
@@ -75,7 +75,7 @@ export function processCsvFile(
     rows.push({
       Date: toISODate(cols[0]),
       Description: desc,
-      Value: parseValue(cols[3]),
+      Amount: parseValue(cols[3]),
     });
   }
   // Remove duplicates
@@ -87,7 +87,7 @@ export function processCsvFile(
   // Write as UTF-8 CSV with comma delimiter
   const csvOut = Papa.unparse(uniqueRows, {
     header: true,
-    columns: ["Date", "Description", "Value"],
+    columns: ["Date", "Description", "Amount"],
     delimiter: ",",
   });
   fs.writeFileSync(outputPath, csvOut, "utf8");
