@@ -25280,3 +25280,77 @@ Searching for unread emails from: todomundo@nubank.com.br
 No unread emails found from configured senders
 => 'IDLE IDLE'
 <= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A6 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A6 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A7 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A7 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A8 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A8 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A9 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A9 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+<= 'IDLE OK IDLE terminated'
+=> 'A10 UID SEARCH UNSEEN FROM "todomundo@nubank.com.br"'
+<= '* SEARCH'
+<= 'A10 OK Success'
+No unread emails found from configured senders
+=> 'IDLE IDLE'
+<= '+ idling'
+Checking for new emails...
+Searching for unread emails from configured senders...
+Looking for unread emails from: [ 'todomundo@nubank.com.br', 'todomundo@nubank.com.br' ]
+Searching for unread emails from: todomundo@nubank.com.br
+=> DONE
+[connection] Error: Error: read ETIMEDOUT
+IMAP error: Error: read ETIMEDOUT
+    at TCP.onStreamRead (node:internal/stream_base_commons:216:20) {
+  errno: -60,
+  code: 'ETIMEDOUT',
+  syscall: 'read',
+  source: 'socket'
+}
+[connection] Closed

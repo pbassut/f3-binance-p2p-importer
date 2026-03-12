@@ -105,33 +105,38 @@ function detectProcessorType(filePath: string): ProcessorType {
   
   console.log(`First line of file: ${lines[0]}`);
   
-  for (const line of lines) {
-    const lower = line.toLowerCase();
-    if (lower.includes("order number") && lower.includes("order type")) {
-      console.log("Detected Binance format");
-      return "binance";
-    }
-    // Itau Credit Card: look for comma-delimited header with 'data,lançamento,valor'
-    if (lower === "data,lançamento,valor" || (lower.includes("data,") && lower.includes("lançamento,") && lower.includes("valor") && !lower.includes(";"))) {
-      console.log("Detected Itaú Credit Card format");
-      return "itau-creditcard";
-    }
-    // Itau: look for a header with 'data;' and 'valor (r$)' (semicolon-delimited)
-    if (lower.includes("data;") && lower.includes("valor (r$)")) {
-      console.log("Detected Itaú format");
-      return "itau";
-    }
-    // Deel: look for specific headers
-    if (lower.includes("transaction id") && lower.includes("transaction type") && lower.includes("payment method")) {
-      console.log("Detected Deel format");
-      return "deel";
-    }
-    // Rico: look for semicolon-delimited headers with Data;Estabelecimento;Portador;Valor;Parcela
-    if (lower.includes("data;estabelecimento;portador;valor;parcela")) {
-      console.log("Detected Rico format");
-      return "rico";
-    }
+  const firstLine = lines[0];
+  const lower = firstLine.toLowerCase();
+  if (lower.includes("order number") && lower.includes("order type")) {
+    console.log("Detected Binance format");
+    return "binance";
   }
+  // Nubank
+  if (lower.includes("valor") && lower.includes("identificador")) {
+    console.log("Detected Nubank format");
+    return "nubank";
+  }
+  // Itau Credit Card: look for comma-delimited header with 'data,lançamento,valor'
+  if (lower === "data,lançamento,valor" || (lower.includes("data,") && lower.includes("lançamento,") && lower.includes("valor") && !lower.includes(";"))) {
+    console.log("Detected Itaú Credit Card format");
+    return "itau-creditcard";
+  }
+  // Itau: look for a header with 'data;' and 'valor (r$)' (semicolon-delimited)
+  if (lower.includes("data;") && lower.includes("valor (r$)")) {
+    console.log("Detected Itaú format");
+    return "itau";
+  }
+  // Deel: look for specific headers
+  if (lower.includes("transaction id") && lower.includes("transaction type") && lower.includes("payment method")) {
+    console.log("Detected Deel format");
+    return "deel";
+  }
+  // Rico: look for semicolon-delimited headers with Data;Estabelecimento;Portador;Valor;Parcela
+  if (lower.includes("data;estabelecimento;portador;valor;parcela")) {
+    console.log("Detected Rico format");
+    return "rico";
+  }
+
   console.log("No specific format detected, falling back to Binance");
   return "binance"; // fallback
 }
@@ -193,7 +198,9 @@ app.post("/api/upload", upload.single("file"), async (req, res) => {
       /\/$/,
       ""
     )}/dataimporter/autoupload?secret=${encodeURIComponent(secret)}`;
+
     console.log(`Posting to Firefly: ${url}`);
+
     const fireflyRes = await axios.post(url, formData, {
       headers: {
         ...formData.getHeaders(),
@@ -201,7 +208,16 @@ app.post("/api/upload", upload.single("file"), async (req, res) => {
         Accept: "application/json",
       },
       maxBodyLength: Infinity,
-    });
+    })
+      .then(response => {
+        console.log(response);
+        return response;
+      })
+      .catch(err => {
+        console.log(err);
+        throw err;
+      });
+
     fs.unlink(inputPath, () => {});
     fs.unlink(outputPath, () => {});
     console.log("Upload and import successful.");

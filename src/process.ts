@@ -6,6 +6,8 @@ import * as itau from "./processors/itau";
 import * as itauCreditcard from "./processors/itau-creditcard";
 import * as deel from "./processors/deel";
 import * as rico from "./processors/rico";
+import * as copy from "./processors/copy";
+import * as nubank from "./processors/nubank";
 
 // --- i18next Initialization ---
 // Load translation files for English and Brazilian Portuguese
@@ -30,7 +32,7 @@ if (!i18next.isInitialized) {
   });
 }
 
-export type ProcessorType = "binance" | "itau" | "itau-creditcard" | "deel" | "rico";
+export type ProcessorType = "binance" | "itau" | "itau-creditcard" | "deel" | "rico" | "copy" | "nubank";
 
 export type InputRow = binance.InputRow;
 export type OutputRow = binance.OutputRow;
@@ -54,7 +56,12 @@ function getProcessor(type: ProcessorType = "binance"): Processor {
       return deel;
     case "rico":
       return rico;
+    case "nubank":
+      return nubank;
+    case "copy":
+      return copy;
     case "binance":
+      return binance;
     default:
       return binance;
   }
@@ -66,9 +73,9 @@ export function processCsvFile(
   cb?: () => void,
   type: ProcessorType = "binance"
 ) {
-  return getProcessor(type).processCsvFile(inputPath, outputPath, cb);
+  return getProcessor(type)?.processCsvFile(inputPath, outputPath, cb);
 }
 
 export function setI18nLanguage(lang: string, type: ProcessorType = "binance") {
-  return getProcessor(type).setI18nLanguage(lang);
+  return getProcessor(type)?.setI18nLanguage(lang);
 }

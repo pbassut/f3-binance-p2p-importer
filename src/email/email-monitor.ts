@@ -39,11 +39,29 @@ export class EmailMonitor {
 
     this.imap.on("error", (err: Error) => {
       console.error("IMAP error:", err);
+      // Attempt to reconnect after timeout errors
+      if (err.message.includes('ETIMEDOUT') && this.isMonitoring) {
+        console.log("Attempting to reconnect due to timeout...");
+        setTimeout(() => {
+          if (this.isMonitoring) {
+            this.imap.connect();
+          }
+        }, 5000); // Wait 5 seconds before reconnecting
+      }
     });
 
     this.imap.on("end", () => {
       console.log("IMAP connection ended");
-      this.isMonitoring = false;
+      if (this.isMonitoring) {
+        console.log("Attempting to reconnect...");
+        setTimeout(() => {
+          if (this.isMonitoring) {
+            this.imap.connect();
+          }
+        }, 10000); // Wait 10 seconds before reconnecting
+      } else {
+        this.isMonitoring = false;
+      }
     });
   }
 
@@ -61,7 +79,7 @@ export class EmailMonitor {
   private searchUnprocessedEmails() {
     console.log("Searching for unread emails from configured senders...");
     
-    const senderEmails = this.config.processors.map(p => p.senderEmail);
+    const senderEmails = [...new Set(this.config.processors.map(p => p.senderEmail))]; // Remove duplicates
     console.log("Looking for unread emails from:", senderEmails);
     
     if (this.config.processors.length === 0) {
@@ -69,25 +87,51 @@ export class EmailMonitor {
       return;
     }
 
-    // Search for unread emails from the first configured sender
-    const senderEmail = this.config.processors[0].senderEmail;
-    console.log(`Searching for unread emails from: ${senderEmail}`);
+    // Search for unread emails from ALL configured senders
+    console.log(`Searching for unread emails from: ${senderEmails.join(', ')}`);
     
-    // Search for emails that are both UNSEEN (unread) and FROM the sender
-    this.imap.search([["UNSEEN"], ["FROM", senderEmail]], (err, uids) => {
-      if (err) {
-        console.error("Error searching unread emails:", err);
-        return;
-      }
+    if (senderEmails.length === 1) {
+      // Single sender search
+      this.imap.search([["UNSEEN"], ["FROM", senderEmails[0]]], (err, uids) => {
+        this.handleSearchResults(err, uids);
+      });
+    } else {
+      // Multiple senders - search each one separately and combine results
+      let allUids: number[] = [];
+      let searchesCompleted = 0;
+      
+      senderEmails.forEach(senderEmail => {
+        this.imap.search([["UNSEEN"], ["FROM", senderEmail]], (err, uids) => {
+          if (err) {
+            console.error(`Error searching emails from ${senderEmail}:`, err);
+          } else {
+            allUids.push(...uids);
+          }
+          
+          searchesCompleted++;
+          if (searchesCompleted === senderEmails.length) {
+            // Remove duplicates and process
+            const uniqueUids = [...new Set(allUids)];
+            this.handleSearchResults(null, uniqueUids);
+          }
+        });
+      });
+    }
+  }
 
-      if (uids.length === 0) {
-        console.log("No unread emails found from configured senders");
-        return;
-      }
+  private handleSearchResults(err: Error | null, uids: number[]) {
+    if (err) {
+      console.error("Error searching unread emails:", err);
+      return;
+    }
 
-      console.log(`Found ${uids.length} unread emails from ${senderEmail}`);
-      this.processEmails(uids);
-    });
+    if (uids.length === 0) {
+      console.log("No unread emails found from configured senders");
+      return;
+    }
+
+    console.log(`Found ${uids.length} unread emails from configured senders`);
+    this.processEmails(uids);
   }
 
   private processEmails(uids: number[]) {

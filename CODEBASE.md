@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-F3 Binance P2P Importer is a full-stack web application designed to convert CSV files from various financial sources (Binance P2P, Itaú Bank, Deel) into a format compatible with Firefly-III, an open-source personal finance manager. The application provides multiple processing capabilities:
+F3 Binance P2P Importer is a full-stack web application designed to convert CSV files from various financial sources (Binance P2P, Itaú Bank, Itaú Credit Card, Deel, Nubank, Rico) into a format compatible with Firefly-III, an open-source personal finance manager. The application provides multiple processing capabilities:
 - Web interface for manual file uploads
 - Command-line processing
 - **Automatic email monitoring** for processing CSV attachments
@@ -46,7 +46,11 @@ f3-binance-p2p-importer/
 │   ├── processors/          # CSV processors for each source
 │   │   ├── binance.ts       # Binance P2P processor
 │   │   ├── itau.ts          # Itaú bank processor
-│   │   └── deel.ts          # Deel payments processor
+│   │   ├── itau-creditcard.ts # Itaú credit card processor
+│   │   ├── deel.ts          # Deel payments processor
+│   │   ├── rico.ts          # Rico broker processor
+│   │   ├── nubank.ts        # Nubank pass-through processor
+│   │   └── copy.ts          # Generic pass-through processor
 │   ├── email/               # Email monitoring components
 │   │   ├── email-config.ts  # Email configuration types
 │   │   └── email-monitor.ts # Email monitoring service
@@ -77,7 +81,7 @@ f3-binance-p2p-importer/
 Express server that:
 - Serves the React frontend from `/frontend/dist`
 - Exposes `/api/upload` endpoint for file processing
-- Detects CSV format automatically (Binance, Itaú, or Deel)
+- Detects CSV format automatically (Binance, Itaú, Itaú Credit Card, Deel, Nubank, Rico)
 - Processes uploaded files and forwards to Firefly-III Data Importer
 - **Initializes email monitoring service** if configured
 - Requires environment variables: `FIREFLY_TOKEN`, `FIREFLY_URL`, `FIREFLY_SECRET`
@@ -117,6 +121,22 @@ Central processing module that:
   - Handles multiple transaction types (payment, withdrawal, advance)
   - Dynamic description generation
   - Income/Expense categorization based on amount
+
+#### Nubank Processor (`src/processors/nubank.ts`)
+- **Input**: Nubank CSV with columns: Data, Valor, Identificador, Descrição
+- **Output**: Identical to input (pass-through processor)
+- **Features**:
+  - Pass-through processor that copies CSV without modifications
+  - Preserves original formatting and encoding
+  - Useful for CSVs already in compatible format
+
+#### Copy Processor (`src/processors/copy.ts`)
+- **Input**: Any CSV file
+- **Output**: Identical to input (pass-through processor)
+- **Features**:
+  - Generic pass-through processor for any CSV format
+  - Preserves original formatting and encoding
+  - Default fallback processor
 
 ### 4. Frontend Application (`frontend/src/App.tsx`)
 
