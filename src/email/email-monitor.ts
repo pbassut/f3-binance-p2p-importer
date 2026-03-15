@@ -25,7 +25,11 @@ export class EmailMonitor {
       tlsOptions: { rejectUnauthorized: false },
       authTimeout: 10000,
       connTimeout: 10000,
-      debug: console.log
+      debug: (msg: string) => {
+        // Filter out login commands to avoid logging credentials
+        if (msg.includes('LOGIN')) return;
+        console.log(msg);
+      }
     });
 
     this.setupEventHandlers();
