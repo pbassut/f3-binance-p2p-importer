@@ -26,4 +26,5 @@ COPY --from=backend-build /app/src/locales ./dist/src/locales
 COPY --from=backend-build /app/uploads ./uploads
 COPY --from=backend-build /app/example.csv ./example.csv
 COPY --from=frontend-build /app/frontend/dist ./frontend/dist
+COPY --from=frontend-build /app/frontend/dist ./dist/frontend/dist
 CMD ["node", "dist/src/main.js"] 
