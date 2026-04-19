@@ -3,7 +3,7 @@
     "source": "ff3-importer-1.6.3",
     "created_at": "2025-06-29T16:39:36-03:00",
     "date": "Y-m-d",
-    "default_account": 20,
+    "default_account": 6,
     "delimiter": "comma",
     "headers": true,
     "rules": true,
