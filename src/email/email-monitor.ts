@@ -4,6 +4,7 @@ import fs from "fs";
 import path from "path";
 import { processCsvFile, ProcessorType } from "../process";
 import { EmailMonitorConfig, EmailProcessorConfig } from "./email-config";
+import { logger } from "./logger";
 import axios from "axios";
 import FormData from "form-data";
 
@@ -15,7 +16,7 @@ export class EmailMonitor {
 
   constructor(config: EmailMonitorConfig) {
     this.config = config;
-    console.log(`Connecting to ${config.host}:${config.port} as ${config.user}`);
+    logger.info(`Connecting to ${config.host}:${config.port} as ${config.user}`);
     this.imap = new Imap({
       user: config.user,
       password: config.password,
@@ -25,11 +26,13 @@ export class EmailMonitor {
       tlsOptions: { rejectUnauthorized: false },
       authTimeout: 10000,
       connTimeout: 10000,
+      // Raw IMAP protocol chatter is logged at debug level only (set
+      // LOG_LEVEL=debug to see it). Login lines are always suppressed to
+      // avoid logging credentials.
       debug: (msg: string) => {
-        // Filter out login commands to avoid logging credentials
-        if (msg.includes('LOGIN')) return;
-        console.log(msg);
-      }
+        if (msg.includes("LOGIN")) return;
+        logger.debug(`IMAP » ${msg}`);
+      },
     });
 
     this.setupEventHandlers();
@@ -37,15 +40,15 @@ export class EmailMonitor {
 
   private setupEventHandlers() {
     this.imap.on("ready", () => {
-      console.log("IMAP connection ready");
+      logger.info("Connected to mail server");
       this.openInbox();
     });
 
     this.imap.on("error", (err: Error) => {
-      console.error("IMAP error:", err);
+      logger.error({ err }, "IMAP error");
       // Attempt to reconnect after timeout errors
-      if (err.message.includes('ETIMEDOUT') && this.isMonitoring) {
-        console.log("Attempting to reconnect due to timeout...");
+      if (err.message.includes("ETIMEDOUT") && this.isMonitoring) {
+        logger.warn("Connection timed out, reconnecting in 5s...");
         setTimeout(() => {
           if (this.isMonitoring) {
             this.imap.connect();
@@ -55,15 +58,15 @@ export class EmailMonitor {
     });
 
     this.imap.on("end", () => {
-      console.log("IMAP connection ended");
       if (this.isMonitoring) {
-        console.log("Attempting to reconnect...");
+        logger.warn("Connection closed, reconnecting in 10s...");
         setTimeout(() => {
           if (this.isMonitoring) {
             this.imap.connect();
           }
         }, 10000); // Wait 10 seconds before reconnecting
       } else {
+        logger.info("Connection closed");
         this.isMonitoring = false;
       }
     });
@@ -72,28 +75,23 @@ export class EmailMonitor {
   private openInbox() {
     this.imap.openBox(this.config.mailbox, false, (err, box) => {
       if (err) {
-        console.error("Error opening mailbox:", err);
+        logger.error({ err }, "Error opening mailbox");
         return;
       }
-      console.log(`Mailbox "${this.config.mailbox}" opened`);
+      logger.info(`Mailbox "${this.config.mailbox}" opened`);
       this.searchUnprocessedEmails();
     });
   }
 
   private searchUnprocessedEmails() {
-    console.log("Searching for unread emails from configured senders...");
-    
-    const senderEmails = [...new Set(this.config.processors.map(p => p.senderEmail))]; // Remove duplicates
-    console.log("Looking for unread emails from:", senderEmails);
-    
     if (this.config.processors.length === 0) {
-      console.log("No email processors configured");
+      logger.warn("No email processors configured");
       return;
     }
 
-    // Search for unread emails from ALL configured senders
-    console.log(`Searching for unread emails from: ${senderEmails.join(', ')}`);
-    
+    const senderEmails = [...new Set(this.config.processors.map(p => p.senderEmail))]; // Remove duplicates
+    logger.info(`Checking for unread emails from: ${senderEmails.join(", ")}`);
+
     if (senderEmails.length === 1) {
       // Single sender search
       this.imap.search([["UNSEEN"], ["FROM", senderEmails[0]]], (err, uids) => {
@@ -103,15 +101,15 @@ export class EmailMonitor {
       // Multiple senders - search each one separately and combine results
       let allUids: number[] = [];
       let searchesCompleted = 0;
-      
+
       senderEmails.forEach(senderEmail => {
         this.imap.search([["UNSEEN"], ["FROM", senderEmail]], (err, uids) => {
           if (err) {
-            console.error(`Error searching emails from ${senderEmail}:`, err);
+            logger.error({ err }, `Error searching emails from ${senderEmail}`);
           } else {
             allUids.push(...uids);
           }
-          
+
           searchesCompleted++;
           if (searchesCompleted === senderEmails.length) {
             // Remove duplicates and process
@@ -125,16 +123,16 @@ export class EmailMonitor {
 
   private handleSearchResults(err: Error | null, uids: number[]) {
     if (err) {
-      console.error("Error searching unread emails:", err);
+      logger.error({ err }, "Error searching unread emails");
       return;
     }
 
     if (uids.length === 0) {
-      console.log("No unread emails found from configured senders");
+      logger.info("No new emails to process");
       return;
     }
 
-    console.log(`Found ${uids.length} unread emails from configured senders`);
+    logger.info(`Found ${uids.length} new email(s) to process`);
     this.processEmails(uids);
   }
 
@@ -145,12 +143,10 @@ export class EmailMonitor {
     });
 
     fetch.on("message", (msg, seqno) => {
-      console.log(`Processing message #${seqno}`);
-      
       msg.on("body", (stream: any) => {
         simpleParser(stream, async (err: any, parsed: ParsedMail) => {
           if (err) {
-            console.error("Error parsing email:", err);
+            logger.error({ err }, "Error parsing email");
             return;
           }
 
@@ -160,38 +156,41 @@ export class EmailMonitor {
     });
 
     fetch.on("error", (err) => {
-      console.error("Fetch error:", err);
+      logger.error({ err }, "Fetch error");
     });
 
     fetch.on("end", () => {
-      console.log("Finished processing emails");
+      logger.info("Finished processing emails");
     });
   }
 
   private async handleParsedEmail(mail: ParsedMail, seqno: number) {
-    console.log(`\nProcessing email #${seqno}:`);
-    console.log(`Subject: ${mail.subject}`);
-    console.log(`From: ${mail.from?.text}`);
-    console.log(`Date: ${mail.date}`);
-    console.log(`Has attachments: ${mail.attachments && mail.attachments.length > 0}`);
-    
     const from = mail.from?.value[0]?.address;
+    logger.info(
+      `Email #${seqno} from ${from ?? "unknown"} — "${mail.subject ?? "(no subject)"}" ` +
+        `(${mail.attachments?.length ?? 0} attachment(s))`
+    );
+
     if (!from) {
-      console.log(`Email #${seqno} has no sender address`);
+      logger.warn(`Email #${seqno} has no sender address, skipping`);
       return;
     }
 
     const processorConfig = this.findProcessorConfig(from, mail.subject);
     if (!processorConfig) {
-      console.log(`No processor configured for sender: ${from}`);
-      console.log(`Configured senders: ${this.config.processors.map(p => p.senderEmail).join(', ')}`);
+      logger.warn(
+        `No processor configured for ${from} ` +
+          `(configured: ${this.config.processors.map(p => p.senderEmail).join(", ")})`
+      );
       return;
     }
 
-    console.log(`Using ${processorConfig.processorType} processor (${processorConfig.importerConfig}) for email from ${from}`);
+    logger.info(
+      `Using "${processorConfig.processorType}" processor (${processorConfig.importerConfig}) for ${from}`
+    );
 
     if (!mail.attachments || mail.attachments.length === 0) {
-      console.log(`Email #${seqno} has no attachments`);
+      logger.warn(`Email #${seqno} has no attachments, skipping`);
       return;
     }
 
@@ -206,16 +205,16 @@ export class EmailMonitor {
     const candidates = this.config.processors.filter(
       (proc) => proc.senderEmail.toLowerCase() === senderEmail.toLowerCase()
     );
-    
+
     if (candidates.length === 0) {
       return undefined;
     }
-    
+
     // If there's only one candidate, return it
     if (candidates.length === 1) {
       return candidates[0];
     }
-    
+
     // If multiple candidates and we have a subject, try to match by subject pattern
     if (subject) {
       for (const candidate of candidates) {
@@ -227,7 +226,7 @@ export class EmailMonitor {
         }
       }
     }
-    
+
     // Fallback to first candidate if no subject match
     return candidates[0];
   }
@@ -254,13 +253,13 @@ export class EmailMonitor {
 
       // Save attachment to disk
       fs.writeFileSync(tempInputPath, attachment.content);
-      console.log(`Saved attachment: ${tempInputPath}`);
+      logger.info(`Saved attachment: ${attachment.filename}`);
 
       // Process the CSV file or pass through if processorType is "csv"
       if (processorConfig.processorType === "csv") {
         // For "csv" type, just copy the file without processing
         fs.copyFileSync(tempInputPath, tempOutputPath);
-        console.log(`CSV passthrough: ${tempOutputPath}`);
+        logger.info("CSV passthrough (no transformation)");
       } else {
         await new Promise<void>((resolve, reject) => {
           processCsvFile(
@@ -270,7 +269,7 @@ export class EmailMonitor {
             processorConfig.processorType as ProcessorType
           );
         });
-        console.log(`Processed CSV: ${tempOutputPath}`);
+        logger.info(`Processed CSV with "${processorConfig.processorType}" processor`);
       }
 
       // Send to Firefly-III if configured
@@ -286,7 +285,7 @@ export class EmailMonitor {
           fs.mkdirSync("output", { recursive: true });
         }
         fs.copyFileSync(tempOutputPath, finalOutputPath);
-        console.log(`Saved processed file to: ${finalOutputPath}`);
+        logger.info(`Saved processed file to: ${finalOutputPath}`);
       }
 
       // Cleanup temp files
@@ -294,7 +293,7 @@ export class EmailMonitor {
       fs.unlinkSync(tempOutputPath);
 
     } catch (error) {
-      console.error(`Error processing attachment ${attachment.filename}:`, error);
+      logger.error({ err: error }, `Error processing attachment ${attachment.filename}`);
       // Cleanup on error
       if (fs.existsSync(tempInputPath)) fs.unlinkSync(tempInputPath);
       if (fs.existsSync(tempOutputPath)) fs.unlinkSync(tempOutputPath);
@@ -319,7 +318,7 @@ export class EmailMonitor {
     const fireflyUrl = process.env.FIREFLY_URL!.replace(/\/$/, "");
     const secret = process.env.FIREFLY_SECRET!;
     const url = `${fireflyUrl}/dataimporter/autoupload?secret=${encodeURIComponent(secret)}`;
-    
+
     try {
       const response = await axios.post(
         url,
@@ -334,20 +333,21 @@ export class EmailMonitor {
         }
       );
 
-      console.log(`Firefly-III import response:`, response.data);
+      logger.info({ response: response.data }, "Firefly-III import succeeded");
     } catch (error: any) {
-      console.error("Error sending to Firefly-III:", error.message);
+      logger.error(`Error sending to Firefly-III: ${error.message}`);
       if (error.response) {
-        console.error("Response status:", error.response.status);
+        logger.error(`Response status: ${error.response.status}`);
         if (error.response.status === 500) {
-          console.error("Server returned 500 Internal Server Error");
           // Log the error message if available in the response
           const errorMatch = error.response.data?.match(/<p class="text-danger">\s*([^<]+)\s*<\/p>/);
           if (errorMatch) {
-            console.error("Server error message:", errorMatch[1]);
+            logger.error(`Server error message: ${errorMatch[1]}`);
+          } else {
+            logger.error("Server returned 500 Internal Server Error");
           }
         }
-        console.error("Request URL:", error.config?.url);
+        logger.error(`Request URL: ${error.config?.url}`);
       }
       throw error;
     }
@@ -355,25 +355,25 @@ export class EmailMonitor {
 
   start() {
     if (this.isMonitoring) {
-      console.log("Email monitoring is already running");
+      logger.info("Email monitoring is already running");
       return;
     }
 
-    console.log("Starting email monitor...");
+    logger.info("Starting email monitor...");
     this.isMonitoring = true;
     this.imap.connect();
 
     // Set up periodic checking
     setInterval(() => {
       if (this.isMonitoring && this.imap.state === "authenticated") {
-        console.log("Checking for new emails...");
+        logger.info("Checking for new emails...");
         this.searchUnprocessedEmails();
       }
     }, this.config.checkIntervalMinutes * 60 * 1000);
   }
 
   stop() {
-    console.log("Stopping email monitor...");
+    logger.info("Stopping email monitor...");
     this.isMonitoring = false;
     this.imap.end();
   }

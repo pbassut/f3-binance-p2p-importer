@@ -53,7 +53,8 @@ f3-binance-p2p-importer/
 │   │   └── copy.ts          # Generic pass-through processor
 │   ├── email/               # Email monitoring components
 │   │   ├── email-config.ts  # Email configuration types
-│   │   └── email-monitor.ts # Email monitoring service
+│   │   ├── email-monitor.ts # Email monitoring service
+│   │   └── logger.ts        # Shared pino logger (pretty, timestamped)
 │   ├── importer-configs/    # Firefly-III importer configurations
 │   │   ├── binance.json
 │   │   ├── itau.json
@@ -165,6 +166,14 @@ React application providing:
 - Defines configuration schema for email monitoring
 - Supports multiple sender-to-processor mappings
 - Configurable check intervals and mailbox selection
+
+#### Logger (`src/email/logger.ts`)
+- Shared application logger built on **pino** with **pino-pretty** output
+- Human-readable, color-coded lines prefixed with a local timestamp
+  (`[YYYY-MM-DD HH:MM:SS] LEVEL: message`)
+- Log level controlled via `LOG_LEVEL` (trace|debug|info|warn|error), default `info`
+- Raw IMAP protocol chatter is logged at `debug` level only (set `LOG_LEVEL=debug`
+  to see it); login lines are always suppressed to avoid logging credentials
 
 ### 6. Importer Configurations
 
