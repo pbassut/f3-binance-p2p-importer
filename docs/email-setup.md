@@ -66,3 +66,30 @@ Processor types:
 - `"binance"` - Process Binance P2P format
 - `"itau"` - Process Itaú bank format
 - `"deel"` - Process Deel payroll format
+
+### Filtering by subject
+
+Add an optional `subjectPattern` (a case-insensitive regex) to only process
+emails whose subject matches. When set, it is a **hard filter**: emails from
+that sender with a non-matching subject are left untouched (not even marked as
+read), so unrelated mail — marketing, alerts — is ignored. This also lets the
+same sender route to different processors based on subject:
+
+```env
+EMAIL_PROCESSORS='[
+  {
+    "senderEmail": "todomundo@nubank.com.br",
+    "processorType": "csv",
+    "importerConfig": "nubank.json",
+    "subjectPattern": "Extrato da sua conta do Nubank"
+  },
+  {
+    "senderEmail": "todomundo@nubank.com.br",
+    "processorType": "csv",
+    "importerConfig": "nubank-creditcard.json",
+    "subjectPattern": "Extrato da fatura do Cartão Nubank"
+  }
+]'
+```
+
+A processor **without** a `subjectPattern` accepts any subject from its sender.

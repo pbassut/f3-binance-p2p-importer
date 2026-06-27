@@ -25,3 +25,33 @@ export const defaultEmailConfig: Partial<EmailMonitorConfig> = {
   checkIntervalMinutes: 5,
   processors: []
 };
+
+/**
+ * Selects the processor for an email, applying `subjectPattern` as a hard
+ * filter. A candidate with a `subjectPattern` only matches when the email's
+ * subject matches the pattern; a candidate without one accepts any subject.
+ * Specific (pattern) matches win over wildcard (no-pattern) candidates.
+ * Returns undefined when no candidate matches (the email should be skipped).
+ */
+export function matchProcessor(
+  processors: EmailProcessorConfig[],
+  senderEmail: string,
+  subject?: string
+): EmailProcessorConfig | undefined {
+  const candidates = processors.filter(
+    (proc) => proc.senderEmail.toLowerCase() === senderEmail.toLowerCase()
+  );
+
+  if (candidates.length === 0) {
+    return undefined;
+  }
+
+  const specific = candidates.find(
+    (c) => c.subjectPattern && subject && new RegExp(c.subjectPattern, "i").test(subject)
+  );
+  if (specific) {
+    return specific;
+  }
+
+  return candidates.find((c) => !c.subjectPattern);
+}

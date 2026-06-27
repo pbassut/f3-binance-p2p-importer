@@ -3,7 +3,7 @@ import { simpleParser, ParsedMail, Attachment } from "mailparser";
 import fs from "fs";
 import path from "path";
 import { processCsvFile, ProcessorType } from "../process";
-import { EmailMonitorConfig, EmailProcessorConfig } from "./email-config";
+import { EmailMonitorConfig, EmailProcessorConfig, matchProcessor } from "./email-config";
 import { logger } from "./logger";
 import axios from "axios";
 import FormData from "form-data";
@@ -89,36 +89,46 @@ export class EmailMonitor {
       return;
     }
 
-    const senderEmails = [...new Set(this.config.processors.map(p => p.senderEmail))]; // Remove duplicates
-    logger.info(`Checking for unread emails from: ${senderEmails.join(", ")}`);
+    const processors = this.config.processors;
+    logger.info(
+      `Searching for unread emails matching: ${processors.map(p => this.describeFilter(p)).join("; ")}`
+    );
 
-    if (senderEmails.length === 1) {
-      // Single sender search
-      this.imap.search([["UNSEEN"], ["FROM", senderEmails[0]]], (err, uids) => {
-        this.handleSearchResults(err, uids);
+    // Search each processor's criteria separately and combine the results.
+    // Including SUBJECT in the IMAP query means we never fetch (and therefore
+    // never mark as seen) emails from a configured sender that don't match the
+    // expected subject — e.g. Nubank marketing emails are left untouched.
+    const allUids: number[] = [];
+    let searchesCompleted = 0;
+
+    processors.forEach(proc => {
+      const criteria: any[] = [["UNSEEN"], ["FROM", proc.senderEmail]];
+      if (proc.subjectPattern) {
+        // IMAP SUBJECT is a case-insensitive substring match. For the precise
+        // (regex) match we re-check the decoded subject after fetching.
+        criteria.push(["SUBJECT", proc.subjectPattern]);
+      }
+
+      this.imap.search(criteria, (err, uids) => {
+        if (err) {
+          logger.error({ err }, `Error searching emails for ${this.describeFilter(proc)}`);
+        } else {
+          allUids.push(...uids);
+        }
+
+        searchesCompleted++;
+        if (searchesCompleted === processors.length) {
+          // Remove duplicates (a UID can match more than one filter)
+          this.handleSearchResults(null, [...new Set(allUids)]);
+        }
       });
-    } else {
-      // Multiple senders - search each one separately and combine results
-      let allUids: number[] = [];
-      let searchesCompleted = 0;
+    });
+  }
 
-      senderEmails.forEach(senderEmail => {
-        this.imap.search([["UNSEEN"], ["FROM", senderEmail]], (err, uids) => {
-          if (err) {
-            logger.error({ err }, `Error searching emails from ${senderEmail}`);
-          } else {
-            allUids.push(...uids);
-          }
-
-          searchesCompleted++;
-          if (searchesCompleted === senderEmails.length) {
-            // Remove duplicates and process
-            const uniqueUids = [...new Set(allUids)];
-            this.handleSearchResults(null, uniqueUids);
-          }
-        });
-      });
-    }
+  private describeFilter(proc: EmailProcessorConfig): string {
+    return proc.subjectPattern
+      ? `${proc.senderEmail} (subject "${proc.subjectPattern}")`
+      : proc.senderEmail;
   }
 
   private handleSearchResults(err: Error | null, uids: number[]) {
@@ -128,15 +138,18 @@ export class EmailMonitor {
     }
 
     if (uids.length === 0) {
-      logger.info("No new emails to process");
+      logger.info("Found 0 matching emails — nothing to process");
       return;
     }
 
-    logger.info(`Found ${uids.length} new email(s) to process`);
+    logger.info(`Found ${uids.length} matching email(s), fetching them now...`);
     this.processEmails(uids);
   }
 
   private processEmails(uids: number[]) {
+    const total = uids.length;
+    const pending: Promise<boolean>[] = [];
+
     const fetch = this.imap.fetch(uids, {
       bodies: "",
       markSeen: true  // This marks emails as read after fetching
@@ -144,14 +157,18 @@ export class EmailMonitor {
 
     fetch.on("message", (msg, seqno) => {
       msg.on("body", (stream: any) => {
-        simpleParser(stream, async (err: any, parsed: ParsedMail) => {
-          if (err) {
-            logger.error({ err }, "Error parsing email");
-            return;
-          }
-
-          await this.handleParsedEmail(parsed, seqno);
-        });
+        pending.push(
+          new Promise<boolean>((resolve) => {
+            simpleParser(stream, async (err: any, parsed: ParsedMail) => {
+              if (err) {
+                logger.error({ err }, "Error parsing email");
+                resolve(false);
+                return;
+              }
+              resolve(await this.handleParsedEmail(parsed, seqno));
+            });
+          })
+        );
       });
     });
 
@@ -160,11 +177,18 @@ export class EmailMonitor {
     });
 
     fetch.on("end", () => {
-      logger.info("Finished processing emails");
+      // Wait for all parse/process callbacks before reporting the summary,
+      // otherwise this fires before the async work has finished.
+      Promise.all(pending).then((results) => {
+        const processed = results.filter(Boolean).length;
+        const skipped = total - processed;
+        logger.info(`Finished — processed ${processed}/${total} email(s), skipped ${skipped}`);
+      });
     });
   }
 
-  private async handleParsedEmail(mail: ParsedMail, seqno: number) {
+  /** Returns true if at least one CSV attachment was processed. */
+  private async handleParsedEmail(mail: ParsedMail, seqno: number): Promise<boolean> {
     const from = mail.from?.value[0]?.address;
     logger.info(
       `Email #${seqno} from ${from ?? "unknown"} — "${mail.subject ?? "(no subject)"}" ` +
@@ -173,62 +197,36 @@ export class EmailMonitor {
 
     if (!from) {
       logger.warn(`Email #${seqno} has no sender address, skipping`);
-      return;
+      return false;
     }
 
     const processorConfig = this.findProcessorConfig(from, mail.subject);
     if (!processorConfig) {
       logger.warn(
-        `No processor configured for ${from} ` +
-          `(configured: ${this.config.processors.map(p => p.senderEmail).join(", ")})`
+        `Email #${seqno} skipped — no processor matches sender "${from}" ` +
+          `with subject "${mail.subject ?? ""}"`
       );
-      return;
+      return false;
     }
 
     logger.info(
-      `Using "${processorConfig.processorType}" processor (${processorConfig.importerConfig}) for ${from}`
+      `Using "${processorConfig.processorType}" processor (${processorConfig.importerConfig}) for email #${seqno}`
     );
 
-    if (!mail.attachments || mail.attachments.length === 0) {
-      logger.warn(`Email #${seqno} has no attachments, skipping`);
-      return;
+    const csvAttachments = (mail.attachments ?? []).filter(a => a.filename?.endsWith(".csv"));
+    if (csvAttachments.length === 0) {
+      logger.warn(`Email #${seqno} has no CSV attachments, skipping`);
+      return false;
     }
 
-    for (const attachment of mail.attachments) {
-      if (attachment.filename?.endsWith(".csv")) {
-        await this.processAttachment(attachment, processorConfig);
-      }
+    for (const attachment of csvAttachments) {
+      await this.processAttachment(attachment, processorConfig);
     }
+    return true;
   }
 
   private findProcessorConfig(senderEmail: string, subject?: string): EmailProcessorConfig | undefined {
-    const candidates = this.config.processors.filter(
-      (proc) => proc.senderEmail.toLowerCase() === senderEmail.toLowerCase()
-    );
-
-    if (candidates.length === 0) {
-      return undefined;
-    }
-
-    // If there's only one candidate, return it
-    if (candidates.length === 1) {
-      return candidates[0];
-    }
-
-    // If multiple candidates and we have a subject, try to match by subject pattern
-    if (subject) {
-      for (const candidate of candidates) {
-        if (candidate.subjectPattern) {
-          const regex = new RegExp(candidate.subjectPattern, 'i');
-          if (regex.test(subject)) {
-            return candidate;
-          }
-        }
-      }
-    }
-
-    // Fallback to first candidate if no subject match
-    return candidates[0];
+    return matchProcessor(this.config.processors, senderEmail, subject);
   }
 
   private async processAttachment(
